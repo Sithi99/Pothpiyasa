@@ -8,13 +8,6 @@
     <title>Home</title>
 </head>
 <body>
-    <h1><i class="fa fa-plus"></i> This is Home</h1>
-
-    <?php
-        echo "<pre>";
-        print_r($rows);
-
     
-    ?>
 </body>
 </html>

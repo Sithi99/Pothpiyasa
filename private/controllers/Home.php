@@ -5,7 +5,7 @@ class Home extends Controller
     public function index()
     {
     
-        $user = new User();
+        //$user = new User();
 
         //$data = $user->where('FirstName','Sithija');
         //$data = $user->findAll();

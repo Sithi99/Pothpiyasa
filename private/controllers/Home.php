@@ -7,9 +7,12 @@ class Home extends Controller
     
         $user = new User();
 
-        $data = $user->where('FirstName','Sithija');
+        //$data = $user->where('FirstName','Sithija');
         //$data = $user->findAll();
+        // $user->insert($arr);
+        // $user->update(3,$arr);
+        // $user->delete(3);
     
-        $this->view('home', ['rows' => $data]);
+        //$this->view('home', ['rows' => $data]);
     }
 }

@@ -1,8 +1,9 @@
-    <!-- Footer -->
-    <footer>
+<!-- Footer -->
 
-    </footer>
-    
 </body>
-<script src="add.js"></script>
+<script src="<?=ROOT?>/js/includes/nav.js"></script>
+<script src="<?=ROOT?>/js/add.js"></script>
+
 </html>
+
+    

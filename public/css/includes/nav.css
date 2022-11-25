@@ -1,0 +1,461 @@
+/* Start of Navigation Section */
+
+.navigation {
+    position: absolute;
+    width: 280px;
+    height: 750px;
+    left: 0px;
+    top: -2px;
+    background: #0a3451;
+  }
+  
+  .navigationLabels{
+    position: absolute;
+    top: -50px;
+    left: 6px;
+  }
+  
+  .logo {
+    position: absolute;
+    width: 237px;
+    height: 65px;
+    left: -5px;
+    top: 6px;
+  }
+  #navIcon {
+    position: absolute;
+    left: 245px;
+    top: 25px;
+    font-size: 30px;
+  
+    color: #ffffff;
+  }
+  
+  .profile{
+    position: relative;
+    top: -30px;
+    left: 1px;
+  
+  }
+  .profileImg {
+    position: absolute;
+    width: 60px;
+    height: 55px;
+    left: 15px;
+    top: 128px;
+    border-radius: 50%;
+  }
+  .profileName{
+    color: white;
+    position: absolute;
+    top: 120px;
+    left: 100px;
+  }
+  
+  .profileID{
+    color: white;
+    position: absolute;
+    top: 140px;
+    left: 110px;
+  }
+  .toggelBar {
+    position: absolute;
+    width: 268px;
+    height: 40px;
+    left: 5px;
+    top: 237px;
+    background: white;
+    opacity: 0.3;
+    border-radius: 35px 0px 0px 35px;
+  }
+  .dashbordLabel {
+    position: absolute;
+    width: 129px;
+    height: 29px;
+    left: 74px;
+    top: 220px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    
+  }
+  .dashbordLabel a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .dashbordIconBack {
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    left: 10px;
+    top: 242px;
+  
+    background: #1395ed;
+    border-radius: 35px;
+  }
+  #dashbordIcon {
+    position: absolute;
+    top: 249px;
+    left: 19px;
+  
+    color: #ffffff;
+  }
+  .accountLabel {
+    position: absolute;
+    width: 129px;
+    height: 29px;
+    left: 74px;
+    top: 270px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    
+  }
+  .accountLabel a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .accountIconBack {
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    left: 10px;
+    top: 292px;
+  
+    background: #1395ed;
+    border-radius: 35px;
+  }
+  #accountIcon {
+    position: absolute;
+    top: 299px;
+    left: 19px;
+  
+    color: #ffffff;
+  }
+  
+  .bookLabel {
+    position: absolute;
+    width: 129px;
+    height: 29px;
+    left: 74px;
+    top: 320px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    
+  }
+  .bookLabel a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .bookIconBack {
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    left: 10px;
+    top: 342px;
+  
+    background: #1395ed;
+    border-radius: 35px;
+  }
+  #bookIcon {
+    position: absolute;
+    top: 349px;
+    left: 21px;
+    color: #ffffff;
+  }
+  
+  .booklist{
+    visibility: hidden;
+    z-index: 100;
+    position: relative;
+    width: 129px;
+    top: 256px;
+    left: 235px;
+  
+  }
+  .booklist ul{
+    list-style: none;
+    
+  }
+  .booklist ul li{
+    background: #AEA7A7;
+    /* text-align: center; */
+    width: 130px;
+    height: 20px;
+    border: white solid 1px;
+    
+  }
+  .booklist ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  .booklist ul li:hover{
+    background: #1395ED;
+  }
+  
+  /* .bookLabel:hover > .booklist{
+    display: block;
+    background: white;
+    position: relative;
+    top: 400px;
+    left: 200px;
+  
+  } */
+  
+  
+  .memberLabel {
+    position: absolute;
+    width: 129px;
+    height: 29px;
+    left: 74px;
+    top: 370px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    
+  }
+  .memberLabel a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .memberIconBack {
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    left: 10px;
+    top: 392px;
+  
+    background: #1395ed;
+    border-radius: 35px;
+  }
+  #memberIcon {
+    position: absolute;
+    top: 399px;
+    left: 21px;
+  
+    color: #ffffff;
+  }
+
+  .memberlist{
+      visibility: hidden;
+      z-index: 100;
+      position: relative;
+      top: 247px;
+      left: 235px;
+  
+  }
+  .memberlist ul{
+      list-style: none;
+  }
+  .memberlist ul li{
+      background: #AEA7A7;
+      /* text-align: center; */
+      width: 130px;
+      border: 1px solid white;
+  }
+  .memberlist ul li a{
+      text-decoration: none;
+      color: white;
+  }
+  .memberlist ul li:hover{
+      background: #1395ED;
+  }
+  
+  /* .memberLabel:hover > .memberlist{
+      display: block;
+      background: white;
+      position: relative;
+      top: 400px;
+      left: 200px;
+  
+  } */
+  
+  .circulationLabel {
+    position: absolute;
+    width: 129px;
+    height: 29px;
+    left: 74px;
+    top: 420px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    
+  }
+  .circulationLabel a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .circulationIconBack {
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    left: 10px;
+    top: 442px;
+  
+    background: #1395ed;
+    border-radius: 35px;
+  }
+  #circulationIcon {
+    position: absolute;
+    top: 449px;
+    left: 21px;
+  
+    color: #ffffff;
+  }
+  .bookCategoryLabel {
+    position: absolute;
+    width: 200px;
+    height: 29px;
+    left: 74px;
+    top: 470px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    
+  }
+  .bookCategoryLabel a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .bookCategoryIconBack {
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    left: 10px;
+    top: 492px;
+  
+    background: #1395ed;
+    border-radius: 35px;
+  }
+  #bookCategoryIcon {
+    position: absolute;
+    top: 499px;
+    left: 21px;
+  
+    color: #ffffff;
+  }
+  .inventoryLabel {
+    position: absolute;
+    width: 129px;
+    height: 29px;
+    left: 74px;
+    top: 520px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    
+  }
+  .inventoryLabel a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .inventoryIconBack {
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    left: 10px;
+    top: 542px;
+  
+    background: #1395ed;
+    border-radius: 35px;
+  }
+  #inventoryIcon {
+    position: absolute;
+    top: 548px;
+    left: 19px;
+  
+    color: #ffffff;
+  }
+  .authorLabel {
+    position: absolute;
+    width: 129px;
+    height: 29px;
+    left: 74px;
+    top: 570px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    
+  }
+  .authorLabel a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .authorIconBack {
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    left: 10px;
+    top: 592px;
+    background: #1395ed;
+    border-radius: 35px;
+  }
+  #authorIcon {
+    position: absolute;
+    top: 598px;
+    left: 22px;
+  
+    color: #ffffff;
+  }
+  .adminTaskLabel {
+    position: absolute;
+    width: 400px;
+    height: 29px;
+    left: 74px;
+    top: 620px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    
+  }
+  .adminTaskLabel a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .adminTaskIconBack {
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    left: 10px;
+    top: 642px;
+  
+    background: #1395ed;
+    border-radius: 35px;
+  }
+  #adminTaskIcon {
+    position: absolute;
+    top: 649px;
+    left: 23px;
+  
+    color: #ffffff;
+  }
+  
+  /* End of Navigation Section */

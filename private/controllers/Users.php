@@ -1,9 +1,15 @@
 <?php
 
-class Login extends Controller
+//Users controller
+class Users extends Controller
 {
     public function index()
     {
-        $this->view('login');
+        //$this->view('login');
+    }
+
+    public function add()
+    {
+        $this->view('users.add');
     }
 }

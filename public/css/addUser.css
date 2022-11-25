@@ -1,490 +1,4 @@
-body {
-  background: #e6eded;
-}
 
-/* Start of Header Section */
-.header {
-  position: absolute;
-  width: 1250px;
-  height: 60px;
-  left: 280px;
-  top: 0px;
-
-  background: #ffffff;
-}
-
-.operation {
-  position: absolute;
-  top: -30px;
-  left: 10px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 46px;
-  color: #aea7a7;
-}
-
-.searchbox {
-  position: absolute;
-  width: 254px;
-  height: 40px;
-  left: 650px;
-  top: 8px;
-  border: none;
-  outline: none;
-  background: #edecf1;
-  border-radius: 35px;
-}
-.searchbox:focus {
-  border: 3px solid #1395ed;
-  outline: none;
-}
-#searchIcon {
-  position: absolute;
-  top: 19px;
-  left: 680px;
-  font-size: 20px;
-  color: #1395ed;
-}
-.search {
-  position: absolute;
-  left: 820px;
-  top: -9px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  text-align: right;
-
-  color: #1395ed;
-}
-.notificationIconBack {
-  position: absolute;
-  width: 37px;
-  height: 29px;
-  left: 990px;
-  top: 15px;
-  background: #1395ed;
-  border-radius: 35px;
-}
-#notificationIcon {
-  position: absolute;
-  top: 18px;
-  left: 1000px;
-  color: white;
-  font-size: 20px;
-}
-.logout {
-  position: absolute;
-  width: 108px;
-  height: 25px;
-  left: 1090px;
-  top: -10px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-}
-.logout a {
-  text-decoration: none;
-  color: #1395ed;
-}
-
-/* End of Header Section */
-
-
-/* Start of Navigation Section */
-
-.navigation {
-  position: absolute;
-  width: 280px;
-  height: 750px;
-  left: 0px;
-  top: -2px;
-  background: #0a3451;
-}
-
-.navigationLabels{
-  position: absolute;
-  top: -50px;
-  left: 6px;
-}
-
-.logo {
-  position: absolute;
-  width: 237px;
-  height: 65px;
-  left: -5px;
-  top: 6px;
-}
-#navIcon {
-  position: absolute;
-  left: 245px;
-  top: 25px;
-  font-size: 30px;
-
-  color: #ffffff;
-}
-
-.profile{
-  position: relative;
-  top: -30px;
-  left: 1px;
-
-}
-.profileImg {
-  position: absolute;
-  width: 60px;
-  height: 55px;
-  left: 15px;
-  top: 128px;
-  border-radius: 50%;
-}
-.profileName{
-  color: white;
-  position: absolute;
-  top: 120px;
-  left: 100px;
-}
-
-.profileID{
-  color: white;
-  position: absolute;
-  top: 140px;
-  left: 110px;
-}
-.toggelBar {
-  position: absolute;
-  width: 250px;
-  height: 40px;
-  left: 5px;
-  top: 237px;
-  background: white;
-  opacity: 0.3;
-  border-radius: 35px 0px 0px 35px;
-}
-.dashbordLabel {
-  position: absolute;
-  width: 129px;
-  height: 29px;
-  left: 74px;
-  top: 220px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 29px;
-  
-}
-.dashbordLabel a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.dashbordIconBack {
-  position: absolute;
-  width: 37px;
-  height: 29px;
-  left: 10px;
-  top: 242px;
-
-  background: #1395ed;
-  border-radius: 35px;
-}
-#dashbordIcon {
-  position: absolute;
-  top: 249px;
-  left: 19px;
-
-  color: #ffffff;
-}
-.accountLabel {
-  position: absolute;
-  width: 129px;
-  height: 29px;
-  left: 74px;
-  top: 270px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 29px;
-  
-}
-.accountLabel a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.accountIconBack {
-  position: absolute;
-  width: 37px;
-  height: 29px;
-  left: 10px;
-  top: 292px;
-
-  background: #1395ed;
-  border-radius: 35px;
-}
-#accountIcon {
-  position: absolute;
-  top: 299px;
-  left: 19px;
-
-  color: #ffffff;
-}
-
-.bookLabel {
-  position: absolute;
-  width: 129px;
-  height: 29px;
-  left: 74px;
-  top: 320px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 29px;
-  
-}
-.bookLabel a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.bookIconBack {
-  position: absolute;
-  width: 37px;
-  height: 29px;
-  left: 10px;
-  top: 342px;
-
-  background: #1395ed;
-  border-radius: 35px;
-}
-#bookIcon {
-  position: absolute;
-  top: 349px;
-  left: 21px;
-  color: #ffffff;
-}
-
-.memberLabel {
-  position: absolute;
-  width: 129px;
-  height: 29px;
-  left: 74px;
-  top: 370px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 29px;
-  
-}
-.memberLabel a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.memberIconBack {
-  position: absolute;
-  width: 37px;
-  height: 29px;
-  left: 10px;
-  top: 392px;
-
-  background: #1395ed;
-  border-radius: 35px;
-}
-#memberIcon {
-  position: absolute;
-  top: 399px;
-  left: 21px;
-
-  color: #ffffff;
-}
-
-.circulationLabel {
-  position: absolute;
-  width: 129px;
-  height: 29px;
-  left: 74px;
-  top: 420px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 29px;
-  
-}
-.circulationLabel a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.circulationIconBack {
-  position: absolute;
-  width: 37px;
-  height: 29px;
-  left: 10px;
-  top: 442px;
-
-  background: #1395ed;
-  border-radius: 35px;
-}
-#circulationIcon {
-  position: absolute;
-  top: 449px;
-  left: 21px;
-
-  color: #ffffff;
-}
-.bookCategoryLabel {
-  position: absolute;
-  width: 200px;
-  height: 29px;
-  left: 74px;
-  top: 470px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 29px;
-  
-}
-.bookCategoryLabel a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.bookCategoryIconBack {
-  position: absolute;
-  width: 37px;
-  height: 29px;
-  left: 10px;
-  top: 492px;
-
-  background: #1395ed;
-  border-radius: 35px;
-}
-#bookCategoryIcon {
-  position: absolute;
-  top: 499px;
-  left: 21px;
-
-  color: #ffffff;
-}
-.inventoryLabel {
-  position: absolute;
-  width: 129px;
-  height: 29px;
-  left: 74px;
-  top: 520px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 29px;
-  
-}
-.inventoryLabel a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.inventoryIconBack {
-  position: absolute;
-  width: 37px;
-  height: 29px;
-  left: 10px;
-  top: 542px;
-
-  background: #1395ed;
-  border-radius: 35px;
-}
-#inventoryIcon {
-  position: absolute;
-  top: 548px;
-  left: 19px;
-
-  color: #ffffff;
-}
-.authorLabel {
-  position: absolute;
-  width: 129px;
-  height: 29px;
-  left: 74px;
-  top: 570px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 29px;
-  
-}
-.authorLabel a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.authorIconBack {
-  position: absolute;
-  width: 37px;
-  height: 29px;
-  left: 10px;
-  top: 592px;
-  background: #1395ed;
-  border-radius: 35px;
-}
-#authorIcon {
-  position: absolute;
-  top: 598px;
-  left: 22px;
-
-  color: #ffffff;
-}
-.adminTaskLabel {
-  position: absolute;
-  width: 400px;
-  height: 29px;
-  left: 74px;
-  top: 620px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 29px;
-  
-}
-.adminTaskLabel a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.adminTaskIconBack {
-  position: absolute;
-  width: 37px;
-  height: 29px;
-  left: 10px;
-  top: 642px;
-
-  background: #1395ed;
-  border-radius: 35px;
-}
-#adminTaskIcon {
-  position: absolute;
-  top: 649px;
-  left: 23px;
-
-  color: #ffffff;
-}
-
-/* End of Navigation Section */
 
 /* Start of Main Section  */
 
@@ -526,7 +40,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .title {
@@ -560,7 +73,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .reg{
@@ -593,7 +105,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .firstName {
@@ -654,7 +165,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
 
   color: #000000;
 }
@@ -687,7 +197,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .sex {
@@ -719,7 +228,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .birthday {
@@ -752,7 +260,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .address {
@@ -784,7 +291,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .email {
@@ -816,7 +322,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .memberType {
@@ -861,7 +366,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .type {
@@ -893,7 +397,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .subject {
@@ -925,7 +428,6 @@ body {
   font-size: 16px;
   line-height: 27px;
   
-
   color: #000000;
 }
 .department {

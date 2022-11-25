@@ -1,20 +1,25 @@
 
-let lecturebtn = document.getElementById("lecturebtn");
-let studentbtn = document.getElementById("studentbtn");
+var btn = document.getElementById("btn");
+var lectureForm = document.getElementById("lectureForm");
+var studentForm = document.getElementById("studentForm");
 
-// lecture btn clicked
-lecturebtn.addEventListener("click", () => {
-  lecturebtn.style.background = "#1395ED";
-  lecturebtn.style.color = '#ffffff'
-  studentbtn.style.background = "transparent";
-  studentbtn.style.color = '#000000'
-});
 
-// student btn clicked
-studentbtn.addEventListener("click", () => {
-  studentbtn.style.background = "#1395ED";
-  studentbtn.style.color = '#ffffff'
-  lecturebtn.style.background = "transparent";
-  lecturebtn.style.color = '#000000'
-});
+
+function getStudent() {
+  studentForm.style.left = "10px";
+  lectureForm.style.left = "-400px";
+  btn.style.left = "110px";
+  
+
+}
+
+
+function getLecture(){
+  studentForm.style.left = "400px";
+  lectureForm.style.left = "10px";
+  btn.style.left = "0px";
+
+}
+
+
 

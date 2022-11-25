@@ -1,5 +1,3 @@
-
-
 /* Start of Main Section  */
 
 /* form container */
@@ -14,7 +12,6 @@
   background: #ffffff;
   border-radius: 35px;
 }
-
 
 .bodyContainer02 {
   position: absolute;
@@ -39,11 +36,10 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
 .title {
-  text-align: center;
   position: absolute;
   width: 200px;
   height: 25px;
@@ -59,7 +55,6 @@
   outline: 0;
 }
 
-
 .regLabel {
   position: absolute;
   width: 49px;
@@ -72,11 +67,10 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
-.reg{
-  
+.reg {
   position: absolute;
   width: 200px;
   height: 25px;
@@ -87,7 +81,7 @@
   background: linear-gradient(0deg, #ffffff, #ffffff),
     linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
 }
-.regfocus {
+.reg:focus {
   border: 3px solid #2e9fed;
   outline: 0;
 }
@@ -104,7 +98,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
 .firstName {
@@ -134,7 +128,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
 .middleName {
@@ -196,11 +190,11 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
 .sex {
-  text-align: center;
+  
   position: absolute;
   width: 160px;
   height: 25px;
@@ -227,7 +221,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
 .birthday {
@@ -259,7 +253,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
 .address {
@@ -290,7 +284,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
 .email {
@@ -313,7 +307,7 @@
   position: absolute;
   width: 100px;
   height: 27px;
-  left: 568px;
+  left: 570px;
   top: 50px;
 
   font-family: "Inter";
@@ -321,15 +315,15 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
 .memberType {
-  text-align: center;
+
   position: absolute;
   width: 204px;
   height: 25px;
-  left: 718px;
+  left: 720px;
   top: 50px;
   border: none;
   outline: none;
@@ -341,19 +335,60 @@
   outline: 0;
 }
 
-.container3 {
+.form-box {
   position: absolute;
   width: 400px;
-  height: 200px;
+  height: 220px;
   left: 555px;
-  top: 140px;
-
+  top: 110px;
   background: #d9d9d9;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 35px;
+  overflow: hidden;
+}
+.button-box {
+  width: 220px;
+  height: 37px;
+  position: relative;
+  margin: 30px auto;
+  border-radius: 35px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.typeLabel {
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: #2e9fed;
+  border-radius: 35px;
+}
+
+.toggleForm {
+  top: 30px;
+  position: absolute;
+  width: 280px;
+  transition: 0.3s;
+}
+#lectureForm {
+  left: 10px;
+}
+
+#studentForm {
+  left: 410px;
+}
+
+.lecTypeLabel {
   position: absolute;
   width: 100px;
   height: 27px;
@@ -365,10 +400,10 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
-.type {
+.lecType {
   position: absolute;
   width: 200px;
   height: 20px;
@@ -379,7 +414,7 @@
   background: linear-gradient(0deg, #ffffff, #ffffff),
     linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
 }
-.type:focus {
+.lecType:focus {
   border: 3px solid #2e9fed;
   outline: 0;
 }
@@ -396,7 +431,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
 .subject {
@@ -427,7 +462,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  
+
   color: #000000;
 }
 .department {
@@ -445,38 +480,106 @@
   border: 3px solid #2e9fed;
   outline: 0;
 }
-.lecturebtn {
-  position: absolute;
-  width: 220px;
-  height: 37.15px;
-  left: 0px;
-  top: -0px;
-  cursor: pointer;
-  border: 0;
-  background: #1395ed;
-  border-radius: 35px;
-  color: white;
-  
-}
-.studentbtn {
-  position: absolute;
-  width: 220px;
-  height: 37.15px;
-  left: 180px;
-  top: -0px;
-  cursor: pointer;
-  border: 0;
-  background: transparent;
-  border-radius: 35px;
-  color: black;
 
-}
-.addbookbtn {
+.stuTypeLabel {
   position: absolute;
   width: 100px;
+  height: 27px;
+  left: 30px;
+  top: 60px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+
+  color: #000000;
+}
+
+.stuType {
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  left: 150px;
+  top: 60px;
+  border: none;
+  outline: none;
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+}
+.stuType:focus {
+  border: 3px solid #2e9fed;
+  outline: 0;
+}
+
+.degreeLabel {
+  position: absolute;
+  width: 100px;
+  height: 27px;
+  left: 30px;
+  top: 100px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+
+  color: #000000;
+}
+.degree {
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  left: 150px;
+  top: 100px;
+  border: none;
+  outline: none;
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+}
+.degree:focus {
+  border: 3px solid #2e9fed;
+  outline: 0;
+}
+
+.batchLabel {
+  position: absolute;
+  width: 100px;
+  height: 27px;
+  left: 30px;
+  top: 140px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+
+  color: #000000;
+}
+.batch {
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  left: 150px;
+  top: 140px;
+  border: none;
+  outline: none;
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+}
+.batch:focus {
+  border: 3px solid #2e9fed;
+  outline: 0;
+}
+.addmemberbtn {
+  position: absolute;
+  width: 120px;
   height: 35px;
-  left: 40px;
-  top: 275px;
+  left: 600px;
+  top: 410px;
   color: white;
   background: #49f546;
   border-radius: 35px;
@@ -495,7 +598,7 @@
   width: 100px;
   height: 35px;
   left: 885px;
-  top: 455px;
+  top: 450px;
   border: 1px solid #5ccbd4;
   background: #5ccbd4;
   border-radius: 35px;

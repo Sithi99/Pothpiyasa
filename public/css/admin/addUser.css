@@ -347,7 +347,7 @@
   overflow: hidden;
 }
 .button-box {
-  width: 220px;
+  width: 250px;
   height: 37px;
   position: relative;
   margin: 30px auto;
@@ -356,7 +356,7 @@
 }
 
 .toggle-btn {
-  padding: 10px 30px;
+  padding: 5px 33px;
   cursor: pointer;
   background: transparent;
   border: 0;
@@ -368,10 +368,31 @@
   top: 0;
   left: 0;
   position: absolute;
-  width: 110px;
+  width: 125px;
   height: 100%;
   background: #2e9fed;
   border-radius: 35px;
+}
+
+#lecturebtn {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+
+  color: white;
+  
+}
+#studentbtn {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+
+  color: #000000;
+  
 }
 
 .toggleForm {

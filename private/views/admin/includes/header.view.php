@@ -8,7 +8,7 @@
     <title>Add Member</title>
     <link rel="stylesheet" href="<?=ROOT?>/css/includes/header.css">
     <link rel="stylesheet" href="<?=ROOT?>/css/includes/nav.css">
-    <link rel="stylesheet" href="<?=ROOT?>/css/addUser.css">
+    <link rel="stylesheet" href="<?=ROOT?>/css/admin/addUser.css">
     <link rel="stylesheet" href="<?=ROOT?>/css/all.min.css">
 </head>
 

@@ -10,6 +10,6 @@ class Users extends Controller
 
     public function add()
     {
-        $this->view('users.add');
+        $this->view('admin/users.add');
     }
 }

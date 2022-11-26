@@ -1,10 +1,10 @@
     <!-- page header  -->
 
-    <?php $this->view('includes/header') ?>
+    <?php $this->view('admin/includes/header') ?>
 
     <!-- navigation bar -->
 
-    <?php $this->view('includes/nav'); ?>
+    <?php $this->view('admin/includes/nav'); ?>
 
     <!-- body -->
 
@@ -13,7 +13,7 @@
         <!-- form -->
 
         <div class="bodyContainer02">
-            <form action="" method="POST">
+            <form action="" method="POST" >
                 <label for="title" class="titleLabel">Title</label>
                 <select id="title" class="title" name="title" id="title">
                     <option value="">--- Choose Type ---</option>
@@ -142,4 +142,4 @@
 
     </div>
 
-    <?php $this->view('includes/footer'); ?>
+    <?php $this->view('admin/includes/footer'); ?>

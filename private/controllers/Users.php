@@ -30,8 +30,12 @@ class Users extends Controller
                 $userData['Address'] = $_POST['Address'];
                 $userData['Email'] = $_POST['Email'];
                 $userData['MemberType'] = $_POST['MemberType'];
-                //$userData['Password'] =
-                //$userData['UserName'] =
+                //Password
+                $password = $_POST['RegistrationNo'];
+                $hashedPassword = sha1($password);
+                $userData['Password'] =  $hashedPassword;
+                //UserName
+                $userData['UserName'] = $_POST['RegistrationNo'];
 
 
                 //Checking member type
@@ -106,7 +110,6 @@ class Users extends Controller
 
                 //$userData['AddStaffID'] =
                 $userData['AddDate'] = date("Y-m-d H:i:s");
-
 
 
                 $user->insert($userData);

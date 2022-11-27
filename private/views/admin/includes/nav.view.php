@@ -16,7 +16,7 @@
 
         <div class="dashbordIconBack" id="dashbordIconBack"></div>
         <i class="fa-solid fa-house-chimney" id="dashbordIcon"></i>
-        <p class="dashbordLabel" id="dashbordLabel"><a href="#">Dashboard</a></p>
+        <p class="dashbordLabel" id="dashbordLabel"><a href="<?= ROOT?>">Dashboard</a></p>
 
 
 
@@ -59,7 +59,7 @@
 
         <div class="memberlist" id="memberlist">
             <ul>
-                <li class="addmember"><a href="#">Add Member</a></li>
+                <li class="addmember"><a href="<?= ROOT?>/users/add">Add Member</a></li>
                 <li class="addmember"><a href="#">View Member</a></li>
             </ul>
             <!-- <p class="addBook">Add Book</p>

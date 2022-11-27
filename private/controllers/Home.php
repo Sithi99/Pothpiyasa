@@ -13,6 +13,6 @@ class Home extends Controller
         // $user->update(3,$arr);
         // $user->delete(3);
     
-        //$this->view('home', ['rows' => $data]);
+        $this->view('admin/home');
     }
 }

@@ -4,6 +4,7 @@
 //This contain all methods that common to all controllers
 class Controller
 {
+    
     public function view($view, $data = array())
     {
         //Save data to variables, array keys become variable names
@@ -30,5 +31,12 @@ class Controller
             echo "model file didn't exist";
         }
         return false;
+    }
+
+    public function redirect($link)
+    {
+        //Eg: (Location: http://localhost/pothpiyasa/public/home)
+        header("Location: ". ROOT . "/".trim($link,"/"));
+        die;
     }
 }

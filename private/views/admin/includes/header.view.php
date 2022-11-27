@@ -14,7 +14,7 @@
 
 <body>
 <div class="header">
-        <p class="operation">Add Book</p>
+        <p class="operation">Add Member</p>
         <input type="text" class="searchbox">
         <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
         <p class="search">Search</p>

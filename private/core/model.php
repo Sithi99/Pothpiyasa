@@ -2,6 +2,7 @@
 
 class Model extends Database
 {
+    public $errors = array();
     
     public function __construct()
     {

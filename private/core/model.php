@@ -32,6 +32,11 @@ class Model extends Database
 
     public function insert($data)
     {
+        // if(method_exists($this,'hash_password'))
+        // {
+        //     $data = $this->hash_password($data);
+        // }
+        
         //Getting all the keys of associative array($data)
         $keys = array_keys($data);
         $columns = implode(',', $keys); //(FirstName,MiddleName ...)

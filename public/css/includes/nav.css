@@ -47,16 +47,29 @@
 .profileName {
   color: white;
   position: absolute;
-  top: 120px;
-  left: 100px;
+  top: 126px;
+  left: 84px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 29px;
 }
 
-.profileID {
+/* .profileID {
+  
   color: white;
   position: absolute;
-  top: 140px;
+  top: 142px;
   left: 110px;
-}
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 29px;
+} */
 .toggelBar {
   position: absolute;
   width: 268px;

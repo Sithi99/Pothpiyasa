@@ -42,4 +42,10 @@ class User extends Model
 
           return false;
      }
+
+     // public function hash_password($data)
+     // {
+     //      $data['Password'] = password_hash($data['Password'], PASSWORD_DEFAULT);
+     //      return $data;
+     // }
 }

@@ -20,5 +20,5 @@
         <p class="search">Search</p>
         <div class="notificationIconBack"></div>
         <i class="fa-solid fa-bell" id="notificationIcon"></i>
-        <p class="logout"><a href="#">Logout</a></p>
+        <p class="logout"><a href="<?=ROOT?>/logout">Logout</a></p>
 </div>

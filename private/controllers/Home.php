@@ -4,15 +4,10 @@ class Home extends Controller
 {
     public function index()
     {
-    
-        //$user = new User();
-
-        //$data = $user->where('FirstName','Sithija');
-        //$data = $user->findAll();
-        // $user->insert($arr);
-        // $user->update(3,$arr);
-        // $user->delete(3);
-    
+        if(!Auth::logged_in())
+        {
+            $this->redirect('login');
+        }
         $this->view('admin/home');
     }
 }

@@ -32,14 +32,14 @@
                     echo '<p class="error" >Invalid User ID / Password</p>';
                 }
             ?>
-            <form action="login_admin.php" method="POST">
+            <form method="POST">
                 <div class="txt_field">
-                    <input type="text" name="user_id" id="user_id" required>
+                    <input type="text" name="UserID" id="user_id" required>
                     <span></span>
                     <label for="user_id">User ID</label>
                 </div>
                 <div class="txt_field">
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="Password" id="password" required>
                     <span></span>
                     <label for="password">Password</label>
                 </div>

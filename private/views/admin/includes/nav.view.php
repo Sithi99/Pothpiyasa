@@ -4,8 +4,8 @@
 
     <div class="profile">
         <img src="<?= ROOT ?>/img/profile2.png" alt="" srcset="" class="profileImg" id="profileImg">
-        <p class="profileName" id="profileName">Profile Name</p>
-        <p class="profileID" id="profileID">Profile ID</p>
+        <p class="profileName" id="profileName"><?=Auth::profileName()?> </p>
+        <!-- <p class="profileID" id="profileID"></p> -->
     </div>
 
     <!-- dashbord -->
@@ -59,8 +59,9 @@
 
         <div class="memberlist" id="memberlist">
             <ul>
+                <!-- Here gives path to the controller, from controller partcular view call -->
                 <li class="addmember"><a href="<?= ROOT?>/users/add">Add Member</a></li>
-                <li class="addmember"><a href="#">View Member</a></li>
+                <li class="addmember"><a href="<?= ROOT?>/users/viewusers">View Member</a></li>
             </ul>
             <!-- <p class="addBook">Add Book</p>
                     <p class="viewBook">View Book</p> -->

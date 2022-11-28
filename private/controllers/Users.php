@@ -31,9 +31,7 @@ class Users extends Controller
                 $userData['Email'] = $_POST['Email'];
                 $userData['MemberType'] = $_POST['MemberType'];
                 //Password
-                $password = $_POST['RegistrationNo'];
-                $hashedPassword = sha1($password);
-                $userData['Password'] =  $hashedPassword;
+                $userData['Password'] = $_POST['RegistrationNo'];
                 //UserName
                 $userData['UserName'] = $_POST['RegistrationNo'];
 
@@ -122,5 +120,11 @@ class Users extends Controller
         }
 
         $this->view('admin/users.add',['errors'=>$errors]);
+    }
+
+    public function viewusers(){
+
+        $this->view('admin/users.view');
+
     }
 }

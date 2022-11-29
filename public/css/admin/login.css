@@ -189,13 +189,12 @@ input[type="submit"] {
   border: none;
 }
 
-p.error{
-    
-    font-size: 18px;
-    text-align: center;
-    padding: 5px;
-    color: rgb(108, 24, 24);
-    background: rgb(246, 138, 138);
+p.error {
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+  color: rgb(108, 24, 24);
+  background: rgb(246, 138, 138);
 }
 
 /* Footer */
@@ -212,8 +211,8 @@ p.error{
   text-align: center;
 }
 
-.copyright{
-    font-size: 16px;
-    color: #1c98ed;
-    font-weight: 500;
+.copyright {
+  font-size: 16px;
+  color: #1c98ed;
+  font-weight: 500;
 }

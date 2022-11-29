@@ -5,5 +5,3 @@
 <script src="<?=ROOT?>/js/admin/addUser.js"></script>
 
 </html>
-
-    

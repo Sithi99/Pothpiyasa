@@ -6,7 +6,7 @@ class Users extends Controller
 
     public function index()
     {
-        //$this->view('login');
+        $this->view('admin/users.view');
     }
 
     public function add()
@@ -121,10 +121,5 @@ class Users extends Controller
 
         $this->view('admin/users.add',['errors'=>$errors]);
     }
-
-    public function viewusers(){
-
-        $this->view('admin/users.view');
-
-    }
+    
 }

@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<div class="header">
+    <div class="header">
         <p class="operation">Add Member</p>
         <input type="text" class="searchbox">
         <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
@@ -21,4 +21,4 @@
         <div class="notificationIconBack"></div>
         <i class="fa-solid fa-bell" id="notificationIcon"></i>
         <p class="logout"><a href="<?=ROOT?>/logout">Logout</a></p>
-</div>
+    </div>

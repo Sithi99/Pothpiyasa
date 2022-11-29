@@ -25,8 +25,8 @@
 
 <!-- navigation bar -->
 
-<?php $this->view('admin/includes/nav'); ?>
+<?php include('../private/views/admin/includes/nav.view.php'); ?>
 
 <!-- body -->
     
-<?php $this->view('admin/includes/footer'); ?>
+<?php include('../private/views/admin/includes/footer.view.php'); ?>

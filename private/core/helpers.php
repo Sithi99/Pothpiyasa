@@ -10,7 +10,6 @@ function get_var($key)
     
     return "";
     
-
 }
 
 //For selecting input fields

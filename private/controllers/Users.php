@@ -6,7 +6,14 @@ class Users extends Controller
 
     public function index()
     {
-        $this->view('admin/users.view');
+        if(!Auth::logged_in())
+        {
+            $this->redirect('login');
+        }
+
+        $user = new User();
+        $data = $user->findAll();
+        $this->view('admin/users.view',['rows' => $data]);
     }
 
     public function add()
@@ -31,7 +38,7 @@ class Users extends Controller
                 $userData['Email'] = $_POST['Email'];
                 $userData['MemberType'] = $_POST['MemberType'];
                 //Password
-                $userData['Password'] = $_POST['RegistrationNo'];
+                $userData['Password'] = password_hash($_POST['Password'], PASSWORD_DEFAULT);
                 //UserName
                 $userData['UserName'] = $_POST['RegistrationNo'];
 

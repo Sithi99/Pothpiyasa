@@ -8,6 +8,7 @@ class User extends Model
      //Validation is differ from one model to another
      public function validate($DATA)
      {
+          
           $this->errors = array();
 
           //Check for first name
@@ -51,7 +52,7 @@ class User extends Model
 
      // public function hash_password($data)
      // {
-     //      $data['Password'] = password_hash($data['Password'], PASSWORD_DEFAULT);
+     //   $data['Password'] = password_hash($data['Password'], PASSWORD_DEFAULT);
      //      return $data;
      // }
 }

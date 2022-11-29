@@ -17,7 +17,7 @@ class Login extends Controller
             
                 //$row[0], (stdClass Object ( [UserID] => 1 [RegistrationNo] => 2020/CS/212..)
                 
-                if($_POST['Password'] == $row->Password){
+                if(password_verify($_POST['Password'],$row->Password)){
                     
                     Auth::authenticate($row);
                     $this->redirect('home');

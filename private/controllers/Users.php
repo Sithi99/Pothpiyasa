@@ -38,7 +38,8 @@ class Users extends Controller
                 $userData['Email'] = $_POST['Email'];
                 $userData['MemberType'] = $_POST['MemberType'];
                 //Password
-                $userData['Password'] = password_hash($_POST['Password'], PASSWORD_DEFAULT);
+                // $userData['Password'] = password_hash($_POST['RegistrationNo'], PASSWORD_DEFAULT);
+                $userData['Password'] = $_POST['RegistrationNo'];
                 //UserName
                 $userData['UserName'] = $_POST['RegistrationNo'];
 

@@ -14,18 +14,31 @@ class Login extends Controller
 
                 //$row comes as array of items (Array ( [0] => stdClass Object ( [UserID] => 1 [RegistrationNo] => 2020/CS/212....)
                 $row = $row[0];
-            
+
                 //$row[0], (stdClass Object ( [UserID] => 1 [RegistrationNo] => 2020/CS/212..)
+
+                // $userInput = $_POST['Password'];
+                // echo $userInput;
+                // $hashedPassword = $row->Password;
+                // echo $hashedPassword;
+
                 
-                if(password_verify($_POST['Password'],$row->Password)){
-                    
+                if ($_POST['Password'] == $row->Password) {
+
                     Auth::authenticate($row);
                     $this->redirect('home');
+
+                } else {
+                    $errors['UserID'] = "Invalid User ID / Password";
                 }
+
+            } else {
+
+                $errors['UserID'] = "Invalid User ID";
+
             }
-            
-            $errors['UserID'] = "Invalid User ID / Password";
-            
+
+
 
 
         }

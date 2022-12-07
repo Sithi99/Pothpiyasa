@@ -38,20 +38,29 @@ class Users extends Controller
                 $userData['Email'] = $_POST['Email'];
                 $userData['MemberType'] = $_POST['MemberType'];
                 //Password
-                // $userData['Password'] = password_hash($_POST['RegistrationNo'], PASSWORD_DEFAULT);
-                $userData['Password'] = $_POST['RegistrationNo'];
+                $userData['Password'] = password_hash($_POST['RegistrationNo'], PASSWORD_DEFAULT);
                 //UserName
                 $userData['UserName'] = $_POST['RegistrationNo'];
+                //UserID
+                $userData['UserID'] = random_string(11);
+                //AddStaffID
+                $userData['AddStaffID'] = $_SESSION['USER']->UserID;
+                //AddDate
+                $userData['AddDate'] = date("Y-m-d H:i:s");
+
 
 
                 //Checking member type
                 if($userData['MemberType'] == 'Library-Staff')
                 {
                     $userData['JobType'] = 'Library-Staff';
-
+                    
                     $libStaff = new LibraryStaff();
 
-                    //$libStaff->insert($libStaffData)
+                    //For LibraryStaff table
+                    $libStaffData['UserID'] = $userData['UserID'];
+
+                    $libStaff->insert($libStaffData);
 
                 }
                 
@@ -92,6 +101,7 @@ class Users extends Controller
 
                     $lecturer = new Lecturer();
 
+                    $lecturerData['UserID'] = $userData['UserID'];
                     $lecturerData['LecType'] = $_POST['LecType'];
                     $lecturerData['Subject'] = $_POST['Subject'];
                     $lecturerData['Department'] = $_POST['Department'];
@@ -106,6 +116,7 @@ class Users extends Controller
 
                     $student = new Student();
 
+                    $studentData['UserID'] = $userData['UserID'];
                     $studentData['StudentType'] = $_POST['StudentType'];
                     $studentData['Degree'] = $_POST['Degree'];
                     $studentData['Batch'] = $_POST['Batch'];
@@ -113,10 +124,6 @@ class Users extends Controller
                     $student->insert($studentData);
 
                 }
-
-                //$userData['AddStaffID'] =
-                $userData['AddDate'] = date("Y-m-d H:i:s");
-
 
                 $user->insert($userData);
                 $this->redirect('home');

@@ -33,3 +33,18 @@ function esc($var)
     return htmlspecialchars($var);
 
 }
+
+function random_string($length)
+{
+    $array = array(0,1,2,3,4,5,6,7,8,9);
+    $text = "";
+
+    for($x = 0; $x < $length; $x++)
+    {
+
+        $random = rand(0,11);
+        $text .= $array[$random];
+    }
+
+    return $text;
+}

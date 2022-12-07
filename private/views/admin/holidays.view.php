@@ -15,6 +15,8 @@
     <!-- navigation bar -->
 
     <?php include('../private/views/admin/includes/nav.view.php'); ?>
+
+    
     
 
     <!-- body -->

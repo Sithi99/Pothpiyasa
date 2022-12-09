@@ -32,9 +32,9 @@ class User extends Model
           }
 
           //Check if email exist
-          if ($this->where('Email', ($DATA['Email']))) {
-               $this->errors['Email'] = "This email is already in use";
-          }
+          // if ($this->where('Email', ($DATA['Email']))) {
+          //      $this->errors['Email'] = "This email is already in use";
+          // }
 
 
           if (count($this->errors) == 0) {

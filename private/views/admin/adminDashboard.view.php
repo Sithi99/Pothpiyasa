@@ -1,4 +1,4 @@
-<?php include('../private/views/admin/includes/header.view.php'); ?>
+<?php include('../private/views/includes/header.view.php'); ?>
 
 <body>
 <div class="header">
@@ -13,11 +13,15 @@
 
 <!-- navigation bar -->
 
-<?php include('../private/views/admin/includes/nav.view.php'); ?>
+<?php include('../private/views/includes/nav.view.php'); ?>
 
 
 <!-- Calendar -->
-<?php include('../private/views/admin/includes/calendar.view.php'); ?>
+<?php include('../private/views/includes/calendar.view.php'); ?>
+
+<!-- Online Users -->
+<?php include('../private/views/includes/onlineUsers.view.php'); ?>
+
 
     
-<?php include('../private/views/admin/includes/footer.view.php'); ?>
+<?php include('../private/views/includes/footer.view.php'); ?>

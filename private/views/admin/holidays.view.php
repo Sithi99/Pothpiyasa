@@ -1,4 +1,4 @@
-<?php include('../private/views/admin/includes/header.view.php'); ?>
+<?php include('../private/views/includes/header.view.php'); ?>
 
 
 <body>
@@ -14,11 +14,11 @@
 
     <!-- navigation bar -->
 
-    <?php include('../private/views/admin/includes/nav.view.php'); ?>
+    <?php include('../private/views/includes/nav.view.php'); ?>
 
     
     
 
     <!-- body -->
 
-    <?php include('../private/views/admin/includes/footer.view.php'); ?>
+    <?php include('../private/views/includes/footer.view.php'); ?>

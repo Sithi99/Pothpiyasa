@@ -206,7 +206,7 @@
   top: 320px;
   left: 235px;
 
-  border-radius: 0px 0px 20px 0px;
+  /* border-radius: 0px 0px 20px 0px; */
 }
 .booklist ul {
   list-style: none;
@@ -215,7 +215,6 @@
   background: #0a3451;
   /* text-align: center; */
   width: 130px;
-  height: 20px;
   border: white solid 0.5px;
   padding: 3px;
 }

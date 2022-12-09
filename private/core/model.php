@@ -44,12 +44,13 @@ class Model extends Database
         return $this->query($query, $data);
     }
 
-    public function update($id,$data)
+    public function update($column,$id,$data)
     {
+        //$column contains column that check with id (eg: UserID)
         
         $str = "";
 
-        //$data is an associative array
+        //$data is an associative array that contain post data
         foreach ($data as $key => $value){
             $str .= $key . "=:" . $key . ","; 
         }
@@ -59,17 +60,19 @@ class Model extends Database
         $str = trim($str, ","); //Remove "," in start and end of string
 
         $data['id'] = $id;
-        $query = "UPDATE $this->table SET $str WHERE id = :id";
+        
+        $query = "UPDATE $this->table SET $str WHERE $column = :id";
+
         //UPDATE user SET FirstName=:FirstName,MiddleName=:MiddleName WHERE id = :id;
 
         //Here, supply query data seperately
         return $this->query($query, $data);
     }
 
-    public function delete($id)
+    public function delete($column,$id)
     {
         
-        $query = "DELETE FROM $this->table WHERE id = :id";
+        $query = "DELETE FROM $this->table WHERE $column = :id";
 
         //Here, supply query data seperately
         $data['id'] = $id;

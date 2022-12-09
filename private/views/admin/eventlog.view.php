@@ -1,5 +1,5 @@
 
-<?php include('../private/views/admin/includes/header.view.php'); ?>
+<?php include('../private/views/includes/header.view.php'); ?>
 
 <body>
 <div class="header">
@@ -14,8 +14,8 @@
 
 <!-- navigation bar -->
 
-<?php include('../private/views/admin/includes/nav.view.php'); ?>
+<?php include('../private/views/includes/nav.view.php'); ?>
 
 
 <!-- Footer     -->
-<?php include('../private/views/admin/includes/footer.view.php'); ?>
+<?php include('../private/views/includes/footer.view.php'); ?>

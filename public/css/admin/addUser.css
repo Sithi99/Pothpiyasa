@@ -672,6 +672,25 @@
   text-align: center;
 }
 
+.deletememberbtn{
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  left: 600px;
+  top: 410px;
+  color: white;
+  background: rgb(245, 78, 78);
+  border-radius: 35px;
+  border: 0;
+  cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
 .backbtn {
   position: absolute;
   width: 100px;

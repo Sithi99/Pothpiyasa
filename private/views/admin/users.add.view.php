@@ -1,4 +1,4 @@
-<?php include('../private/views/admin/includes/header.view.php'); ?>
+<?php include('../private/views/includes/header.view.php'); ?>
 
 
 <body>
@@ -14,7 +14,9 @@
 
     <!-- navigation bar -->
 
-    <?php include('../private/views/admin/includes/nav.view.php'); ?>
+    <?php include('../private/views/includes/nav.view.php'); ?>
+
+
 
 
     <!-- body -->
@@ -92,9 +94,9 @@
                     required>
 
 
-                <label for="address" class="addressLable">Address</label>
-                <textarea name="Address" class="address" id="address" cols="30" rows="10"
-                    value="<?= get_var('Address') ?>" required></textarea>
+                    <label for="address" class="addressLable">Address</label>
+                <input type="text" name="Address" class="address" id="address" value="<?= get_var('Address') ?>" 
+                    required>
 
 
                 <label for="email" class="emailLable">Email</label>
@@ -216,12 +218,14 @@
                         </select>
                     </div>
                 </div>
-                <button class="addmemberbtn" name="addMember">Add Member</button>
+                <button class="addmemberbtn" name="addMember" onclick="openPopup()">Add Member</button>
 
             </form>
         </div>
-        <button class="backbtn"><a href="<?= ROOT ?>">Back</a></button>
+        <button class="backbtn"><a href="<?= ROOT?>">Back</a></button>
 
     </div>
 
-    <?php include('../private/views/admin/includes/footer.view.php'); ?>
+    <?php include('../private/views/includes/popup.view.php'); ?>
+
+    <?php include('../private/views/includes/footer.view.php'); ?>

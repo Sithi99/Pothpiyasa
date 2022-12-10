@@ -189,6 +189,5 @@
 
     </div>
 
-    <?php include('../private/views/includes/popup.view.php'); ?>
 
     <?php include('../private/views/includes/footer.view.php'); ?>

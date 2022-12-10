@@ -12,7 +12,7 @@ class Users extends Controller
 
         $user = new User();
         $data = $user->findAll();
-
+        
         //$data comes as array of items (Array ( [0] => stdClass Object ( [UserID] => 1 [RegistrationNo] => 2020/CS/212....)
 
         //In view method, it extract the data (['rows'] => $data; --> $rows = $data;)
@@ -25,6 +25,7 @@ class Users extends Controller
         $errors = array();
 
         if (count($_POST) > 0) {
+            
             $user = new User();
 
             if ($user->validate($_POST)) {
@@ -141,6 +142,7 @@ class Users extends Controller
 
             }
         }
+        
 
         $this->view('admin/users.add', ['errors' => $errors]);
     }
@@ -285,7 +287,6 @@ class Users extends Controller
             $lecturer = new Lecturer();
 
             $lecturer->delete('UserID', $id);
-
 
             $this->redirect('users');
 

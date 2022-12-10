@@ -1,135 +1,146 @@
+.container_view {
+  position: absolute;
+  width: 1210px;
+  height: 590px;
+  left: 306px;
+  top: 104px;
+
+  background: #ffffff;
+  border-radius: 35px;
+}
+
 .user_table {
-    position: absolute;
-    top: 15%;
-    left: 22%;
-    padding: 10px;
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    margin-top: 30px;
+  position: absolute;
+  top: 2%;
+  left: 0.6%;
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 30px;
 }
 
 .user_table th {
-    border-bottom: 1px solid #1395ed;
-    padding: 12px;
-    font-size: 18px;
-    letter-spacing: 0.7px;
-    background-color: #1395ed;
-    color: white;
+  border-bottom: 1px solid #1395ed;
+  padding: 12px;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  background-color: #1395ed;
+  color: white;
 
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
 }
 
 .user_table td {
-    font-size: 15px;
-    padding: 12px;
+  font-size: 15px;
+  padding: 12px;
 
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
 }
 
 .user_table tr:nth-child(even) {
-    background: #effaff;
+  background: #D9D9D9;
 }
 
 .user_table tr:hover {
-    background: #7493bc;
-    color: white;
+  background: #7493bc;
+  color: white;
 }
 
 .editbtn {
-    background: #dea01e;
-    border: none;
-    color: white;
-    padding: 5px;
-    width: 100px;
-    height: 30px;
-    border-radius: 35px;
-    cursor: pointer;
+  background: #dea01e;
+  border: none;
+  color: white;
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  border-radius: 35px;
+  cursor: pointer;
 
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
 }
 
 .editbtn a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .deletebtn {
-    background: #f25e5b;
-    border: none;
-    color: white;
-    padding: 5px;
-    width: 100px;
-    height: 30px;
-    border-radius: 35px;
-    cursor: pointer;
+  background: #f25e5b;
+  border: none;
+  color: white;
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  border-radius: 35px;
+  cursor: pointer;
 
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
 }
 
 .deletebtn a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .backBookViewbtn {
-    position: absolute;
-    width: 89px;
-    height: 33px;
-    left: 1000px;
-    top: 565px;
-    border: 1px solid #5ccbd4;
-    background: #5ccbd4;
-    border-radius: 35px;
+  position: absolute;
+  width: 89px;
+  height: 33px;
+  left: 1000px;
+  top: 565px;
+  border: 1px solid #5ccbd4;
+  background: #5ccbd4;
+  border-radius: 35px;
 
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .backBookViewbtn a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 /* pagination styles  */
 
 .pagination {
-    position: fixed;
-    top: 610px;
-    left: 320px;
+  position: fixed;
+  top: 610px;
+  left: 320px;
 }
 
 .pagingheader {
-    border: 1px solid lightgray;
-    padding: 5px;
-    background: none;
+  border: 1px solid lightgray;
+  padding: 5px;
+  background: none;
 }
 
 .paginationTr:hover {
-    background: none;
+  background: none;
 }

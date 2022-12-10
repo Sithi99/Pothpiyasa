@@ -1,17 +1,23 @@
 
-
 .popup{
     position: absolute;
     width: 380px;
     background: white;
     border-radius: 10px;
-    top: 32%;
+    top: -15%;
     left: 45%;
     text-align: center;
     padding: 0 30px 30px;
     color: #333;
     scale: 0.1;
     visibility: hidden;
+    transition: transform 0.4s, top 0.4s ; 
+}
+
+.open_popup{
+    visibility: visible;
+    top: 32%;
+    scale: 1;
 }
 
 .popup img{
@@ -48,3 +54,38 @@
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 
 }
+
+.deletPopup{
+    position: absolute;
+    width: 380px;
+    background: white;
+    border-radius: 10px;
+    top: 32%;
+    left: 45%;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    scale: 0.1;
+    visibility: hidden;
+}
+
+.deletPopup button{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 0;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* .cancelButton{
+
+} */
+
+/* .deleteButton{
+
+} */

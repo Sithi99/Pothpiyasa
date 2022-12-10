@@ -36,6 +36,11 @@ class User extends Model
           //      $this->errors['Email'] = "This email is already in use";
           // }
 
+          //Check if registration no exist
+          if ($this->where('RegistrationNo', ($DATA['RegistrationNo']))) {
+               $this->errors['RegistrationNo'] = "This Registration Number is already exist";
+          }
+
 
           if (count($this->errors) == 0) {
                return true;

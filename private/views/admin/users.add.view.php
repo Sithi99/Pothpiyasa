@@ -225,7 +225,9 @@
         <button class="backbtn"><a href="<?= ROOT?>">Back</a></button>
 
     </div>
-
-    <?php include('../private/views/includes/popup.view.php'); ?>
-
+    
+    
+    <?php include('../private/views/includes/popup.add.view.php'); ?>
+    
+    
     <?php include('../private/views/includes/footer.view.php'); ?>

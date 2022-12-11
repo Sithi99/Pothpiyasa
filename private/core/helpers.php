@@ -31,10 +31,6 @@ function get_select($key,$value,$default = "")
     
     return "";
 
-    
-
-    
-
 }
 
 //Escape harmful code

@@ -40,32 +40,56 @@
             <div class="days_holidays"></div>
         </div>
     </div>
-    <div class="holidays_form">
-        <div class="scheduleForm">
+    <div id="holidays_form1" class="holidays_form1">
+        <div class="FormHeader">
+            <i onclick="closeForm1()" class="fas fa-window-close"></i>
             <h3>Schedule Form</h3>
         </div>
         <form method="POST">
             <label class="holiday_Label" for="holiday_title">Title</label>
-            <br>
-            <input class="holiday_input" type="text" id="holiday_title" name="Holiday_title" required>
+            <input class="holiday_input" type="text" id="holiday_title" name="Holiday_title">
             <br><br>
 
             <label class="holiday_Label" for="holiday_description">Description</label>
-            <br>
             <input class="holiday_input" type="text" id="holiday_description" name="Holiday_description">
             <br><br>
 
             <label class="holiday_Label" for="holiday_start">Start</label>
-            <br>
             <input class="holiday_input" type="date" id="holiday_start" name="Holiday_start">
             <br><br>
 
             <label class="holiday_Label" for="holiday_end">End</label>
-            <br>
             <input class="holiday_input" type="date" id="holiday_end" name="Holiday_end">
 
-            <button class="addholidaybtn" name="addHoliday" >Save</button>
-            <button class="cancelholidaybtn" name="cancelHoliday" >Cancel</button>
+            <button class="addholidaybtn" name="addHoliday">Save</button>
+            <button onclick="closeForm1()" class="cancelholidaybtn" name="cancelHoliday">Cancel</button>
+
+        </form>
+    </div>
+
+    <div id="holidays_form2" class="holidays_form2">
+        <div class="FormHeader">
+            <i onclick="closeForm2()" class="fas fa-window-close"></i>
+            <h3>Schedule Form</h3>
+        </div>
+        <form method="POST">
+            <label class="holiday_Label" for="holiday_title">Title</label>
+            <input class="holiday_input" type="text" id="holiday_title" name="Holiday_title" required>
+            <br><br>
+
+            <label class="holiday_Label" for="holiday_description">Description</label>
+            <input class="holiday_input" type="text" id="holiday_description" name="Holiday_description">
+            <br><br>
+
+            <label class="holiday_Label" for="holiday_start">Start</label>
+            <input class="holiday_input" type="date" id="holiday_start" name="Holiday_start">
+            <br><br>
+
+            <label class="holiday_Label" for="holiday_end">End</label>
+            <input class="holiday_input" type="date" id="holiday_end" name="Holiday_end">
+
+            <button class="editholidaybtn" name="editHoliday">Edit</button>
+            <button class="deleteholidaybtn" name="deleteHoliday">Delete</button>
 
         </form>
     </div>

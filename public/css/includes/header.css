@@ -29,7 +29,7 @@ body {
     position: absolute;
     width: 254px;
     height: 40px;
-    left: 650px;
+    left: 670px;
     top: 8px;
     border: none;
     outline: none;
@@ -43,14 +43,14 @@ body {
   #searchIcon {
     position: absolute;
     top: 19px;
-    left: 680px;
+    left: 700px;
     font-size: 20px;
     color: #1395ed;
   }
   .search {
     position: absolute;
-    left: 820px;
-    top: -9px;
+    left: 830px;
+    top: -10px;
   
     font-family: "Inter";
     font-style: normal;
@@ -65,7 +65,7 @@ body {
     position: absolute;
     width: 37px;
     height: 29px;
-    left: 990px;
+    left: 1030px;
     top: 15px;
     background: #1395ed;
     border-radius: 35px;
@@ -73,7 +73,7 @@ body {
   #notificationIcon {
     position: absolute;
     top: 18px;
-    left: 1000px;
+    left: 1040px;
     color: white;
     font-size: 20px;
   }
@@ -81,7 +81,7 @@ body {
     position: absolute;
     width: 108px;
     height: 25px;
-    left: 1090px;
+    left: 1140px;
     top: -10px;
     font-family: "Inter";
     font-style: normal;

@@ -44,7 +44,7 @@ const renderHolidayCalendar = () => {
   ];
 
   document.querySelector(".date_holidays h1").innerHTML = months[date_holidays.getMonth()];
-  
+
   document.querySelector(".date_holidays p").innerHTML = new Date().toDateString();
 
   let days = "";
@@ -63,9 +63,9 @@ const renderHolidayCalendar = () => {
       date_holidays.getMonth() === new Date().getMonth() &&
       date_holidays.getFullYear() === new Date().getFullYear()
     ) {
-      days += `<div class = "today_holidays">${i}</div>`;
+      days += `<div onclick="openForm1()" class = "today_holidays">${i}</div>`;
     } else {
-      days += `<div>${i}</div>`;
+      days += `<div onclick="openForm1()" >${i}</div>`;
     }
   }
 
@@ -88,3 +88,15 @@ document.querySelector(".next").addEventListener("click", () => {
 });
 
 renderHolidayCalendar();
+
+let holidays_form2 = document.getElementById("holidays_form2");
+let holidays_form1 = document.getElementById("holidays_form1");
+
+function openForm1() {
+
+  holidays_form1.classList.add("holidays_form1_popup");
+}
+
+function closeForm1(){
+  holidays_form1.classList.remove("holidays_form1_popup");
+}

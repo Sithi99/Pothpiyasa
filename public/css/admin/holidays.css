@@ -4,10 +4,10 @@
 
 .container_calendar_holidays {
     position: absolute;
-    width: 812px;
-    height: 600px;
-    left: 350px;
-    top: 100px;
+    width: 1012px;
+    height: 630px;
+    left: 400px;
+    top: 95px;
     color: black;
     display: flex;
     justify-content: center;
@@ -15,8 +15,8 @@
 }
 
 .calendar_holidays {
-    width: 832px;
-    height: 600px;
+    width: 1032px;
+    height: 610px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
@@ -24,7 +24,7 @@
 
 .month_holidays {
     color: black;
-    width: 832px;
+    width: 1032px;
     height: 60px;
     border-radius: 10px 10px 0px 0px;
     display: flex;
@@ -54,18 +54,18 @@
 }
 
 .weekdays_holidays {
-    width: 832px;
+    width: 1032px;
     height: 2rem;
-    padding: 0 10px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
 }
 
 .weekdays_holidays div {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
-    width: calc(828px / 7);
+    width: calc(1028px / 7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,8 +79,8 @@
 }
 
 .days_holidays div {
-    font-size: 1rem;
-    width: calc(812px / 7);
+    font-size: 1.1rem;
+    width: calc(1012px / 7);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -109,34 +109,56 @@
     border-radius: 5px;
 }
 
-/* Form */
+/* Form 1 */
 
-.holidays_form {
-    height: 450px;
-    background-color: white;
+.holidays_form1 {
+    height: 330px;
+    background-color: #D9D9D9;
     border-radius: 10px;
     box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
     position: absolute;
-    width: 280px;
-    left: 1215px;
-    top: 100px;
+    width: 430px;
+    left: 690px;
+    top: -120px;
     color: black;
+    scale: 0.1;
+    visibility: hidden;
+    transition: transform 0.5s, top 0.5s ; 
+
+
 }
 
-.scheduleForm {
-    border-bottom: 3px solid #2c9eea;
-    height: 60px;
+.holidays_form1_popup{
+    top: 220px;
+    scale: 1;
+    visibility: visible;
+}
+
+.FormHeader {
+    height: 30px;
     text-align: center;
+    padding-bottom: 35px;
     justify-content: center;
     align-items: center;
+    border-bottom: 3px solid #2c9eea;
+
 }
 
-.holidays_form h3 {
-    font-size: 24px;
+.FormHeader h3 {
+    font-size: 20px;
 }
 
-.holidays_form form {
-    margin: 20px 14%;
+.FormHeader i{
+    position: absolute;
+    top: 10px;
+    left: 400px;
+    font-size: 1.2rem;
+    color: red;
+    cursor: pointer;
+}
+
+.holidays_form1 form {
+    margin: 20px 12%;
 }
 
 .holiday_Label {
@@ -154,6 +176,7 @@
     position: absolute;
     width: 204px;
     height: 25px;
+    left: 180px;
     border: 2px solid #d9d9d9;
     background: white;
 }
@@ -167,8 +190,8 @@
     position: absolute;
     width: 100px;
     height: 35px;
-    top: 380px;
-    left: 30px;
+    top: 270px;
+    left: 70px;
     border: none;
     background: #49f546;
     border-radius: 10px;
@@ -187,10 +210,124 @@
     position: absolute;
     width: 100px;
     height: 35px;
-    top: 380px;
-    left: 160px;
+    top: 270px;
+    left: 270px;
     border: none;
     background: #2c9eea;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+/* Form 2 */
+
+
+.holidays_form2 {
+    height: 330px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
+    position: absolute;
+    width: 430px;
+    left: 690px;
+    top: 220px;
+    color: black;
+    visibility: hidden;
+}
+
+.holidays_form2_popup{
+    visibility: visible;
+}
+
+.FormHeader {
+    height: 30px;
+    text-align: center;
+    padding-bottom: 35px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #2c9eea;
+
+}
+
+.FormHeader h3 {
+    font-size: 20px;
+}
+
+.FormHeader i{
+    position: absolute;
+    top: 10px;
+    left: 400px;
+    font-size: 1.2rem;
+    color: red;
+    cursor: pointer;
+
+}
+
+.holidays_form2 form {
+    margin: 20px 12%;
+}
+
+.holiday_Label {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+
+    color: #000000;
+}
+
+
+.holiday_input {
+    position: absolute;
+    width: 204px;
+    height: 25px;
+    left: 180px;
+    border: 2px solid #d9d9d9;
+    background: white;
+}
+
+.holiday_input:focus {
+    border: 3px solid #2e9fed;
+    outline: 0;
+}
+
+.editholidaybtn {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 270px;
+    left: 70px;
+    border: none;
+    background: #dea01e;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.deleteholidaybtn {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 270px;
+    left: 270px;
+    border: none;
+    background: #f25e5b;
     border-radius: 10px;
     color: white;
     cursor: pointer;

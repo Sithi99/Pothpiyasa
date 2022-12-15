@@ -5,7 +5,7 @@
 .container_calendar_holidays {
     position: absolute;
     width: 1012px;
-    height: 630px;
+    height: 575px;
     left: 400px;
     top: 95px;
     color: black;
@@ -16,7 +16,7 @@
 
 .calendar_holidays {
     width: 1032px;
-    height: 610px;
+    height: 555px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
@@ -41,12 +41,12 @@
 }
 
 .month_holidays h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
-    margin: 14px auto;
-    padding-bottom: -4px;
+    margin: 10px auto;
+    padding-bottom: -12px;
 }
 
 .month_holidays p {
@@ -81,7 +81,7 @@
 .days_holidays div {
     font-size: 1.1rem;
     width: calc(1012px / 7);
-    height: 80px;
+    height: 72px;
     display: flex;
     justify-content: center;
     padding: 5px;
@@ -206,6 +206,11 @@
     text-align: center;
 }
 
+.addholidaybtn a{
+    text-decoration: none;
+    color: white;
+}
+
 .cancelholidaybtn {
     position: absolute;
     width: 100px;
@@ -238,12 +243,16 @@
     position: absolute;
     width: 430px;
     left: 690px;
-    top: 220px;
+    top: -120px;
     color: black;
+    scale: 0.1;
     visibility: hidden;
+    transition: transform 0.5s, top 0.5s ;
 }
 
 .holidays_form2_popup{
+    top: 220px;
+    scale: 1;
     visibility: visible;
 }
 
@@ -320,6 +329,11 @@
     text-align: center;
 }
 
+.editholidaybtn a{
+    text-decoration: none;
+    color: white;
+}
+
 .deleteholidaybtn {
     position: absolute;
     width: 100px;
@@ -339,3 +353,38 @@
     line-height: 24px;
     text-align: center;
 }
+
+
+.deleteholidaybtn a{
+    text-decoration: none;
+    color: white;
+}
+
+.holiday_details{
+    position: absolute;
+    top: 680px;
+    left: 730px;
+    display: flex;
+}
+
+.holiday_details i,p{
+    display: inline-block;
+}
+
+.holiday_details i{
+    margin-left: 20px;
+}
+
+.poya_holiday i{
+    color: yellow;
+}
+
+.academic_holiday i{
+    color: green;
+}
+
+.other_holiday i{
+    color: orange;
+}
+
+

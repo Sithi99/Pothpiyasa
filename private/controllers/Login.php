@@ -21,7 +21,18 @@ class Login extends Controller
                 if (password_verify($_POST['Password'],$row->Password)) {
 
                     Auth::authenticate($row);
-                    $this->redirect('home');
+
+                    
+                    if($row->JobType == "Administrator")
+                    {
+                        $this->redirect('AdminDashboard');
+
+                    }
+
+                    if($row->JobType == "Librarian")
+                    {
+                        // $this->redirect('Librarian');
+                    }
 
                 } else {
                     $errors['UserName'] = "Invalid User Name / Password";

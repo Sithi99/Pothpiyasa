@@ -110,8 +110,8 @@
 
         <div class="adminlist" id="adminlist">
             <ul>
-                <li class="getReports"><a href="#">Get Reports</a></li>
-                <li class="getReports"><a href="<?= ROOT?>/holidays">Add Holidays</a></li>
+                <li class="getReports"><a href="<?= ROOT?>/reports">Get Reports</a></li>
+                <li class="getReports"><a href="<?= ROOT?>/holidays">Holidays</a></li>
                 <li class="getReports"><a href="<?= ROOT?>/eventlog">Event Log</a></li>
                 <li class="getReports"><a href="#">Config Settings</a></li>
                 <li class="getReports"><a href="#">Backups</a></li>

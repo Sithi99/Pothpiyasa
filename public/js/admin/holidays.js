@@ -43,9 +43,11 @@ const renderHolidayCalendar = () => {
     "December",
   ];
 
-  document.querySelector(".date_holidays h1").innerHTML = months[date_holidays.getMonth()];
+  const dateHeader = document.querySelector(".date_holidays h1");
+  dateHeader.innerHTML = months[date_holidays.getMonth()];
 
-  document.querySelector(".date_holidays p").innerHTML = new Date().toDateString();
+  const dateParagraph = document.querySelector(".date_holidays p");
+  dateParagraph.innerHTML = new Date().toDateString();
 
   let days = "";
 
@@ -53,7 +55,7 @@ const renderHolidayCalendar = () => {
 
   //days = previous month's days
   for (let x = firstDayIndex; x > 0; x--) {
-    days += `<div class="prev-date_holidays">${prevLastDay - x + 1}</div>`;
+    days += `<div class="prev-date_holidays" id="${new Date(date_holidays.getFullYear(),date_holidays.getMonth(),x).toDateString()}">${prevLastDay - x + 1}</div>`;
   }
 
   //days = current month's days
@@ -63,15 +65,15 @@ const renderHolidayCalendar = () => {
       date_holidays.getMonth() === new Date().getMonth() &&
       date_holidays.getFullYear() === new Date().getFullYear()
     ) {
-      days += `<div onclick="openForm1()" class = "today_holidays">${i}</div>`;
+      days += `<div onclick="openForm1()" class = "today_holidays" id="${new Date(date_holidays.getFullYear(),date_holidays.getMonth(),i).toDateString()}">${i}</div>`;
     } else {
-      days += `<div onclick="openForm1()" >${i}</div>`;
+      days += `<div onclick="openForm1()" id="${new Date(date_holidays.getFullYear(),date_holidays.getMonth(),i).toDateString()}">${i}</div>`;
     }
   }
 
   //days = next month's days
   for (let j = 1; j <= nextDays; j++) {
-    days += `<div class="next-date_holidays">${j}</div>`;
+    days += `<div class="next-date_holidays" id="${new Date(date_holidays.getFullYear(),date_holidays.getMonth(),i).toDateString()}">${j}</div>`;
   }
 
   monthDays.innerHTML = days;
@@ -89,14 +91,51 @@ document.querySelector(".next").addEventListener("click", () => {
 
 renderHolidayCalendar();
 
-let holidays_form2 = document.getElementById("holidays_form2");
 let holidays_form1 = document.getElementById("holidays_form1");
+let holidays_form2 = document.getElementById("holidays_form2");
+
 
 function openForm1() {
-
   holidays_form1.classList.add("holidays_form1_popup");
 }
 
-function closeForm1(){
+function closeForm1() {
   holidays_form1.classList.remove("holidays_form1_popup");
 }
+
+
+
+fetch("http://localhost/pothpiyasa/public/holidays/getHolidayDetails")
+  .then((res) => res.json())
+  .then((data) => {
+    for (i = 0; i < data.length; i++) {
+      const holidayStartDate = new Date(data[i].Holiday_start).toDateString();
+
+      const holidayStartDateDiv = document.getElementById(holidayStartDate);
+
+      if (data[i].Holiday_title == "Poya Holiday") {
+        holidayStartDateDiv.style.backgroundColor = "Yellow";
+        // holidayStartDateDiv.style.color= "White";
+      }
+      else if (data[i].Holiday_title == "Academic Holiday") {
+        holidayStartDateDiv.style.backgroundColor = "Green";
+        holidayStartDateDiv.style.color= "White";
+      }
+      else{
+        holidayStartDateDiv.style.backgroundColor = "Orange";
+        holidayStartDateDiv.style.color= "White";
+      }
+
+      holidayStartDateDiv.removeEventListener("click", openForm1);
+
+      holidayStartDateDiv.addEventListener("click", () => {
+        holidays_form1.classList.remove("holidays_form1_popup");
+        holidays_form2.classList.add("holidays_form2_popup");
+      });
+
+    }
+  });
+
+  function closeForm2() {
+    holidays_form2.classList.remove("holidays_form2_popup");
+  }

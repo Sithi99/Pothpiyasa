@@ -17,8 +17,6 @@
     <?php include('../private/views/includes/nav.view.php'); ?>
 
 
-
-
     <!-- body -->
 
     <div class="bodyContainer01">
@@ -43,6 +41,14 @@
                 <label for="reg" class="regLabel">Reg#</label>
                 <input type="text" name="RegistrationNo" class="reg" id="reg" value="<?= get_var('RegistrationNo') ?>"
                     required>
+
+                <div class="errorRegistrationNo">
+                    <?php if (isset($errors['RegistrationNo'])): ?>
+                    <p>
+                        <?="*" . $errors['RegistrationNo'] ?>
+                    </p>
+                    <?php endif; ?>
+                </div>
 
                 <label for="firstName" class="firstNameLabel">First Name</label>
                 <input type="text" name="FirstName" class="firstName" id="firstName" value="<?= get_var('FirstName') ?>"
@@ -94,8 +100,8 @@
                     required>
 
 
-                    <label for="address" class="addressLable">Address</label>
-                <input type="text" name="Address" class="address" id="address" value="<?= get_var('Address') ?>" 
+                <label for="address" class="addressLable">Address</label>
+                <input type="text" name="Address" class="address" id="address" value="<?= get_var('Address') ?>"
                     required>
 
 
@@ -218,16 +224,16 @@
                         </select>
                     </div>
                 </div>
-                <button class="addmemberbtn" name="addMember" onclick="openPopup()">Add Member</button>
+                <button class="addmemberbtn" name="addMember">Add Member</button>
 
             </form>
         </div>
-        <button class="backbtn"><a href="<?= ROOT?>">Back</a></button>
+        <button class="backbtn"><a href="<?= ROOT ?>">Back</a></button>
 
     </div>
-    
-    
+
+
     <?php include('../private/views/includes/popup.add.view.php'); ?>
-    
-    
+
+
     <?php include('../private/views/includes/footer.view.php'); ?>

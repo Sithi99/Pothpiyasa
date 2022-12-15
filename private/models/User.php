@@ -43,10 +43,15 @@ class User extends Model
 
 
           if (count($this->errors) == 0) {
+
                return true;
+               
+
           }
 
           return false;
+     
+          
      }
 
 

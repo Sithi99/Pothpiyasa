@@ -1,6 +1,6 @@
 <?php
 
-class adminDashboard extends Controller
+class AdminDashboard extends Controller
 {
     public function index()
     {

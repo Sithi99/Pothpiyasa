@@ -22,13 +22,21 @@ class Users extends Controller
 
     public function add()
     {
+        if(!Auth::logged_in())
+        {
+            $this->redirect('login');
+        }
+
         $errors = array();
 
         if (count($_POST) > 0) {
+            echo "awa";
             
             $user = new User();
 
             if ($user->validate($_POST)) {
+
+
                 $userData['RegistrationNo'] = $_POST['RegistrationNo'];
                 $userData['Title'] = $_POST['Title'];
                 $userData['FirstName'] = $_POST['FirstName'];
@@ -38,7 +46,6 @@ class Users extends Controller
                 $userData['Birthday'] = $_POST['Birthday'];
                 $userData['Address'] = $_POST['Address'];
                 $userData['Email'] = $_POST['Email'];
-                $userData['MemberType'] = $_POST['MemberType'];
                 //Password
                 $userData['Password'] = password_hash($_POST['RegistrationNo'], PASSWORD_DEFAULT);
                 //UserName
@@ -53,46 +60,56 @@ class Users extends Controller
 
 
                 //Checking member type
-                if ($userData['MemberType'] == 'Library-Staff') {
+
+                if (
+                    $_POST['MemberType'] == 'Librarian'
+                    || $_POST['MemberType'] == 'Library-Staff'
+                    || $_POST['MemberType'] == 'Administrator'
+                ) {
+
+                    $userData['MemberType'] = 'Library-StaffMember';
+
+                }else{
+
+                    $userData['MemberType'] = 'Other-Member';
+                }
+
+
+                if ($_POST['MemberType'] == 'Library-Staff') {
                     $userData['JobType'] = 'Library-Staff';
 
                 }
 
-                if ($userData['MemberType'] == 'Administrator') {
+                if ($_POST['MemberType'] == 'Administrator') {
 
                     $userData['JobType'] = 'Administrator';
 
                 }
 
-                if ($userData['MemberType'] == 'Librarian') {
+                if ($_POST['MemberType'] == 'Librarian') {
 
                     $userData['JobType'] = 'Librarian';
 
                 }
 
-                if (
-                    $userData['MemberType'] == 'Librarian'
-                    || $userData['MemberType'] == 'Library-Staff'
-                    || $userData['MemberType'] == 'Administrator'
-                    || $userData['MemberType'] == 'Non-Academic'
-                ) {
 
-                    $userData['AcademicType'] = 'Non-Academic';
-
-                }
-
-                if ($userData['MemberType'] == 'Lecturer' || $userData['MemberType'] == 'Student') {
+                if ($_POST['MemberType'] == 'Lecturer' || $_POST['MemberType'] == 'Student') {
 
                     $userData['AcademicType'] = 'Academic';
 
                 }
 
-                if ($userData['MemberType'] == 'Lecturer') {
+                if ($_POST['MemberType'] == 'Non-Academic') {
+                    $userData['AcademicType'] = 'Non-Academic';
+
+                }
+
+                if ($_POST['MemberType'] == 'Lecturer') {
                     $userData['Type'] = 'Lecturer';
 
                 }
 
-                if ($userData['MemberType'] == 'Student') {
+                if ($_POST['MemberType'] == 'Student') {
                     $userData['Type'] = 'Student';
 
                 }
@@ -102,7 +119,7 @@ class Users extends Controller
 
 
                 //Insert data to librarystaff table
-                if ($userData['MemberType'] == 'Library-Staff') {
+                if ($_POST['MemberType'] == 'Library-Staff') {
                     $libStaff = new LibraryStaff();
 
                     //For LibraryStaff table
@@ -111,7 +128,7 @@ class Users extends Controller
                 }
 
                 //Insert data to student table
-                if ($userData['MemberType'] == 'Student') {
+                if ($_POST['MemberType'] == 'Student') {
                     $student = new Student();
 
                     $studentData['UserID'] = $userData['UserID'];
@@ -124,7 +141,7 @@ class Users extends Controller
                 }
 
                 //Insert data to lecturer table
-                if ($userData['MemberType'] == 'Lecturer') {
+                if ($_POST['MemberType'] == 'Lecturer') {
                     $lecturer = new Lecturer();
 
                     $lecturerData['UserID'] = $userData['UserID'];
@@ -135,7 +152,16 @@ class Users extends Controller
                     $lecturer->insert($lecturerData);
                 }
 
-                $this->redirect('adminDashboard');
+                //Insert data to nonAcademic staff table
+                if ($_POST['MemberType'] == 'Non-Academic') {
+                    $nonAcademicStaff = new NonAcademicStaff();
+
+                    //For LibraryStaff table
+                    $nonAcademicStaffData['UserID'] = $userData['UserID'];
+                    $nonAcademicStaff->insert($nonAcademicStaffData);
+                }
+
+                $this->redirect('AdminDashboard');
 
             } else {
                 $errors = $user->errors;
@@ -143,12 +169,16 @@ class Users extends Controller
             }
         }
         
-
         $this->view('admin/users.add', ['errors' => $errors]);
     }
 
     public function edit($id = null)
     {
+        if(!Auth::logged_in())
+        {
+            $this->redirect('login');
+        }
+
         $errors = array();
 
         $user = new User();
@@ -168,50 +198,58 @@ class Users extends Controller
                 $userData['Birthday'] = $_POST['Birthday'];
                 $userData['Address'] = $_POST['Address'];
                 $userData['Email'] = $_POST['Email'];
-                $userData['MemberType'] = $_POST['MemberType'];
-
 
                 //Checking member type
-                if ($userData['MemberType'] == 'Library-Staff') {
+
+                if (
+                    $_POST['MemberType'] == 'Librarian'
+                    || $_POST['MemberType'] == 'Library-Staff'
+                    || $_POST['MemberType'] == 'Administrator'
+                ) {
+
+                    $userData['MemberType'] = 'Library-StaffMember';
+
+                }else{
+
+                    $userData['MemberType'] = 'Other-Member';
+                }
+
+
+                if ($_POST['MemberType'] == 'Library-Staff') {
                     $userData['JobType'] = 'Library-Staff';
 
                 }
 
-                if ($userData['MemberType'] == 'Administrator') {
+                if ($_POST['MemberType'] == 'Administrator') {
 
                     $userData['JobType'] = 'Administrator';
 
                 }
 
-                if ($userData['MemberType'] == 'Librarian') {
+                if ($_POST['MemberType'] == 'Librarian') {
 
                     $userData['JobType'] = 'Librarian';
 
                 }
 
-                if (
-                    $userData['MemberType'] == 'Librarian'
-                    || $userData['MemberType'] == 'Library-Staff'
-                    || $userData['MemberType'] == 'Administrator'
-                    || $userData['MemberType'] == 'Non-Academic'
-                ) {
 
-                    $userData['AcademicType'] = 'Non-Academic';
-
-                }
-
-                if ($userData['MemberType'] == 'Lecturer' || $userData['MemberType'] == 'Student') {
+                if ($_POST['MemberType'] == 'Lecturer' || $_POST['MemberType'] == 'Student') {
 
                     $userData['AcademicType'] = 'Academic';
 
                 }
 
-                if ($userData['MemberType'] == 'Lecturer') {
+                if ($_POST['MemberType'] == 'Non-Academic') {
+                    $userData['AcademicType'] = 'Non-Academic';
+
+                }
+
+                if ($_POST['MemberType'] == 'Lecturer') {
                     $userData['Type'] = 'Lecturer';
 
                 }
 
-                if ($userData['MemberType'] == 'Student') {
+                if ($_POST['MemberType'] == 'Student') {
                     $userData['Type'] = 'Student';
 
                 }
@@ -221,7 +259,7 @@ class Users extends Controller
 
 
                 //Insert data to student table
-                if ($userData['MemberType'] == 'Student') {
+                if ($_POST['MemberType'] == 'Student') {
                     $student = new Student();
 
                     $studentData['StudentType'] = $_POST['StudentType'];
@@ -233,7 +271,7 @@ class Users extends Controller
                 }
 
                 //Insert data to lecturer table
-                if ($userData['MemberType'] == 'Lecturer') {
+                if ($_POST['MemberType'] == 'Lecturer') {
                     $lecturer = new Lecturer();
 
                     $lecturerData['LecType'] = $_POST['LecType'];
@@ -259,6 +297,10 @@ class Users extends Controller
 
     public function delete($id = null)
     {
+        if(!Auth::logged_in())
+        {
+            $this->redirect('login');
+        }
 
         $user = new User();
 

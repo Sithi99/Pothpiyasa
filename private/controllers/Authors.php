@@ -91,7 +91,7 @@ class Authors extends Controller
             }else{
                 
                 $errors = $author->errors;
-                print_r($errors);
+                //print_r($errors);
                 
             }
         }
@@ -133,7 +133,7 @@ class Authors extends Controller
 
             } else {
                 $errors = $author->errors;
-                print_r($errors);
+                //print_r($errors);
 
             }
         }

@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <div class="header_bar">
+        <div class="header_bar_login">
             <div class="system_logo">
                 <img src="<?= ROOT ?>/img/admin/login/logo.png" class="logo">
                 <img src="<?= ROOT ?>/img/admin/login/logo_text.png" class="logo_text">
@@ -26,7 +26,7 @@
     <main>
         <img src="<?= ROOT ?>/img/admin/login/library.png" class="library_png">
 
-        <div class="login">
+        <div class="login_form">
             <h1>Welcome</h1>
             <?php if (isset($errors) && (!empty($errors))): ?>
             <p class="error">
@@ -38,6 +38,7 @@
                     <input type="text" name="UserName" id="UserName" required>
                     <span></span>
                     <label for="UserName">User Name</label>
+                    
                 </div>
                 <div class="txt_field">
                     <input type="password" name="Password" id="Password" required>

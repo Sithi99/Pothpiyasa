@@ -6,7 +6,7 @@ class Logout extends Controller
     {
         Auth::logout();
         
-        $this->redirect('AdminLogin');
+        $this->redirect('Home');
         
     }
 }

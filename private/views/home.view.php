@@ -29,6 +29,10 @@
 
     <div class="home_container">
 
+        <div class="home_background">
+        
+        </div>
+
         <div class="role admin_role">
             <h3>Administrator</h3>
             <a href="<?= ROOT?>/AdminLogin">
@@ -57,7 +61,11 @@
             </a>
         </div>
         
+        
     </div>
+
+
+    
 
     <footer>
         <div class="footer_bar">

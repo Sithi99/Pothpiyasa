@@ -16,7 +16,7 @@
 
         <div class="dashbordIconBack" id="dashbordIconBack"></div>
         <i class="fa-solid fa-house-chimney" id="dashbordIcon"></i>
-        <p class="dashbordLabel" id="dashbordLabel"><a href="<?= ROOT?>">Dashboard</a></p>
+        <p class="dashbordLabel" id="dashbordLabel"><a href="<?= ROOT?>/AdminDashboard">Dashboard</a></p>
 
 
 

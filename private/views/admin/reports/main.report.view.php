@@ -20,7 +20,7 @@
 
 
             <div class="outside_box">
-                <a href='<?= ROOT ?>'>
+                <a href='<?= ROOT ?>/reports/issued_books'>
                     <div class="inside_box">
                         <h3>Issued Books</h3>
                     </div>

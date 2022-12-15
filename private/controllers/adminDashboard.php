@@ -8,6 +8,7 @@ class AdminDashboard extends Controller
         {
             $this->redirect('AdminLogin');
         }
+        
         $this->view('admin/adminDashboard');
     }
 }

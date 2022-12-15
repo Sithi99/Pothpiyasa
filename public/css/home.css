@@ -1,0 +1,102 @@
+.home_container {
+    position: absolute;
+    flex-wrap: wrap;
+    top: 8%;
+    left: 4%;
+    align-items: center;
+
+
+}
+
+.role {
+    display: inline-block;
+    margin: 110px;
+
+
+}
+
+
+.role h3 {
+    position: relative;
+    top: 240px;
+    left: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 39px;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: #1c98ed;
+    padding: 2px 12px;
+    border-radius: 10px;
+
+}
+
+.admin_role img {
+    filter: invert(52%) sepia(76%) saturate(1992%) hue-rotate(179deg) brightness(91%) contrast(105%);
+    left: 115px;
+    transition: 1s;
+}
+
+.admin_role h3{
+    left: 8px;
+    
+}
+
+.admin_role img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.librarian_role img {
+    filter: invert(52%) sepia(76%) saturate(1992%) hue-rotate(179deg) brightness(91%) contrast(105%);
+    left: 450px;
+    transition: 1s;
+
+}
+
+.librarian_role h3{
+    left: -18px;
+}
+
+.librarian_role img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.libraryStaff_role img {
+    filter: invert(52%) sepia(76%) saturate(1992%) hue-rotate(179deg) brightness(91%) contrast(105%);
+    left: 768px;
+    transition: 1s;
+
+}
+
+.libraryStaff_role h3{
+    left: -52px;
+}
+
+.libraryStaff_role img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.user_role img {
+    filter: invert(52%) sepia(76%) saturate(1992%) hue-rotate(179deg) brightness(91%) contrast(105%);
+    left: 1070px;
+    transition: 1s;
+}
+
+.user_role img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.user_role h3{
+    left: 22px;
+
+}
+
+.user_role h3{
+    left: -115px;
+}

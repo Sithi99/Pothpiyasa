@@ -7,7 +7,7 @@ class Users extends Controller
     public function index()
     {
         if (!Auth::logged_in()) {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
 
         $user = new User();
@@ -24,7 +24,7 @@ class Users extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
 
         $errors = array();
@@ -161,6 +161,7 @@ class Users extends Controller
                     $nonAcademicStaff->insert($nonAcademicStaffData);
                 }
 
+                
                 $this->redirect('AdminDashboard');
 
             } else {
@@ -176,7 +177,7 @@ class Users extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
 
         $errors = array();
@@ -299,7 +300,7 @@ class Users extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
 
         $user = new User();

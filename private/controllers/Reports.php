@@ -7,7 +7,7 @@ class Reports extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
         
         $this->view('admin/reports/main.report');
@@ -21,7 +21,7 @@ class Reports extends Controller
 
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
         
         $this->view('admin/reports/issued.report');
@@ -32,7 +32,7 @@ class Reports extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
         
         $this->view('admin/reports/damaged.report');
@@ -43,7 +43,7 @@ class Reports extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
         
         $this->view('admin/reports/returned.report');
@@ -65,7 +65,7 @@ class Reports extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
         
         $this->view('admin/reports/lost.report');
@@ -76,7 +76,7 @@ class Reports extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
         
         $this->view('admin/reports/fine.report');
@@ -87,7 +87,7 @@ class Reports extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
         
         $this->view('admin/reports/missing.report');
@@ -98,7 +98,7 @@ class Reports extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
         
         $this->view('admin/reports/inventory.report');

@@ -53,7 +53,7 @@
 
     <footer>
         <div class="footer_bar">
-            <h5 class="copyright">© Copyright Pothpiyasa 2022</h5>
+            <h5 class="copyright">© Copyright PothPiyasa 2022</h5>
         </div>
     </footer>
 

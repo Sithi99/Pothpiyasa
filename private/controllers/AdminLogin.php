@@ -1,7 +1,7 @@
 <?php
 
 //Login controller
-class Login extends Controller
+class AdminLogin extends Controller
 {
     public function index()
     {

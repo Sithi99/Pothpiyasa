@@ -6,7 +6,7 @@ class AdminDashboard extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
         $this->view('admin/adminDashboard');
     }

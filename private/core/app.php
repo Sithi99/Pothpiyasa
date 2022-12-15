@@ -2,7 +2,7 @@
 
 class App
 {
-    protected $controller = "AdminDashboard";
+    protected $controller = "Home";
     protected $method = "index";
     protected $params = array();
 
@@ -38,7 +38,7 @@ class App
 
     private function getURL()
     {
-        $url = isset($_GET['url']) ? $_GET['url'] : "AdminDashboard";
+        $url = isset($_GET['url']) ? $_GET['url'] : "Home";
         return explode("/", filter_var(trim($url, "/")),FILTER_SANITIZE_URL);
 
     }

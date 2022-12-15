@@ -7,7 +7,7 @@ class Holidays extends Controller
     {
         if(!Auth::logged_in())
         {
-            $this->redirect('login');
+            $this->redirect('AdminLogin');
         }
         
         $holiday = new Holiday();

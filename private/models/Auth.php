@@ -51,6 +51,30 @@ class Auth
         return false;
         
     }
+    
+      public static function profile()
+    {
+        if(isset($_SESSION['USER']))
+        {
+            return $_SESSION['USER']->Image; 
+        }
+
+        return false;
+        
+    }
+
+
+
+    public static function StaffID()
+    {
+        if(isset($_SESSION['USER']))
+        {
+            return $_SESSION['USER']->StaffID; 
+        }
+
+        return false;
+        
+    }
 
 
 

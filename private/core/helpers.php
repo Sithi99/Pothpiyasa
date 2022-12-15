@@ -71,4 +71,64 @@ function get_user_name($key,$value)
         return "None";
     }
 }
+
+function get_staff_name($key,$value)
+{
+    $user = new LibraryStaff();
+    if ($row = $user->where($key, $value)) {
+        $row = $row[0];
+        $value1 = $row->UserID;
+        //return $value1;
+
+         $member = new User();
+        if($row1= $member->where('UserID',$value1)){
+            $row1 = $row1[0];
+            return $row1->FirstName."".$row1->MidName." ".$row1->LastName;
+
+        }
+       
+    }else{
+        return "None";
+    }
+}
+
+function get_staffid($key,$value)
+{
+    $user = new LibraryStaff();
+    if ($row = $user->where($key, $value)) {
+        $row = $row[0];
+        return $row->StaffID;
+
+ 
+       
+    }else{
+        return "None";
+    }
+}
+
+
+function get_bookid($key,$value)
+{
+    $user = new LibraryStaff();
+    if ($row = $user->where($key, $value)) {
+        $row = $row[0];
+        return $row->StaffID;
+
+ 
+       
+    }else{
+        return "None";
+    }
+}
+
+
+function viewbooksforauthor($authorID)
+    {
+       
+        $book = new Book();
+        $data = $book->where("AuthorID",$authorID);
+        return $data;
+   }
+
+
  

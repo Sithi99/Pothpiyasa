@@ -128,7 +128,7 @@ class Authors extends Controller
                 $author->update('AuthorID',$id, $authorData);
 
 
-               
+                
                 $this->redirect('authors');
 
             } else {
@@ -138,7 +138,7 @@ class Authors extends Controller
             }
         }
 
-       
+        
         $this->view('librarian/authors.edit',['row' => $row,'errors'=>$errors]);
     }
 

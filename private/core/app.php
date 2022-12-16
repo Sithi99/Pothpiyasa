@@ -2,7 +2,7 @@
 
 class App
 {
-    protected $controller = "Home";
+    protected $controller = "home";
     protected $method = "index";
     protected $params = array();
 
@@ -24,6 +24,7 @@ class App
                 $this->method = ucfirst($URL[1]);
                 unset($URL[1]);
             }
+
         }
 
         //Now, url only have params only, controller and method is unset
@@ -38,7 +39,7 @@ class App
 
     private function getURL()
     {
-        $url = isset($_GET['url']) ? $_GET['url'] : "Home";
+        $url = isset($_GET['url']) ? $_GET['url'] : "home";
         return explode("/", filter_var(trim($url, "/")),FILTER_SANITIZE_URL);
 
     }

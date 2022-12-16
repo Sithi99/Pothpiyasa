@@ -1,9 +1,9 @@
 .report_container {
     position: absolute;
-    width: 1200px;
+    width: 1150px;
     height: 520px;
-    left: 310px;
-    top: 140px;
+    left: 335px;
+    top: 130px;
 
     background: #ffffff;
     border-radius: 35px;
@@ -12,18 +12,10 @@
 
 .report {
     position: absolute;
-    width: 1000px;
-    height: 360px;
-    left: 105px;
-    top: 70px;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-
-        
+    width: 1140px;
+    height: 320px;
+    left: 25px;
+    top: 25px;
 }
 
 .report a{
@@ -31,31 +23,48 @@
 }
 
 .outside_box {
-    width: 240px;
-    height: 50px;
-    margin-left: 20px;
+    display: inline-block;
 
+    width: 230px;
+    height: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+    padding-top: 12px;
+
+    margin: 40px 20px;
     background: #D9D9D9;
     border-radius: 20px;
+    transition: 1s;
+
+    box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
 
 }
 
-.inside_box {
-    width: 170px;
-    height: 30px;
-    text-align: center;
+.outside_box:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.report h3{
     color: white;
-    margin-left: 30px;
-    padding-top: -1px;
-
-
+    text-align: center;
     background: #1395ED;
-    border-radius: 20px;
+    padding: 5px;
+    width: 200px;
+
+    font-size: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
+
 }
+
 
 .report button{
-    top: 360px;
-    left: 450px;
+    top: 430px;
+    left: 910px;
 
 }
 

@@ -25,9 +25,8 @@
 
     <!-- navigation bar -->
 
-    <?php 
-       $this->view('librarian/includes/nav'); 
-    ?>
+    <?php include('../private/views/includes/nav.view.php'); ?>
+
 
     <!-- body -->
 
@@ -91,4 +90,5 @@
         
 </div>
 
-    <?php $this->view('librarian/includes/footer'); ?>
+<?php include('../private/views/includes/footer.view.php'); ?>
+    

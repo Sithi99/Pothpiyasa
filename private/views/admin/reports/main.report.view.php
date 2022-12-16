@@ -21,80 +21,89 @@
 
             <div class="outside_box">
                 <a href='<?= ROOT ?>/reports/issued_books'>
-                    <div class="inside_box">
-                        <h3>Issued Books</h3>
-                    </div>
+                    <h3>Issued Books</h3>
                 </a>
             </div>
 
             <div class="outside_box">
-                <a href='<?= ROOT ?>'>
-                    <div class="inside_box">
-                        <h3>Returned Books</h3>
-                    </div>
+                <a href='<?= ROOT ?>/reports/returned_books'>
+                    <h3>Returned Books</h3>
                 </a>
-                </div>
+            </div>
 
-                <div class="outside_box">
-                    <a href='<?= ROOT ?>'>
-                        <div class="inside_box">
-                            <h3>Withdrawn Books</h3>
-                        </div>
-                    </a>
-                </div>
+            <div class="outside_box">
+                <a href='<?= ROOT ?>/reports/withdrawn_books'>
+                    <h3>Withdrawn Books</h3>
+                </a>
+            </div>
 
 
-                <div class="outside_box">
-                    <a href='<?= ROOT ?>'>
-                        <div class="inside_box">
-                            <h3>Lost Books</h3>
-                        </div>
-                    </a>
-                </div>
+            <div class="outside_box">
+                <a href='<?= ROOT ?>/reports/damaged_books'>
+                    <h3>Withdrawn Books(T)</h3>
+                </a>
+            </div>
 
 
-
-                <div class="outside_box">
-                    <a href='<?= ROOT ?>'>
-                        <div class="inside_box">
-                            <h3>Damaged Books</h3>
-                        </div>
-                    </a>
-                </div>
-
-
-
-                <div class="outside_box">
-                    <a href='<?= ROOT ?>'>
-                        <div class="inside_box">
-                            <h3>Fine Report</h3>
-                        </div>
-                    </a>
-                </div>
-
-
-                <div class="outside_box">
-                    <a href='<?= ROOT ?>'>
-                        <div class="inside_box">
-                            <h3>Inventory Missing</h3>
-                        </div>
-                    </a>
-                </div>
-                
-
-                <div class="outside_box">
-                    <a href='<?= ROOT ?>'>
-                        <div class="inside_box">
-                            <h3>Inventory Report</h3>
-                        </div>
-                    </a>
-                </div>
-
-
-                <button class="backbtn"><a href="<?= ROOT ?>">Back</a></button>
-
+            <div class="outside_box">
+                <a href='<?= ROOT ?>/reports/lost_books'>
+                    <h3>Lost Books</h3>
+                </a>
             </div>
 
 
 
-            <?php include('../private/views/includes/footer.view.php'); ?>
+            <div class="outside_box">
+                <a href='<?= ROOT ?>/reports/damaged_books'>
+                    <h3>Damaged Books</h3>
+                </a>
+            </div>
+
+
+
+            <div class="outside_box">
+                <a href='<?= ROOT ?>/reports/fine_report'>
+                    <h3>Fine Report</h3>
+                </a>
+            </div>
+
+            <div class="outside_box">
+                <a href='<?= ROOT ?>/reports/fine_report'>
+                    <h3>Fine Payment</h3>
+                </a>
+            </div>
+
+            <div class="outside_box">
+                <a href='<?= ROOT ?>/reports/missing'>
+                    <h3>Photocopies</h3>
+                </a>
+            </div>
+
+
+            <div class="outside_box">
+                <a href='<?= ROOT ?>/reports/inventory_report'>
+                    <h3>Donors/Vendors</h3>
+                </a>
+            </div>
+
+            <div class="outside_box">
+                <a href='<?= ROOT ?>/reports/missing'>
+                    <h3>Inventory Missing</h3>
+                </a>
+            </div>
+
+
+            <div class="outside_box">
+                <a href='<?= ROOT ?>/reports/inventory_report'>
+                    <h3>Inventory Report</h3>
+                </a>
+            </div>
+
+
+            <button class="backbtn"><a href="<?= ROOT ?>">Back</a></button>
+
+        </div>
+
+
+
+        <?php include('../private/views/includes/footer.view.php'); ?>

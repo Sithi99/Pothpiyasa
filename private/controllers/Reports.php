@@ -105,6 +105,50 @@ class Reports extends Controller
 
     }
 
+    public function withdrawn_books_T()
+    {
+        if(!Auth::logged_in())
+        {
+            $this->redirect('AdminLogin');
+        }
+        
+        $this->view('admin/reports/withdrawn(t).report');
+
+    }
+
+    public function fine_payment()
+    {
+        if(!Auth::logged_in())
+        {
+            $this->redirect('AdminLogin');
+        }
+        
+        $this->view('admin/reports/finePayment.report');
+
+    }
+
+    public function photocopies()
+    {
+        if(!Auth::logged_in())
+        {
+            $this->redirect('AdminLogin');
+        }
+        
+        $this->view('admin/reports/photocopies.report');
+
+    }
+
+    public function donors_vendors()
+    {
+        if(!Auth::logged_in())
+        {
+            $this->redirect('AdminLogin');
+        }
+        
+        $this->view('admin/reports/donorsVendors.report');
+
+    }
+
     
 
 

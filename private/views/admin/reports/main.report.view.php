@@ -18,7 +18,6 @@
     <div class="report_container">
         <div class="report">
 
-
             <div class="outside_box">
                 <a href='<?= ROOT ?>/reports/issued_books'>
                     <h3>Issued Books</h3>
@@ -40,7 +39,7 @@
 
             <div class="outside_box">
                 <a href='<?= ROOT ?>/reports/damaged_books'>
-                    <h3>Withdrawn Books(T)</h3>
+                    <h3>Withdrawn Books (T)</h3>
                 </a>
             </div>
 

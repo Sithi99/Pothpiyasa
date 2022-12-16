@@ -11,8 +11,41 @@ class Users extends Controller
         }
 
         $user = new User();
-        $data = $user->findAll();
-        
+
+        if (isset($_POST['filter_search'])) {
+
+            $column = $_POST['user_filter'];
+
+            echo $column;
+
+            if ($column == 'Library-Staff Members') {
+                $data = $user->where('MemberType', 'Library-StaffMember');
+            }
+
+            if ($column == 'Lecturers') {
+                $data = $user->where('Type', 'Lecturer');
+            }
+
+            if ($column == 'Students') {
+                $data = $user->where('Type', 'Student');
+            }
+
+            if ($column == 'Non-Academic Members') {
+                $data = $user->where('AcademicType', 'Non-Academic');
+            }
+
+            if ($column == '') {
+                $data = $user->findAll();   
+            }
+
+
+
+        } else {
+            
+            $data = $user->findAll();
+
+        }
+
         //$data comes as array of items (Array ( [0] => stdClass Object ( [UserID] => 1 [RegistrationNo] => 2020/CS/212....)
 
         //In view method, it extract the data (['rows'] => $data; --> $rows = $data;)
@@ -22,16 +55,14 @@ class Users extends Controller
 
     public function add()
     {
-        if(!Auth::logged_in())
-        {
+        if (!Auth::logged_in()) {
             $this->redirect('AdminLogin');
         }
 
         $errors = array();
 
         if (count($_POST) > 0) {
-            echo "awa";
-            
+
             $user = new User();
 
             if ($user->validate($_POST)) {
@@ -69,7 +100,7 @@ class Users extends Controller
 
                     $userData['MemberType'] = 'Library-StaffMember';
 
-                }else{
+                } else {
 
                     $userData['MemberType'] = 'Other-Member';
                 }
@@ -119,7 +150,7 @@ class Users extends Controller
 
 
                 //Insert data to librarystaff table
-                if ($_POST['MemberType'] == 'Library-Staff') {
+                if ($userData['MemberType'] == 'Library-StaffMember') {
                     $libStaff = new LibraryStaff();
 
                     //For LibraryStaff table
@@ -161,7 +192,7 @@ class Users extends Controller
                     $nonAcademicStaff->insert($nonAcademicStaffData);
                 }
 
-                
+
                 $this->redirect('AdminDashboard');
 
             } else {
@@ -169,14 +200,13 @@ class Users extends Controller
 
             }
         }
-        
+
         $this->view('admin/users.add', ['errors' => $errors]);
     }
 
     public function edit($id = null)
     {
-        if(!Auth::logged_in())
-        {
+        if (!Auth::logged_in()) {
             $this->redirect('AdminLogin');
         }
 
@@ -210,7 +240,7 @@ class Users extends Controller
 
                     $userData['MemberType'] = 'Library-StaffMember';
 
-                }else{
+                } else {
 
                     $userData['MemberType'] = 'Other-Member';
                 }
@@ -298,8 +328,7 @@ class Users extends Controller
 
     public function delete($id = null)
     {
-        if(!Auth::logged_in())
-        {
+        if (!Auth::logged_in()) {
             $this->redirect('AdminLogin');
         }
 
@@ -315,7 +344,7 @@ class Users extends Controller
             $user->delete('UserID', $id);
 
 
-            //Delete data from user table
+            //Delete data from librarystaff table
             $libStaff = new LibraryStaff();
 
             $libStaff->delete('UserID', $id);

@@ -38,7 +38,6 @@
                     <input type="text" name="UserName" id="UserName" required>
                     <span></span>
                     <label for="UserName">User Name</label>
-                    
                 </div>
                 <div class="txt_field">
                     <input type="password" name="Password" id="Password" required>

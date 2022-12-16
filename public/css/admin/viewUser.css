@@ -1,19 +1,116 @@
 .container_view {
   position: absolute;
-  width: 1220px;
-  height: 590px;
-  left: 306px;
-  top: 104px;
+  width: 1240px;
+  height: 550px;
+  left: 290px;
+  top: 144px;
 
   background: #ffffff;
   border-radius: 35px;
+  
+}
+
+
+.user_filter{
+  position: absolute;
+  width: 250px;
+  height: 35px;
+  left: 335px;
+  top: 85px;
+  border: none;
+  border-radius: 20px 0 20px 0;
+  box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
+  
+}
+
+.user_filter:focus {
+  border: 3px solid #2e9fed;
+  outline: 0;
+}
+
+.filter_search_btn1{
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  left: 638px;
+  top: 85px;
+  color: white;
+  background: #1395ed;
+  border-radius: 35px;
+  cursor: pointer;
+  border: none;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.user_filter_typo{
+  position: absolute;
+  width: 200px;
+  height: 35px;
+  left: 935px;
+  top: 85px;
+  border: none;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px 0 0 0;
+  box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
+}
+
+.user_filter_typo:focus {
+  border: 3px solid #2e9fed;
+  outline: 0;
+}
+
+.user_filter_typo_input{
+  position: absolute;
+  width: 200px;
+  height: 35px;
+  left: 1138px;
+  top: 85px;
+  padding-left: 2px;
+  border: none;
+  outline: none;
+  background: white;
+  border-radius: 0 0 20px 0;
+  box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
+
+}
+
+.user_filter_typo_input:focus {
+  border: 3px solid #2e9fed;
+  outline: 0;
+}
+
+.filter_search_btn2{
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  left: 1390px;
+  top: 85px;
+  color: white;
+  background: #1395ed;
+  border-radius: 35px;
+  cursor: pointer;
+  border: none;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .user_table {
   position: absolute;
   top: 2%;
-  left: 0.001%;
-  padding: 10px;
+  left: 20px;
+  padding: 6px;
   display: block;
   overflow-x: auto;
   white-space: nowrap;
@@ -22,7 +119,7 @@
 
 .user_table th {
   border-bottom: 1px solid #1395ed;
-  padding: 12px;
+  padding: 10px;
   font-size: 18px;
   letter-spacing: 0.7px;
   background-color: #1395ed;
@@ -38,7 +135,7 @@
 
 .user_table td {
   font-size: 15px;
-  padding: 12px;
+  padding: 10px;
 
   font-family: "Inter";
   font-style: normal;

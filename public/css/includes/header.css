@@ -93,5 +93,12 @@ body {
     text-decoration: none;
     color: #1395ed;
   }
+
+  .No_user{
+    position: absolute;
+    font-size: 24px;
+    left: 38%;
+    top: 20%;
+  }
   
   /* End of Header Section */

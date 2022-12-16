@@ -119,8 +119,7 @@ class Users extends Controller
 
 
                 //Insert data to librarystaff table
-                if ($userData['MemberType'] == 'Library-StaffMember') {
-                    
+                if ($_POST['MemberType'] == 'Library-Staff') {
                     $libStaff = new LibraryStaff();
 
                     //For LibraryStaff table

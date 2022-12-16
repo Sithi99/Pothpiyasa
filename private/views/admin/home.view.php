@@ -1,9 +1,8 @@
-
 <?php include('../private/views/admin/includes/header.view.php'); ?>
 
 <body>
 <div class="header">
-        <p class="operation">Event Log</p>
+        <p class="operation">Dashboard</p>
         <input type="text" class="searchbox">
         <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
         <p class="search">Search</p>
@@ -17,5 +16,8 @@
 <?php include('../private/views/admin/includes/nav.view.php'); ?>
 
 
-<!-- Footer     -->
+<!-- Calendar -->
+<?php include('../private/views/admin/includes/calendar.view.php'); ?>
+
+    
 <?php include('../private/views/admin/includes/footer.view.php'); ?>

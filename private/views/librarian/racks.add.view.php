@@ -8,13 +8,13 @@
     <title>Add Author</title>
     <link rel="stylesheet" href="<?= ROOT ?>/css/includes/header.css">
     <link rel="stylesheet" href="<?= ROOT ?>/css/librarian/includes/nav.css">
-    <link rel="stylesheet" href="<?= ROOT ?>/css/librarian/addAuthor.css">
+    <link rel="stylesheet" href="<?= ROOT ?>/css/librarian/addRack.css">
     <link rel="stylesheet" href="<?= ROOT ?>/css/all.min.css">
 </head>
 
 <body>
     <div class="header">
-        <p class="operation">Add Author</p>
+        <p class="operation">Add Rack</p>
         <input type="text" class="searchbox">
         <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
         <p class="search">Search</p>
@@ -37,52 +37,43 @@
 
 <div class="bodyContainer02">
     <form method="post" enctype="multipart/form-data">
-        <label for="fullname" class="fnameLabel">Full Name</label>
-        <input type="text" name="Name" class="fname" id="fname" required value="<?= get_var('Name') ?>">
-        <div class="errorName">
-                    <?php if (isset($errors['Name'])): ?>
-                    <p>
-                        <?="*" . $errors['Name'] ?>
-                    </p>
-                    <?php endif; ?>
+        
     
 
-        <label for="sex" class="sexLabel">Sex</label>
-        <select id="sex" class="sex" name="Sex" required >
+        <label for="bookCategory" class="bookcategoryLabel">Book Category</label>
+        <select id="bookcategory" class="bookcategory" name="bookcategory" required >
             <!-- <option value="" disabled selected>  --- Choose Type ---</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Other">Other</option> -->
 
-            <option <?=get_select('Sex','')?> value="" disabled selected >--- Choose Type ---</option>
-                            <option <?=get_select('Sex','Male')?> value="Male">Male</option>
-                            <option <?=get_select('Sex','Female')?> value="Female">Female</option>
-                            <option <?=get_select('Sex','Other')?> value="Other">Other</option>
+            <option <?=get_select('bookCategory','')?> value="" disabled selected >--- Choose Type ---</option>
+                            <option <?=get_select('bookCategory','Male')?> value="Male">Male</option>
+                            <option <?=get_select('bookCategory','Female')?> value="Female">Female</option>
+                            <option <?=get_select('bookCategory','Other')?> value="Other">Other</option>
         
         </select>
 
-        <label for="email" class="emailLabel">Email</label>
-        <input type="email" name="Email" class="email" id="email" required value="<?= get_var('Email') ?>">
+        <label for="noOfBooks" class="noOfBooksLabel">No of Books</label>
+        <input type="number" name="noOfBooks" class="noOfBooks" id="noOfBooks" required value="<?= get_var('Email') ?>">
 
-        <div class="errorEmail">
+        <div class="errorNoofBooks">
                     <?php if (isset($errors['Email'])): ?>
                     <p>
                         <?="*" . $errors['Email'] ?>
                     </p>
                     <?php endif; ?>
-
+                    </div>
         
 
-        <label for="authorImage" class="authorImageLabel">Upload Image</label> 
-        <input type="file" id="imagefile" name="imagefile" class="imagefile" required >
+       
 
       
         
-        <div class="container3" id="imagecontainer">
-            <img src="<?=ROOT?>/img/profile.jpg" id="imagepreview" class="imagepreview">
+        
 
-        <button class="addauthorbtn" name="submit" type="submit">Add Author</button>
-        </div>
+        <button class="addrackbtn" name="submit" type="submit">Add Rack</button>
+       
     </form>
 </div>
 <button class="backbtn"><a href="<?= ROOT ?>/librarian">Back</a></button>

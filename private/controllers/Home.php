@@ -4,7 +4,10 @@ class Home extends Controller
 {
     public function index()
     {
-        
-        $this->view('home');
+        if(!Auth::logged_in())
+        {
+            $this->redirect('login');
+        }
+        $this->view('admin/home');
     }
 }

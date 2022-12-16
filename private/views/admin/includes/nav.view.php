@@ -3,9 +3,9 @@
     <i class="fa-solid fa-bars" id="navIcon"></i>
 
     <div class="profile">
-        <img src="<?= ROOT?>/uploads/<?=Auth::profile()?>" alt="" srcset="" class="profileImg" id="profileImg">
+        <img src="<?= ROOT ?>/img/profile2.png" alt="" srcset="" class="profileImg" id="profileImg">
         <p class="profileName" id="profileName"><?=Auth::profileName()?> </p>
-        
+        <!-- <p class="profileID" id="profileID"></p> -->
     </div>
 
     <!-- dashbord -->
@@ -16,7 +16,7 @@
 
         <div class="dashbordIconBack" id="dashbordIconBack"></div>
         <i class="fa-solid fa-house-chimney" id="dashbordIcon"></i>
-        <p class="dashbordLabel" id="dashbordLabel"><a href="<?= ROOT?>/librarian/home">Dashboard</a></p>
+        <p class="dashbordLabel" id="dashbordLabel"><a href="<?= ROOT?>">Dashboard</a></p>
 
 
 
@@ -40,8 +40,8 @@
         
         <div class="booklist" id="booklist">
             <ul>
-                <li class="addBook"><a href="<?= ROOT?>/books/add">Add Book</a></li>
-                <li class="addBook"><a href="<?= ROOT?>/books/viewBook?page=1">View Book</a></li>
+                <li class="addBook"><a href="#">Add Book</a></li>
+                <li class="addBook"><a href="#">View Book</a></li>
             </ul>
             <!-- <p class="addBook">Add Book</p>
                     <p class="viewBook">View Book</p> -->
@@ -92,8 +92,6 @@
         <p class="inventoryLabel" id="inventoryLabel"><a href="#">Inventory</a></p>
         <i class="fas fa-chevron-circle-right" id="toggleArrow6"></i>
 
-        
-
 
         <!-- author -->
 
@@ -102,31 +100,26 @@
         <p class="authorLabel" id="authorLabel"><a href="#">Author</a></p>
         <i class="fas fa-chevron-circle-right" id="toggleArrow7"></i>
 
-        <div class="authorlist" id="authorlist">
-            <ul>
-                <li class="addauthor"><a href="<?= ROOT?>/authors/add">Add Author</a></li>
-                <li class="addauthor"><a href="<?= ROOT?>/authors/viewauthors">View Author</a></li>
-            </ul>
-          
-        </div>
 
+        <!-- admin task -->
 
-        <!-- rack -->
-
-        <div class="rackIconBack" id="rackIconBack"></div>
-        <i class="fa-solid fa-clipboard-list" id="rackIcon"></i>
+        <div class="adminTaskIconBack" id="adminTaskIconBack"></div>
+        <i class="fa-solid fa-clipboard-list" id="adminTaskIcon"></i>
         <i class="fas fa-chevron-circle-right" id="toggleArrow8"></i>
-        <p class="rackLabel" id="rackLabel"><a href="#">Rack</a></p>
+        <p class="adminTaskLabel" id="adminTaskLabel"><a href="#">Admin Tasks</a></p>
 
-        <div class="racklist" id="racklist">
+        <div class="adminlist" id="adminlist">
             <ul>
-                <li class="addrack"><a href="<?= ROOT?>/racks/add">Add Rack</a></li>
-                <li class="addrack"><a href="<?= ROOT?>/racks/viewauthors">View Rack</a></li>
+                <li class="getReports"><a href="#">Get Reports</a></li>
+                <li class="getReports"><a href="<?= ROOT?>/holidays">Add Holidays</a></li>
+                <li class="getReports"><a href="<?= ROOT?>/eventlog">Event Log</a></li>
+                <li class="getReports"><a href="#">Config Settings</a></li>
+                <li class="getReports"><a href="#">Backups</a></li>
             </ul>
-          
+            <!-- <p class="addBook">Add Book</p>
+                    <p class="viewBook">View Book</p> -->
         </div>
 
-       
         
     </div>
 </div>

@@ -4,11 +4,6 @@ class Eventlog extends Controller
 {
     public function index()
     {
-
-        if(!Auth::logged_in())
-        {
-            $this->redirect('AdminLogin');
-        }
     
         //$user = new User();
 

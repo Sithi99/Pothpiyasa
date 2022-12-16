@@ -34,7 +34,8 @@ class Auth
     {
         if(isset($_SESSION['USER']))
         {
-            return $_SESSION['USER']->Title." . ".$_SESSION['USER']->FirstName. " " .$_SESSION['USER']->LastName; 
+            return $_SESSION['USER']->FirstName. "" .$_SESSION['USER']->MidName. " " .$_SESSION['USER']->LastName; 
+
         }
 
         return false;
@@ -52,7 +53,7 @@ class Auth
         
     }
     
-      public static function profile()
+    public static function profile()
     {
         if(isset($_SESSION['USER']))
         {

@@ -94,8 +94,7 @@ class Books extends Controller
                 $bookData['AuthorID'] = get_authorID("Name",$_POST["AuthorName"]);
                   
                 $book->insert($bookData);
-                echo '<script type="text/javascript">
-                        window.onload = function () { alert("Welcome"); }; </script>'; 
+                
                 
                 // $this->redirect('home');
                 $flag[0] = 1;
@@ -122,9 +121,15 @@ class Books extends Controller
     //delete book
     public function delete($id = Null){
         $book = new Book();
-        $book->delete("BookID",$id);
+        $flag = array(0);
+        if($book->delete("BookID",$id) )
+        {
+            $flag[0]=1;
+        }
 
-        $this->redirect('books?page=1');
+        $this->view("librarian\book.delete",['flag'=>$flag]);
+
+        // $this->redirect('books?page=1');
         
         
     }

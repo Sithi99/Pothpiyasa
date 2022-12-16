@@ -40,8 +40,8 @@
         
         <div class="booklist" id="booklist">
             <ul>
-                <li class="addBook"><a href="<?= ROOT?>/books/add">Add Book</a></li>
-                <li class="addBook"><a href="<?= ROOT?>/books/viewBook?page=1">View Book</a></li>
+                <li class="addBook"><a href="#">Add Book</a></li>
+                <li class="addBook"><a href="#">View Book</a></li>
             </ul>
             <!-- <p class="addBook">Add Book</p>
                     <p class="viewBook">View Book</p> -->
@@ -113,18 +113,10 @@
 
         <!-- rack -->
 
-        <div class="rackIconBack" id="rackIconBack"></div>
-        <i class="fa-solid fa-clipboard-list" id="rackIcon"></i>
+        <div class="adminTaskIconBack" id="adminTaskIconBack"></div>
+        <i class="fa-solid fa-clipboard-list" id="adminTaskIcon"></i>
         <i class="fas fa-chevron-circle-right" id="toggleArrow8"></i>
-        <p class="rackLabel" id="rackLabel"><a href="#">Rack</a></p>
-
-        <div class="racklist" id="racklist">
-            <ul>
-                <li class="addrack"><a href="<?= ROOT?>/racks/add">Add Rack</a></li>
-                <li class="addrack"><a href="<?= ROOT?>/racks/viewauthors">View Rack</a></li>
-            </ul>
-          
-        </div>
+        <p class="adminTaskLabel" id="adminTaskLabel"><a href="#">Rack</a></p>
 
        
         

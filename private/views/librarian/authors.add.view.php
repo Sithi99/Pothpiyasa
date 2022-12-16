@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Author</title>
     <link rel="stylesheet" href="<?= ROOT ?>/css/includes/header.css">
-    <link rel="stylesheet" href="<?= ROOT ?>/css/librarian/includes/nav.css">
+    <link rel="stylesheet" href="<?= ROOT ?>/css/includes/nav.css">
     <link rel="stylesheet" href="<?= ROOT ?>/css/librarian/addAuthor.css">
     <link rel="stylesheet" href="<?= ROOT ?>/css/all.min.css">
 </head>

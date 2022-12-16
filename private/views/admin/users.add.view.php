@@ -1,4 +1,4 @@
-<?php include('../private/views/admin/includes/header.view.php'); ?>
+<?php include('../private/views/includes/header.view.php'); ?>
 
 
 <body>
@@ -14,7 +14,7 @@
 
     <!-- navigation bar -->
 
-    <?php include('../private/views/admin/includes/nav.view.php'); ?>
+    <?php include('../private/views/includes/nav.view.php'); ?>
 
 
     <!-- body -->
@@ -41,6 +41,14 @@
                 <label for="reg" class="regLabel">Reg#</label>
                 <input type="text" name="RegistrationNo" class="reg" id="reg" value="<?= get_var('RegistrationNo') ?>"
                     required>
+
+                <div class="errorRegistrationNo">
+                    <?php if (isset($errors['RegistrationNo'])): ?>
+                    <p>
+                        <?="*" . $errors['RegistrationNo'] ?>
+                    </p>
+                    <?php endif; ?>
+                </div>
 
                 <label for="firstName" class="firstNameLabel">First Name</label>
                 <input type="text" name="FirstName" class="firstName" id="firstName" value="<?= get_var('FirstName') ?>"
@@ -93,8 +101,8 @@
 
 
                 <label for="address" class="addressLable">Address</label>
-                <textarea name="Address" class="address" id="address" cols="30" rows="10"
-                    value="<?= get_var('Address') ?>" required></textarea>
+                <input type="text" name="Address" class="address" id="address" value="<?= get_var('Address') ?>"
+                    required>
 
 
                 <label for="email" class="emailLable">Email</label>
@@ -224,4 +232,8 @@
 
     </div>
 
-    <?php include('../private/views/admin/includes/footer.view.php'); ?>
+
+    <?php include('../private/views/includes/popup.add.view.php'); ?>
+
+
+    <?php include('../private/views/includes/footer.view.php'); ?>

@@ -32,10 +32,6 @@ class Model extends Database
 
     public function insert($data)
     {
-        // if(method_exists($this,'hash_password'))
-        // {
-        //     $data = $this->hash_password($data);
-        // }
         
         //Getting all the keys of associative array($data)
         $keys = array_keys($data);
@@ -50,10 +46,11 @@ class Model extends Database
 
     public function update($column,$id,$data)
     {
+        //$column contains column that check with id (eg: UserID)
         
         $str = "";
 
-        //$data is an associative array
+        //$data is an associative array that contain post data
         foreach ($data as $key => $value){
             $str .= $key . "=:" . $key . ","; 
         }
@@ -62,10 +59,10 @@ class Model extends Database
 
         $str = trim($str, ","); //Remove "," in start and end of string
 
-        
-
         $data['id'] = $id;
+        
         $query = "UPDATE $this->table SET $str WHERE $column = :id";
+
         //UPDATE user SET FirstName=:FirstName,MiddleName=:MiddleName WHERE id = :id;
 
         //Here, supply query data seperately
@@ -74,27 +71,12 @@ class Model extends Database
 
     public function delete($column,$id)
     {
-       
         
         $query = "DELETE FROM $this->table WHERE $column = :id";
 
         //Here, supply query data seperately
         $data['id'] = $id;
-        
         return $this->query($query, $data);
-    }
-
-    
-
-    //kasun
-
-    //i added
-    public function findLimit($start,$end) //Getting specific number of rows
-    {
-        
-        $query = "SELECT * FROM $this->table LIMIT $start,$end";
-
-        return $this->query($query);
     }
 
 

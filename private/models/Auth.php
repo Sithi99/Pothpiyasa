@@ -34,7 +34,7 @@ class Auth
     {
         if(isset($_SESSION['USER']))
         {
-            return $_SESSION['USER']->Title." . ".$_SESSION['USER']->FirstName. " " .$_SESSION['USER']->LastName; 
+            return $_SESSION['USER']->FirstName. " " .$_SESSION['USER']->LastName; 
         }
 
         return false;

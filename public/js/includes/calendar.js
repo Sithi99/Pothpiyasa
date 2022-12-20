@@ -1,4 +1,15 @@
 const date = new Date();
+function checkURL(){
+  if(!document.URL.includes('pothpiyasa/public/AdminDashboard')){
+    console.log(document.URL);
+    return false;
+  }
+  else{
+    console.log("true");
+    return true;
+  }
+}
+
 
 const renderCalendar = () => {
   date.setDate(1);
@@ -80,4 +91,8 @@ document.querySelector(".next").addEventListener("click", () => {
   renderCalendar();
 });
 
-renderCalendar();
+var currURL = checkURL();
+
+if(currURL === true){
+  renderCalendar();
+}

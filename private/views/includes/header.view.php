@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="<?=ROOT?>/css/admin/holidays.css">
     <link rel="stylesheet" href="<?=ROOT?>/css/admin/viewUser.css">
     <link rel="stylesheet" href="<?=ROOT?>/css/admin/reports.css">
-    <link rel="stylesheet" href="<?=ROOT?>/css/all.min.css">    <link rel="stylesheet" href="<?=ROOT?>/css/includes/calendar.css">
+    <link rel="stylesheet" href="<?=ROOT?>/css/admin/adminDashboard.css">
+    <link rel="stylesheet" href="<?=ROOT?>/css/all.min.css">    
+    <link rel="stylesheet" href="<?=ROOT?>/css/includes/calendar.css">
     <link rel="stylesheet" href="<?=ROOT?>/css/includes/onlineUsers.css">
     <link rel="stylesheet" href="<?=ROOT?>/css/includes/popup.css">
 

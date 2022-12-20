@@ -7,15 +7,15 @@
   /* width: 332px;
   height: 330px; */
   left: 1160px;
-  top: 480px;
+  top: 460px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .onlineUsers {
-  width: 340px;
-  height: 250px;
+  width: 332px;
+  height: 270px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);

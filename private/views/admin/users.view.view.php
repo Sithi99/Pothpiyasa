@@ -33,16 +33,16 @@
         <form method="POST">
 
                 <select class="user_filter_typo" id="user_filter_typo" class="user_filter_typo" name="user_filter_typo">
+                        <option value="">--- Filter By  ---</option>
                         <option value="FirstName">--- Filter By First Name ---</option>
                         <option value="LastName">--- Filter By Last Name ---</option>
-                        <option value="Lecturers">--- Filter By Sex ---</option>
-                        <option value="Students">--- Filter By Email ---</option>
-                        <option value="Non-Academic Members">--- Filter By Add Staff ID ---</option>
+                        <option value="Sex">--- Filter By Sex ---</option>
+                        <option value="Email">--- Filter By Email ---</option>
                 </select>
 
-                <input class="user_filter_typo_input" type="text">
+                <input class="user_filter_typo_input" name="user_filter_typo_input" type="text">
 
-                <button id="filter_search" name="filter_search" class="filter_search_btn2">Filter</button>
+                <button id="filter_typo_search" name="filter_typo_search" class="filter_search_btn2">Filter</button>
         </form>
 
         <div class="container_view">
@@ -110,7 +110,13 @@
                 </table>
 
                 <?php else: ?>
-                <h4 class="No_user">No users were found at this time</h4>
+                <div class="result_notfound_container">
+                        <img src="<?= ROOT ?>/img/notfound.png" class="notfound_png">
+                        <br>
+                        <h4 class="No_result">No results found</h4>
+                        <br>
+                        <h5 class="No_result_para">We couldn't find what you search for. <br>Try searching again!</h5>
+                </div>
                 <?php endif; ?>
         </div>
 

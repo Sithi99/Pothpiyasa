@@ -1,5 +1,14 @@
 let date_holidays = new Date();
 
+function checkURL(){
+  if(!document.URL.includes('pothpiyasa/public/holidays')){
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
 const renderHolidayCalendar = () => {
   date_holidays.setDate(1);
 
@@ -89,7 +98,7 @@ document.querySelector(".next").addEventListener("click", () => {
   renderHolidayCalendar();
 });
 
-renderHolidayCalendar();
+
 
 let holidays_form1 = document.getElementById("holidays_form1");
 let holidays_form2 = document.getElementById("holidays_form2");
@@ -103,39 +112,50 @@ function closeForm1() {
   holidays_form1.classList.remove("holidays_form1_popup");
 }
 
+function closeForm2() {
+  holidays_form2.classList.remove("holidays_form2_popup");
+}
 
+var currURL = checkURL();
+if(currURL === true){
+  renderHolidayCalendar();
 
-fetch("http://localhost/pothpiyasa/public/holidays/getHolidayDetails")
+  fetch("http://localhost/pothpiyasa/public/holidays/getHolidayDetails")
   .then((res) => res.json())
   .then((data) => {
+    console.log(data);
     for (i = 0; i < data.length; i++) {
       const holidayStartDate = new Date(data[i].Holiday_start).toDateString();
 
       const holidayStartDateDiv = document.getElementById(holidayStartDate);
+      holidayStartDateDiv.style.display = "flex";
+      holidayStartDateDiv.style.flexDirection = "column";
+      console.log(holidayStartDate);
+
+      const holidayDivRow = document.createElement("div");
+      holidayDivRow.id = data[i].HolidayID;
 
       if (data[i].Holiday_title == "Poya Holiday") {
-        holidayStartDateDiv.style.backgroundColor = "Yellow";
+        holidayDivRow.style.backgroundColor = "Yellow";
         // holidayStartDateDiv.style.color= "White";
       }
       else if (data[i].Holiday_title == "Academic Holiday") {
-        holidayStartDateDiv.style.backgroundColor = "Green";
-        holidayStartDateDiv.style.color= "White";
+        holidayDivRow.style.backgroundColor = "Green";
+        holidayDivRow.style.color= "White";
       }
       else{
-        holidayStartDateDiv.style.backgroundColor = "Orange";
-        holidayStartDateDiv.style.color= "White";
+        holidayDivRow.style.backgroundColor = "Orange";
+        holidayDivRow.style.color= "White";
       }
-
-      holidayStartDateDiv.removeEventListener("click", openForm1);
-
-      holidayStartDateDiv.addEventListener("click", () => {
-        holidays_form1.classList.remove("holidays_form1_popup");
+      holidayDivRow.style.width = "100%";
+      holidayDivRow.addEventListener("click", () => {
+        const editBtn = document.getElementById("editholidaybtn");
+        editBtn.lastChild.href = editBtn.lastChild.href + holidayDivRow.id;
+        //holidays_form1.classList.remove("holidays_form1_popup");
         holidays_form2.classList.add("holidays_form2_popup");
       });
 
+      holidayStartDateDiv.appendChild(holidayDivRow);
     }
   });
-
-  function closeForm2() {
-    holidays_form2.classList.remove("holidays_form2_popup");
-  }
+}

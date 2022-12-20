@@ -157,6 +157,35 @@
   color: white;
 }
 
+.accountlist {
+  visibility: hidden;
+  z-index: 100;
+  position: absolute;
+  width: 129px;
+  top: 270px;
+  left: 235px;
+
+  /* border-radius: 0px 0px 20px 0px; */
+}
+.accountlist ul {
+  list-style: none;
+}
+.accountlist ul li {
+  background: #0a3451;
+  /* text-align: center; */
+  width: 130px;
+  border: white solid 0.5px;
+  padding: 5px;
+}
+.accountlist ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.accountlist ul li:hover {
+  background: #1395ed;
+}
+
 .bookLabel {
   position: absolute;
   width: 129px;
@@ -217,11 +246,13 @@
   /* text-align: center; */
   width: 130px;
   border: white solid 0.5px;
-  padding: 3px;
+  padding: 5px;
 }
 .booklist ul li a {
   text-decoration: none;
   color: white;
+  font-size: 18px;
+
 }
 .booklist ul li:hover {
   background: #1395ed;
@@ -293,11 +324,13 @@
   /* text-align: center; */
   width: 130px;
   border: 1px solid white;
-  padding: 3px;
+  padding: 5px;
 }
 .memberlist ul li a {
   text-decoration: none;
   color: white;
+  font-size: 18px;
+
 }
 .memberlist ul li:hover {
   background: #1395ed;
@@ -528,11 +561,13 @@
   /* text-align: center; */
   width: 130px;
   border: 1px solid white;
-  padding: 3px;
+  padding:3.5px;
 }
 .adminlist ul li a {
   text-decoration: none;
   color: white;
+  font-size: 18px;
+
 }
 .adminlist ul li:hover {
   background: #1395ed;

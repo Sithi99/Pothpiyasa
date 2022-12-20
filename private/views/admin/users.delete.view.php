@@ -78,14 +78,14 @@
                 <label for="memberType" class="memberTypeLabel">Member Type</label>
                 <select id="memberType" class="memberType" name="MemberType" required>
                     <option <?= get_select('MemberType', '', $row[0]->MemberType) ?> value="">--- Choose Type ---</option>
-                    <option <?= get_select('MemberType', 'Administrator', $row[0]->MemberType) ?> value="Administrator">Administrator
+                    <option <?= get_select('MemberType', 'Administrator', $row[0]->JobType) ?> value="Administrator">Administrator
                     </option>
-                    <option <?= get_select('MemberType', 'Librarian', $row[0]->MemberType) ?> value="Librarian">Librarian</option>
-                    <option <?= get_select('MemberType', 'Library-Staff', $row[0]->FirstName) ?> value="Library-Staff">Library-Staff
+                    <option <?= get_select('MemberType', 'Librarian', $row[0]->JobType) ?> value="Librarian">Librarian</option>
+                    <option <?= get_select('MemberType', 'Library-Staff', $row[0]->JobType) ?> value="Library-Staff">Library-Staff
                     </option>
-                    <option <?= get_select('MemberType', 'Lecturer', $row[0]->MemberType) ?> value="Lecturer">Lecturer</option>
-                    <option <?= get_select('MemberType', 'Student', $row[0]->MemberType) ?> value="Student">Student</option>
-                    <option <?= get_select('MemberType', 'Non-Academic', $row[0]->MemberType) ?> value="Non-Academic">Non-Academic</option>
+                    <option <?= get_select('MemberType', 'Lecturer', $row[0]->Type) ?> value="Lecturer">Lecturer</option>
+                    <option <?= get_select('MemberType', 'Student', $row[0]->Type) ?> value="Student">Student</option>
+                    <option <?= get_select('MemberType', 'Non-Academic', $row[0]->AcademicType) ?> value="Non-Academic">Non-Academic</option>
                 </select>
 
                 <!-- Lecture/Student -->

@@ -1,0 +1,72 @@
+.adminDashboard_analytics {
+    position: absolute;
+    width: 810px;
+    height: 632px;
+    left: 330px;
+    top: 100px;
+
+
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
+}
+
+.admin_analytics {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.adminDashboard_analytics h2 {
+    margin-left: 20px;
+    font-size: 26px;
+}
+
+.analytics_item {
+    width: 175px;
+    height: 85px;
+    text-align: center;
+    margin: 20px 10px;
+    color: white;
+
+    border-radius: 20px;
+    box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
+    transition: 1s;
+}
+
+.analytics_item:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.admin_total_books {
+    background-color: #7fe368;
+}
+
+.analytics_item:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.admin_total_members {
+    background-color: #14B48C;
+
+}
+
+.admin_new_users {
+    background-color: #7fe368;
+
+}
+
+.admin_book_loans {
+    background-color: #14B48C;
+
+}
+
+.admin_analytics img {
+    width: 100%;
+    height: 410px;
+
+}

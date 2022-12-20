@@ -89,7 +89,6 @@
             <label class="holiday_Label" for="holiday_end">End</label>
             <input class="holiday_input" type="date" id="holiday_end" name="Holiday_end">
 
-            <button class="editholidaybtn" name="editHoliday">Edit</button>
             <button type='button' class='editholidaybtn' id='editholidaybtn'><i class='fa-solid fa-pen'></i>&nbsp;<a
                     href='<?= ROOT ?>/holidays/edit/'>Edit</a></button>
             <button class="deleteholidaybtn" name="deleteHoliday">Delete</button>

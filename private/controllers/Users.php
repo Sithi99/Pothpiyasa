@@ -16,32 +16,45 @@ class Users extends Controller
 
             $column = $_POST['user_filter'];
 
-            echo $column;
-
             if ($column == 'Library-Staff Members') {
                 $data = $user->where('MemberType', 'Library-StaffMember');
-            }
 
-            if ($column == 'Lecturers') {
+            } elseif ($column == 'Lecturers') {
                 $data = $user->where('Type', 'Lecturer');
-            }
 
-            if ($column == 'Students') {
+            } elseif ($column == 'Students') {
                 $data = $user->where('Type', 'Student');
-            }
 
-            if ($column == 'Non-Academic Members') {
+            } elseif ($column == 'Non-Academic Members') {
                 $data = $user->where('AcademicType', 'Non-Academic');
+                
+            } else {
+                $data = $user->findAll();
             }
 
-            if ($column == '') {
-                $data = $user->findAll();   
+        } elseif (isset($_POST['filter_typo_search'])) {
+
+            $column = $_POST['user_filter_typo'];
+            $value = $_POST['user_filter_typo_input'];
+
+            if ($column == 'FirstName') {
+                $data = $user->where($column, $value);
+
+            } elseif ($column == 'LastName') {
+                $data = $user->where($column, $value);
+
+            } elseif ($column == 'Sex') {
+                $data = $user->where($column, $value);
+
+            } elseif ($column == 'Email') {
+                $data = $user->where($column, $value);
+
+            } else {
+                $data = $user->findAll();
             }
-
-
 
         } else {
-            
+
             $data = $user->findAll();
 
         }
@@ -247,6 +260,7 @@ class Users extends Controller
 
 
                 if ($_POST['MemberType'] == 'Library-Staff') {
+                    
                     $userData['JobType'] = 'Library-Staff';
 
                 }
@@ -366,6 +380,129 @@ class Users extends Controller
 
         $this->view('admin/users.delete', [
             'row' => $row
+        ]);
+    }
+
+    public function editProfile($id = null)
+    {
+        if (!Auth::logged_in()) {
+            $this->redirect('AdminLogin');
+        }
+
+        $errors = array();
+
+        $user = new User();
+
+        //Getting existing data from database
+        $row = $user->where('UserID', $id);
+
+        if (count($_POST) > 0) {
+
+            if ($user->validate($_POST)) {
+                $userData['RegistrationNo'] = $_POST['RegistrationNo'];
+                $userData['Title'] = $_POST['Title'];
+                $userData['FirstName'] = $_POST['FirstName'];
+                $userData['MidName'] = $_POST['MidName'];
+                $userData['LastName'] = $_POST['LastName'];
+                $userData['Sex'] = $_POST['Sex'];
+                $userData['Birthday'] = $_POST['Birthday'];
+                $userData['Address'] = $_POST['Address'];
+                $userData['Email'] = $_POST['Email'];
+
+                //Checking member type
+
+                if (
+                    $_POST['MemberType'] == 'Librarian'
+                    || $_POST['MemberType'] == 'Library-Staff'
+                    || $_POST['MemberType'] == 'Administrator'
+                ) {
+
+                    $userData['MemberType'] = 'Library-StaffMember';
+
+                } else {
+
+                    $userData['MemberType'] = 'Other-Member';
+                }
+
+
+                if ($_POST['MemberType'] == 'Library-Staff') {
+                    
+                    $userData['JobType'] = 'Library-Staff';
+
+                }
+
+                if ($_POST['MemberType'] == 'Administrator') {
+
+                    $userData['JobType'] = 'Administrator';
+
+                }
+
+                if ($_POST['MemberType'] == 'Librarian') {
+
+                    $userData['JobType'] = 'Librarian';
+
+                }
+
+
+                if ($_POST['MemberType'] == 'Lecturer' || $_POST['MemberType'] == 'Student') {
+
+                    $userData['AcademicType'] = 'Academic';
+
+                }
+
+                if ($_POST['MemberType'] == 'Non-Academic') {
+                    $userData['AcademicType'] = 'Non-Academic';
+
+                }
+
+                if ($_POST['MemberType'] == 'Lecturer') {
+                    $userData['Type'] = 'Lecturer';
+
+                }
+
+                if ($_POST['MemberType'] == 'Student') {
+                    $userData['Type'] = 'Student';
+
+                }
+
+                //Insert data to user table
+                $user->update('UserID', $id, $userData);
+
+
+                //Insert data to student table
+                if ($_POST['MemberType'] == 'Student') {
+                    $student = new Student();
+
+                    $studentData['StudentType'] = $_POST['StudentType'];
+                    $studentData['Degree'] = $_POST['Degree'];
+                    $studentData['Batch'] = $_POST['Batch'];
+
+                    $student->update('UserID', $id, $studentData);
+
+                }
+
+                //Insert data to lecturer table
+                if ($_POST['MemberType'] == 'Lecturer') {
+                    $lecturer = new Lecturer();
+
+                    $lecturerData['LecType'] = $_POST['LecType'];
+                    $lecturerData['Subject'] = $_POST['Subject'];
+                    $lecturerData['Department'] = $_POST['Department'];
+
+                    $lecturer->update('UserID', $id, $lecturerData);
+                }
+
+                $this->redirect('users');
+
+            } else {
+                $errors = $user->errors;
+
+            }
+        }
+
+        $this->view('admin/users.edit', [
+            'row' => $row,
+            'errors' => $errors
         ]);
     }
 

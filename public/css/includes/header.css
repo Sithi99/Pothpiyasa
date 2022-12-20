@@ -1,5 +1,5 @@
 body {
-    background: #ede6e7;
+    background: #edecf1;
   }
   
   /* Start of Header Section */
@@ -94,11 +94,34 @@ body {
     color: #1395ed;
   }
 
-  .No_user{
+
+  .No_result{
     position: absolute;
-    font-size: 24px;
-    left: 38%;
-    top: 20%;
+    font-size: 42px;
+    color: #3FBAFE;
+    font-weight: 700;
+    left: 41%;
+    top: 40%;
+  }
+
+  .No_result_para{
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    left: 41.5%;
+    color: #908d8d;
+    /* color: #1ED7FE; */
+
+    top: 55%;
+  }
+
+  .notfound_png{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 46%;
+
+    top: 15%;
   }
   
   /* End of Header Section */

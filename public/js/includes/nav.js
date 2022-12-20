@@ -2,122 +2,118 @@
 let toggelBar = document.getElementById("toggelBar");
 let mainForm = document.getElementById("mainForm");
 
+let dashboard_nav = document.getElementById('dashboard_nav');
 
-let dashbordIconBack = document.getElementById("dashbordIconBack");
-let dashbordIcon = document.getElementById("dashbordIcon");
-let dashbordLabel = document.getElementById("dashbordLabel");
-
-let accountIconBack = document.getElementById("accountIconBack");
-let accountIcon = document.getElementById("accountIcon");
-let accountLabel = document.getElementById("accountLabel");
-
-let bookIconBack = document.getElementById("bookIconBack");
-let bookIcon = document.getElementById("bookIcon");
-let bookLabel = document.getElementById("bookLabel");
-
-let memberIconBack = document.getElementById("memberIconBack");
-let memberIcon = document.getElementById("memberIcon");
-let memberLabel = document.getElementById("memberLabel");
-
-let circulationIconBack = document.getElementById("circulationIconBack");
-let circulationIcon = document.getElementById("circulationIcon");
-let circulationLabel = document.getElementById("circulationLabel");
-
-let bookCategoryIconBack = document.getElementById("bookCategoryIconBack");
-let bookCategoryIcon = document.getElementById("bookCategoryIcon");
-let bookCategoryLabel = document.getElementById("bookCategoryLabel");
-
-let inventoryIconBack = document.getElementById("inventoryIconBack");
-let inventoryIcon = document.getElementById("inventoryIcon");
-let inventoryLabel = document.getElementById("inventoryLabel");
-
-let authorIconBack = document.getElementById("authorIconBack");
-let authorIcon = document.getElementById("authorIcon");
-let authorLabel = document.getElementById("authorLabel");
-
-let adminTaskIconBack = document.getElementById("adminTaskIconBack");
-let adminTaskIcon = document.getElementById("adminTaskIcon");
-let adminTaskLabel = document.getElementById("adminTaskLabel");
-
-let booklist = document.getElementById('booklist');
-//let bookArrow = document.getElementById('bookArrow');
-
-let memberlist = document.getElementById('memberlist');
-//let memberArrow = document.getElementById('memberArrow');
-
-let adminlist = document.getElementById('adminlist');
-//let memberArrow = document.getElementById('memberArrow');
-
-
-dashbordLabel.addEventListener("mouseover", () => {
+dashboard_nav.addEventListener("mouseover", () => {
   toggelBar.style.top = "237px";
-  booklist.style.visibility ='hidden';
-  memberlist.style.visibility ='hidden';
-  adminlist.style.visibility ='hidden';
+  toggelBar.style.visibility = 'visible';
+});
+
+dashboard_nav.addEventListener("mouseout", () => {
+  toggelBar.style.visibility = 'hidden';
   
 });
 
-accountLabel.addEventListener("mouseover", () => {
+let account_nav = document.getElementById('account_nav');
+let accountlist = document.getElementById('accountlist');
+
+account_nav.addEventListener("mouseover", () => {
   toggelBar.style.top = "287px";
-  booklist.style.visibility ='hidden';
-  memberlist.style.visibility ='hidden';
-  adminlist.style.visibility ='hidden';
+  toggelBar.style.visibility = 'visible';
+  accountlist.style.visibility ='visible';
   
- 
 });
 
-bookLabel.addEventListener("mouseover", () => {
+account_nav.addEventListener("mouseout", () => {
+  toggelBar.style.visibility = 'hidden';
+  accountlist.style.visibility ='hidden';
+  
+});
+
+let book_nav = document.getElementById('book_nav');
+let booklist = document.getElementById('booklist');
+
+book_nav.addEventListener("mouseover", () => {
   toggelBar.style.top = "337px";
+  toggelBar.style.visibility = 'visible';
   booklist.style.visibility ='visible';
-  memberlist.style.visibility ='hidden';
-  adminlist.style.visibility ='hidden'; 
-
 });
 
-memberLabel.addEventListener("mouseover", () => {
-  toggelBar.style.top = "387px";
-  memberlist.style.visibility ='visible';
+book_nav.addEventListener("mouseout", () => {
+  toggelBar.style.visibility = 'hidden';
   booklist.style.visibility ='hidden';
-  adminlist.style.visibility ='hidden';
   
 });
 
-circulationLabel.addEventListener("mouseover", () => {
+let member_nav = document.getElementById('member_nav');
+let memberlist = document.getElementById('memberlist');
+
+member_nav.addEventListener("mouseover", () => {
+  toggelBar.style.top = "387px";
+  toggelBar.style.visibility = 'visible';
+  memberlist.style.visibility ='visible';
+});
+
+member_nav.addEventListener("mouseout", () => {
+  toggelBar.style.visibility = 'hidden';
+  memberlist.style.visibility ='hidden';
+});
+
+
+let circulation_nav = document.getElementById('circulation_nav');
+
+circulation_nav.addEventListener("mouseover", () => {
   toggelBar.style.top = "437px";
-  booklist.style.visibility ='hidden';
-  memberlist.style.visibility ='hidden';
-  adminlist.style.visibility ='hidden';
- 
+  toggelBar.style.visibility = 'visible';
 });
 
-bookCategoryLabel.addEventListener("mouseover", () => {
+circulation_nav.addEventListener("mouseout", () => {
+  toggelBar.style.visibility = 'hidden';
+});
+
+let bookCategory_nav = document.getElementById('bookCategory_nav');
+
+bookCategory_nav.addEventListener("mouseover", () => {
   toggelBar.style.top = "487px";
-  booklist.style.visibility ='hidden';
-  memberlist.style.visibility ='hidden';
-  adminlist.style.visibility ='hidden';
- 
+  toggelBar.style.visibility = 'visible';
 });
 
-inventoryLabel.addEventListener("mouseover", () => {
+bookCategory_nav.addEventListener("mouseout", () => {
+  toggelBar.style.visibility = 'hidden';
+});
+
+let inventory_nav = document.getElementById('inventory_nav');
+
+inventory_nav.addEventListener("mouseover", () => {
   toggelBar.style.top = "537px";
-  booklist.style.visibility ='hidden';
-  memberlist.style.visibility ='hidden';
-  adminlist.style.visibility ='hidden';
- 
+  toggelBar.style.visibility = 'visible';
 });
 
-authorLabel.addEventListener("mouseover", () => {
+inventory_nav.addEventListener("mouseout", () => {
+  toggelBar.style.visibility = 'hidden';
+});
+
+let author_nav = document.getElementById('author_nav');
+
+author_nav.addEventListener("mouseover", () => {
   toggelBar.style.top = "587px";
-  booklist.style.visibility ='hidden';
-  memberlist.style.visibility ='hidden';
-  adminlist.style.visibility ='hidden';
-
+  toggelBar.style.visibility = 'visible';
 });
 
-adminTaskLabel.addEventListener("mouseover", () => {
-  toggelBar.style.top = "637px";
-  adminlist.style.visibility ='visible';
-  booklist.style.visibility ='hidden';
-  memberlist.style.visibility ='hidden';
+author_nav.addEventListener("mouseout", () => {
+  toggelBar.style.visibility = 'hidden';
+});
 
+let admin_nav = document.getElementById('admin_nav');
+let adminlist = document.getElementById('adminlist');
+
+admin_nav.addEventListener("mouseover", () => {
+  toggelBar.style.top = "637px";
+  toggelBar.style.visibility = 'visible';
+  adminlist.style.visibility ='visible';
+});
+
+admin_nav.addEventListener("mouseout", () => {
+  toggelBar.style.visibility = 'hidden';
+  adminlist.style.visibility ='hidden';
 });

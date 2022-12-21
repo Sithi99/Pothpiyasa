@@ -96,7 +96,7 @@ class Users extends Controller
                 //UserName
                 $userData['UserName'] = $_POST['RegistrationNo'];
                 //UserID
-                $userData['UserID'] = random_string(11);
+                $userData['UserID'] = random_string(9);
                 //AddStaffID
                 $userData['AddStaffID'] = get_staffid('UserID', $_SESSION['USER']->UserID);
                 //AddDate
@@ -353,12 +353,11 @@ class Users extends Controller
         }
 
         $user = new User();
+        $flag = array(0);
+
 
         //Getting existing data from database
         $row = $user->where('UserID', $id);
-
-        if (count($_POST) > 0) {
-
 
             //Delete data from user table
             $user->delete('UserID', $id);
@@ -380,12 +379,15 @@ class Users extends Controller
 
             $lecturer->delete('UserID', $id);
 
-            $this->redirect('users');
+            $flag[0]=1;
 
-        }
+            echo $flag[0];
+            // $this->redirect('users');
+
 
         $this->view('admin/users.delete', [
-            'row' => $row
+            'row' => $row,
+            'flag'=>$flag
         ]);
     }
 
@@ -509,11 +511,20 @@ class Users extends Controller
             }
         }
 
-        $this->view('admin/users.edit', [
+        $this->view('admin/users.editProfile', [
             'row' => $row,
             'errors' => $errors,
             'flag'=>$flag
         ]);
+    }
+
+    public function deletePreview($id = Null){
+        $user = new User();
+        $row =$user->where("UserID",$id);
+            
+        $this->view("admin/users.deletePreview",['row'=>$row]);
+          
+        
     }
 
 }

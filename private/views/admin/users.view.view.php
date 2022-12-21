@@ -98,10 +98,10 @@
                                                         class='fa-solid fa-pen'></i>&nbsp;<a
                                                         href='<?= ROOT ?>/users/edit/<?= $row->UserID ?>'>
                                                         Edit</a></button>
-                                        <button type='button' class='deletebtn' id='deletebtn'><i
-                                                        class='fa-solid fa-trash'></i>&nbsp;<a
-                                                        href='<?= ROOT ?>/users/delete/<?= $row->UserID ?>'>
-                                                        Delete</a></button>
+
+                                        <button type='button' class='deletebtn' id='deletebtn' onclick='openDeletePopup(<?= $row->UserID ?>)'><i
+                                                        class='fa-solid fa-trash'></i>&nbsp;&nbsp;Delete</button>
+                                                        
                                 </td>
 
                         </tr>
@@ -120,7 +120,7 @@
                 <?php endif; ?>
         </div>
 
-
-
+        <?php include('../private/views/includes/popup.delete1.view.php'); ?>
+        
 
         <?php include('../private/views/includes/footer.view.php'); ?>

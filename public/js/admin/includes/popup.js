@@ -4,7 +4,6 @@ let visitUrl;
 let id;
 
 function openPopup(url){
-    console.log("awa");
     popup.style.visibility = "visible";
     visitUrl = url;
     
@@ -32,7 +31,7 @@ function openDelete2Popup(){
 function directPreviewPage(){
     // popup.classList.remove("open_popup");
     popup.style.visibility = "hidden";
-    window.location.href = "http://localhost/Pothpiyasa/public/books/deletePreview/"+id;
+    window.location.href = "http://localhost/Pothpiyasa/public/users/deletePreview/"+id;
 }
 
 

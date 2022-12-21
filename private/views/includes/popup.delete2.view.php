@@ -1,5 +1,5 @@
 <div class="container_popup">
-    <div class="popup" id="popup">
+    <div class="delete2Popup" id="popup">
         <img src="<?= ROOT ?>/img/tick.png">
         <h2>Deleted!</h2>
         <p>Data has been deleted.</p>

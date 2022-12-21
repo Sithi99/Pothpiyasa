@@ -55,26 +55,26 @@
 
 
 
-                <label for="middleName" class="middleNameLabel">Middle Name</label>
-                <input type="text" name="MidName" class="middleName" id="middleName" value="<?= get_var('MidName', $row[0]->MidName) ?>"
-                    required>
-
-                <div class="errorMidName">
-                    <?php if (isset($errors['MidName'])): ?>
-                    <p>
-                        <?="*" . $errors['MidName'] ?>
-                    </p>
-                    <?php endif; ?>
-                </div>
-
                 <label for="lastName" class="lastNameLabel">Last Name</label>
-                <input type="text" name="LastName" class="lastName" id="lastName" value="<?= get_var('LastName', $row[0]->LastName) ?>"
+                <input type="text" name="LastName" class="lastName" id="lastName" value="<?= get_var('LastName',$row[0]->LastName) ?>"
                     required>
 
                 <div class="errorLastName">
                     <?php if (isset($errors['LastName'])): ?>
                     <p>
                         <?="*" . $errors['LastName'] ?>
+                    </p>
+                    <?php endif; ?>
+                </div>
+
+                <label for="phoneNo" class="phoneNoLabel">Phone No</label>
+                <input type="text" name="PhoneNo" class="phoneNo" id="phoneNo" value="<?= get_var('PhoneNo',$row[0]->PhoneNo) ?>"
+                    required>
+
+                <div class="errorPhoneNo">
+                    <?php if (isset($errors['PhoneNo'])): ?>
+                    <p>
+                        <?="*" . $errors['PhoneNo'] ?>
                     </p>
                     <?php endif; ?>
                 </div>

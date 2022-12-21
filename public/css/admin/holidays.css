@@ -45,8 +45,8 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
-    margin: 10px auto;
-    padding-bottom: -12px;
+    margin: -2px auto;
+    margin-top: 16px;
 }
 
 .month_holidays p {
@@ -363,7 +363,7 @@
 .holiday_details{
     position: absolute;
     top: 680px;
-    left: 730px;
+    left: 700px;
     display: flex;
 }
 
@@ -372,7 +372,11 @@
 }
 
 .holiday_details i{
-    margin-left: 20px;
+    margin-left: 25px;
+}
+
+.today_holiday i{
+    color:#2c9eea;
 }
 
 .poya_holiday i{

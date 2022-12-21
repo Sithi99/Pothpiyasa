@@ -138,54 +138,12 @@
   color: red;
   
 }
-.middleNameLabel {
-  position: absolute;
-  width: 100px;
-  height: 27px;
-  left: 70px;
-  top: 185px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 27px;
-
-  color: #000000;
-}
-.middleName {
-  position: absolute;
-  width: 204px;
-  height: 25px;
-  left: 180px;
-  top: 185px;
-  border: none;
-  outline: none;
-  background: linear-gradient(0deg, #ffffff, #ffffff),
-    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
-}
-.middleName:focus {
-  border: 3px solid #2e9fed;
-  outline: 0;
-}
-
-.errorMidName {
-  position: absolute;
-  font-size: 12px;
-  text-align: center;
-  left: 176px;
-  top: 195px;
-  padding: 5px;
-  color: red;
-  
-}
-
 .lastNameLabel {
   position: absolute;
   width: 100px;
   height: 27px;
   left: 70px;
-  top: 230px;
+  top: 185px;
 
   font-family: "Inter";
   font-style: normal;
@@ -200,7 +158,7 @@
   width: 204px;
   height: 25px;
   left: 180px;
-  top: 230px;
+  top: 185px;
   border: none;
   outline: none;
   background: linear-gradient(0deg, #ffffff, #ffffff),
@@ -212,6 +170,48 @@
 }
 
 .errorLastName {
+  position: absolute;
+  font-size: 12px;
+  text-align: center;
+  left: 176px;
+  top: 195px;
+  padding: 5px;
+  color: red;
+  
+}
+
+.phoneNoLabel {
+  position: absolute;
+  width: 100px;
+  height: 27px;
+  left: 70px;
+  top: 230px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+
+  color: #000000;
+}
+.phoneNo {
+  position: absolute;
+  width: 204px;
+  height: 25px;
+  left: 180px;
+  top: 230px;
+  border: none;
+  outline: none;
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+}
+.phoneNo:focus {
+  border: 3px solid #2e9fed;
+  outline: 0;
+}
+
+.errorPhoneNo {
   position: absolute;
   font-size: 12px;
   text-align: center;

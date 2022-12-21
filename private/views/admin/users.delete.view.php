@@ -46,13 +46,14 @@
                     required>
 
             
-                <label for="middleName" class="middleNameLabel">Middle Name</label>
-                <input type="text" name="MidName" class="middleName" id="middleName" value="<?= get_var('MidName', $row[0]->MidName) ?>"
+                <label for="lastName" class="lastNameLabel">Last Name</label>
+                <input type="text" name="LastName" class="lastName" id="lastName" value="<?= get_var('LastName',$row[0]->LastName) ?>"
                     required>
 
-                <label for="lastName" class="lastNameLabel">Last Name</label>
-                <input type="text" name="LastName" class="lastName" id="lastName" value="<?= get_var('LastName', $row[0]->LastName) ?>"
+                <label for="phoneNo" class="phoneNoLabel">Phone No</label>
+                <input type="text" name="PhoneNo" class="phoneNo" id="phoneNo" value="<?= get_var('PhoneNo',$row[0]->PhoneNo) ?>"
                     required>
+
 
                 <label for="sex" class="sexLabel">Sex</label>
                 <select id="sex" class="sex" name="Sex" id="sex" required>

@@ -66,7 +66,7 @@ function get_user_name($key,$value)
     $user = new User();
     if ($row = $user->where($key, $value)) {
         $row = $row[0];
-        return $row->FirstName . " " . $row->MidName;
+        return $row->FirstName . " " . $row->LastName;
     }else{
         return "None";
     }
@@ -95,11 +95,10 @@ function get_staff_name($key,$value)
 function get_staffid($key,$value)
 {
     $user = new LibraryStaff();
+    
     if ($row = $user->where($key, $value)) {
         $row = $row[0];
         return $row->StaffID;
-
- 
        
     }else{
         return "None";
@@ -113,8 +112,6 @@ function get_bookid($key,$value)
     if ($row = $user->where($key, $value)) {
         $row = $row[0];
         return $row->StaffID;
-
- 
        
     }else{
         return "None";

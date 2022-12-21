@@ -111,7 +111,7 @@ img {
 .login_form {
   position: absolute;
   padding: 38px;
-  top: 190px;
+  top: 160px;
   left: 880px;
   width: 400px;
   background: #F5F5F5;
@@ -131,10 +131,10 @@ img {
 }
 
 
-.login_form:hover {
+/* .login_form:hover {
   transform: scale(1.1);
   z-index: 2;
-}
+} */
 
 form .txt_field {
   position: relative;

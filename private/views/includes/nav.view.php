@@ -37,7 +37,14 @@
             <div class="accountlist" id="accountlist">
                 <ul>
                     <!-- Here gives path to the controller, from controller partcular view call -->
-                    <li class="editProfile"><a href="<?= ROOT ?>/users/editProfile">Profile</a></li>
+                    <li class="editProfile"><a href="<?= ROOT ?>/users/editProfile/<?= Auth::profileID() ?>">Profile</a></li>
+                    <li class="editProfile"><a href="<?= ROOT ?>/users/editProfile">Search Book</a></li>
+                    <li class="editProfile"><a href="<?= ROOT ?>/users/editProfile">My Reservation</a></li>
+                    <li class="editProfile"><a href="<?= ROOT ?>/users/editProfile">My Loans</a></li>
+                    <li class="editProfile"><a href="<?= ROOT ?>/users/editProfile">My History</a></li>
+                    <li class="editProfile"><a href="<?= ROOT ?>/users/editProfile">Request Book</a></li>
+
+
                 </ul>
             </div>
         </div>

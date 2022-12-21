@@ -52,8 +52,8 @@
                 <table class="user_table">
                         <tr>
                                 <th>First Name</th>
-                                <th>Middle Name</th>
                                 <th>Last Name</th>
+                                <th>Phone No</th>
                                 <th>Sex</th>
                                 <th>Birthday</th>
                                 <th>Address</th>
@@ -69,10 +69,10 @@
                                         <?= $row->FirstName ?>
                                 </td>
                                 <td>
-                                        <?= $row->MidName ?>
+                                        <?= $row->LastName ?>
                                 </td>
                                 <td>
-                                        <?= $row->LastName ?>
+                                        <?= $row->PhoneNo ?>
                                 </td>
                                 <td>
                                         <?= $row->Sex ?>

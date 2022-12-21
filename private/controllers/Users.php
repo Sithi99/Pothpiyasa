@@ -73,6 +73,7 @@ class Users extends Controller
         }
 
         $errors = array();
+        $flag = array(0);
 
         if (count($_POST) > 0) {
 
@@ -84,7 +85,7 @@ class Users extends Controller
                 $userData['RegistrationNo'] = $_POST['RegistrationNo'];
                 $userData['Title'] = $_POST['Title'];
                 $userData['FirstName'] = $_POST['FirstName'];
-                $userData['MidName'] = $_POST['MidName'];
+                $userData['PhoneNo'] = $_POST['PhoneNo'];
                 $userData['LastName'] = $_POST['LastName'];
                 $userData['Sex'] = $_POST['Sex'];
                 $userData['Birthday'] = $_POST['Birthday'];
@@ -97,7 +98,7 @@ class Users extends Controller
                 //UserID
                 $userData['UserID'] = random_string(11);
                 //AddStaffID
-                $userData['AddStaffID'] = $_SESSION['USER']->UserID;
+                $userData['AddStaffID'] = get_staffid('UserID', $_SESSION['USER']->UserID);
                 //AddDate
                 $userData['AddDate'] = date("Y-m-d H:i:s");
 
@@ -161,7 +162,6 @@ class Users extends Controller
                 //Insert data to user table
                 $user->insert($userData);
 
-
                 //Insert data to librarystaff table
                 if ($userData['MemberType'] == 'Library-StaffMember') {
                     $libStaff = new LibraryStaff();
@@ -173,6 +173,7 @@ class Users extends Controller
 
                 //Insert data to student table
                 if ($_POST['MemberType'] == 'Student') {
+
                     $student = new Student();
 
                     $studentData['UserID'] = $userData['UserID'];
@@ -186,6 +187,7 @@ class Users extends Controller
 
                 //Insert data to lecturer table
                 if ($_POST['MemberType'] == 'Lecturer') {
+
                     $lecturer = new Lecturer();
 
                     $lecturerData['UserID'] = $userData['UserID'];
@@ -205,8 +207,8 @@ class Users extends Controller
                     $nonAcademicStaff->insert($nonAcademicStaffData);
                 }
 
-
-                $this->redirect('AdminDashboard');
+                $flag[0] = 1;
+                //$this->redirect('AdminDashboard');
 
             } else {
                 $errors = $user->errors;
@@ -214,7 +216,7 @@ class Users extends Controller
             }
         }
 
-        $this->view('admin/users.add', ['errors' => $errors]);
+        $this->view('admin/users.add', ['errors' => $errors,'flag'=>$flag]);
     }
 
     public function edit($id = null)
@@ -224,6 +226,8 @@ class Users extends Controller
         }
 
         $errors = array();
+        $flag = array(0);
+
 
         $user = new User();
 
@@ -236,7 +240,7 @@ class Users extends Controller
                 $userData['RegistrationNo'] = $_POST['RegistrationNo'];
                 $userData['Title'] = $_POST['Title'];
                 $userData['FirstName'] = $_POST['FirstName'];
-                $userData['MidName'] = $_POST['MidName'];
+                $userData['PhoneNo'] = $_POST['PhoneNo'];
                 $userData['LastName'] = $_POST['LastName'];
                 $userData['Sex'] = $_POST['Sex'];
                 $userData['Birthday'] = $_POST['Birthday'];
@@ -326,7 +330,8 @@ class Users extends Controller
                     $lecturer->update('UserID', $id, $lecturerData);
                 }
 
-                $this->redirect('users');
+                $flag[0] = 1;
+                //$this->redirect('users');
 
             } else {
                 $errors = $user->errors;
@@ -336,7 +341,8 @@ class Users extends Controller
 
         $this->view('admin/users.edit', [
             'row' => $row,
-            'errors' => $errors
+            'errors' => $errors,
+            'flag'=>$flag
         ]);
     }
 
@@ -390,6 +396,8 @@ class Users extends Controller
         }
 
         $errors = array();
+        $flag = array(0);
+
 
         $user = new User();
 
@@ -402,7 +410,7 @@ class Users extends Controller
                 $userData['RegistrationNo'] = $_POST['RegistrationNo'];
                 $userData['Title'] = $_POST['Title'];
                 $userData['FirstName'] = $_POST['FirstName'];
-                $userData['MidName'] = $_POST['MidName'];
+                $userData['PhoneNo'] = $_POST['PhoneNo'];
                 $userData['LastName'] = $_POST['LastName'];
                 $userData['Sex'] = $_POST['Sex'];
                 $userData['Birthday'] = $_POST['Birthday'];
@@ -492,6 +500,7 @@ class Users extends Controller
                     $lecturer->update('UserID', $id, $lecturerData);
                 }
 
+                $flag[0] = 1;
                 $this->redirect('users');
 
             } else {
@@ -502,7 +511,8 @@ class Users extends Controller
 
         $this->view('admin/users.edit', [
             'row' => $row,
-            'errors' => $errors
+            'errors' => $errors,
+            'flag'=>$flag
         ]);
     }
 

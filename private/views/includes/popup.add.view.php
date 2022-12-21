@@ -1,4 +1,4 @@
-<div class="container_popup">
+<div class="container_popup" id="container_popup">
     <div class="popup" id="popup">
         <img src="<?= ROOT ?>/img/tick.png">
         <h2>Added!</h2>

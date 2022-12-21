@@ -47,19 +47,19 @@
         </div>
         <form action="<?= ROOT ?>/holidays/add" method="POST">
             <label class="holiday_Label" for="holiday_title">Title</label>
-            <input class="holiday_input" type="text" id="holiday_title" name="Holiday_title" required>
+            <input class="holiday_input" type="text" id="Holiday_title" name="Holiday_title" required>
             <br><br>
 
             <label class="holiday_Label" for="holiday_description">Description</label>
-            <input class="holiday_input" type="text" id="holiday_description" name="Holiday_description">
+            <input class="holiday_input" type="text" id="Holiday_description" name="Holiday_description">
             <br><br>
 
             <label class="holiday_Label" for="holiday_start">Start</label>
-            <input class="holiday_input" type="date" id="holiday_start" name="Holiday_start">
+            <input class="holiday_input" type="date" id="Holiday_start" name="Holiday_start" required>
             <br><br>
 
             <label class="holiday_Label" for="holiday_end">End</label>
-            <input class="holiday_input" type="date" id="holiday_end" name="Holiday_end">
+            <input class="holiday_input" type="date" id="Holiday_end" name="Holiday_end">
 
             <button class="addholidaybtn" name="addHoliday">Save</button>
             <button onclick="closeForm1()" class="cancelholidaybtn" name="cancelHoliday">Cancel</button>
@@ -73,21 +73,21 @@
             <h3>Schedule Form</h3>
         </div>
         <form method="POST">
-    
+
             <label class="holiday_Label" for="holiday_title">Title</label>
-            <input class="holiday_input" type="text" id="holiday_title" name="Holiday_title" required>
+            <input class="holiday_input" type="text" id="Holiday_title" name="Holiday_title" required>
             <br><br>
 
             <label class="holiday_Label" for="holiday_description">Description</label>
-            <input class="holiday_input" type="text" id="holiday_description" name="Holiday_description">
+            <input class="holiday_input" type="text" id="Holiday_description" name="Holiday_description">
             <br><br>
 
             <label class="holiday_Label" for="holiday_start">Start</label>
-            <input class="holiday_input" type="date" id="holiday_start" name="Holiday_start">
+            <input class="holiday_input" type="date" id="Holiday_start" name="Holiday_start">
             <br><br>
 
             <label class="holiday_Label" for="holiday_end">End</label>
-            <input class="holiday_input" type="date" id="holiday_end" name="Holiday_end">
+            <input class="holiday_input" type="date" id="Holiday_end" name="Holiday_end">
 
             <button type='button' class='editholidaybtn' id='editholidaybtn'><i class='fa-solid fa-pen'></i>&nbsp;<a
                     href='<?= ROOT ?>/holidays/edit/'>Edit</a></button>
@@ -97,6 +97,10 @@
     </div>
 
     <div class="holiday_details">
+        <div class="today_holiday">
+            <i class="fas fa-square"></i>
+            <p>Today</p>
+        </div>
         <div class="poya_holiday">
             <i class="fas fa-square"></i>
             <p>Poya Holiday</p>
@@ -111,4 +115,8 @@
         </div>
     </div>
 
-    <?php include('../private/views/includes/footer.view.php'); ?>
+</body>
+<script src="<?=ROOT?>/js/admin/includes/nav.js"></script>
+<script src="<?=ROOT?>/js/admin/holidays.js"></script>
+
+</html>

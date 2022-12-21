@@ -7,7 +7,7 @@
   /* width: 332px;
   height: 330px; */
   left: 1160px;
-  top: 460px;
+  top: 440px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@
 
 .onlineUsers {
   width: 332px;
-  height: 270px;
+  height: 282px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);

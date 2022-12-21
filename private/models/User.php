@@ -12,14 +12,9 @@ class User extends Model
           $this->errors = array();
 
           //Check for first name
-          if (!preg_match('/^[a-zA-Z]+$/', $DATA['FirstName'])) {
-               $this->errors['FirstName'] = "Only letters allowed in first name";
-          }
-
-          //Check for middle name
-          if (!preg_match('/^[a-zA-Z]+$/', $DATA['MidName'])) {
-               $this->errors['MidName'] = "Only letters allowed in middle name";
-          }
+          // if (!preg_match('/^[a-zA-Z]+$/', $DATA['FirstName'])) {
+          //      $this->errors['FirstName'] = "Only letters allowed in first name";
+          // }
 
           //Check for last name
           if (!preg_match('/^[a-zA-Z]+$/', $DATA['LastName'])) {

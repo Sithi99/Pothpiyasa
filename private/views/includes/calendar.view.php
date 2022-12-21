@@ -20,3 +20,8 @@
         <div class="days"></div>
     </div>
 </div>
+
+</body>
+<script src="<?=ROOT?>/js/admin/includes/nav.js"></script>
+<script src="<?=ROOT?>/js/admin/includes/calendar.js"></script>
+</html>

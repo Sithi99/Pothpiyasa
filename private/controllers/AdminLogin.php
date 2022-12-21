@@ -35,7 +35,7 @@ class AdminLogin extends Controller
                     }
 
                 } else {
-                    $errors['UserName'] = "Invalid User Name / Password";
+                    $errors['UserName'] = "Invalid Password";
                 }
 
             } else {

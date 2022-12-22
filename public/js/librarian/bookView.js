@@ -15,7 +15,7 @@ if(currentPage== 1){
 else if(currentPage == pages){
     next.style.color = 'gray';
 }
-else if(pages == 1){
+if(pages == 1){
     previous.style.color='gray';
     next.style.color = 'gray';
 }

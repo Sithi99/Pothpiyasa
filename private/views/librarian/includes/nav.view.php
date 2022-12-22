@@ -16,7 +16,7 @@
 
         <div class="dashbordIconBack" id="dashbordIconBack"></div>
         <i class="fa-solid fa-house-chimney" id="dashbordIcon"></i>
-        <p class="dashbordLabel" id="dashbordLabel"><a href="<?= ROOT?>/librarian/home">Dashboard</a></p>
+        <p class="dashbordLabel" id="dashbordLabel"><a href="<?= ROOT?>/librariandashboard">Dashboard</a></p>
 
 
 
@@ -40,8 +40,8 @@
         
         <div class="booklist" id="booklist">
             <ul>
-                <li class="addBook"><a href="#">Add Book</a></li>
-                <li class="addBook"><a href="#">View Book</a></li>
+                <li class="addBook"><a href="<?= ROOT?>/books/add">Add Book</a></li>
+                <li class="addBook"><a href="<?= ROOT?>/books/viewBook?page=1">View Book</a></li>
             </ul>
             <!-- <p class="addBook">Add Book</p>
                     <p class="viewBook">View Book</p> -->
@@ -60,8 +60,8 @@
         <div class="memberlist" id="memberlist">
             <ul>
                 <!-- Here gives path to the controller, from controller partcular view call -->
-                <li class="addmember"><a href="<?= ROOT?>/users/add">Add Member</a></li>
-                <li class="addmember"><a href="<?= ROOT?>/users/viewusers">View Member</a></li>
+                <li class="addmember"><a href="#">Add Member</a></li>
+                <li class="addmember"><a href="#">View Member</a></li>
             </ul>
             <!-- <p class="addBook">Add Book</p>
                     <p class="viewBook">View Book</p> -->
@@ -83,6 +83,13 @@
         <i class="fa-sharp fa-solid fa-swatchbook" id="bookCategoryIcon"></i>
         <p class="bookCategoryLabel" id="bookCategoryLabel"><a href="#">Book Category</a></p>
         <i class="fas fa-chevron-circle-right" id="toggleArrow5"></i>
+        <div class="categorylist" id="categorylist">
+            <ul>
+                <li class="addcategory"><a href="<?= ROOT?>/bookcategories/add">Add BookCategory</a></li>
+                <li class="addcategory"><a href="<?= ROOT?>/bookcategories/viewcategory">View BookCategory</a></li>
+            </ul>
+          
+        </div>
 
 
         <!-- inventory -->
@@ -113,10 +120,18 @@
 
         <!-- rack -->
 
-        <div class="adminTaskIconBack" id="adminTaskIconBack"></div>
-        <i class="fa-solid fa-clipboard-list" id="adminTaskIcon"></i>
+        <div class="rackIconBack" id="rackIconBack"></div>
+        <i class="fa-solid fa-clipboard-list" id="rackIcon"></i>
         <i class="fas fa-chevron-circle-right" id="toggleArrow8"></i>
-        <p class="adminTaskLabel" id="adminTaskLabel"><a href="#">Rack</a></p>
+        <p class="rackLabel" id="rackLabel"><a href="#">Rack</a></p>
+
+        <div class="racklist" id="racklist">
+            <ul>
+                <li class="addrack"><a href="<?= ROOT?>/racks/add">Add Rack</a></li>
+                <li class="addrack"><a href="<?= ROOT?>/racks/viewrack">View Rack</a></li>
+            </ul>
+          
+        </div>
 
        
         

@@ -78,5 +78,12 @@ class Model extends Database
         $data['id'] = $id;
         return $this->query($query, $data);
     }
+     public function findLimit($start,$end) //Getting specific number of rows
+    {
+        
+        $query = "SELECT * FROM $this->table LIMIT $start,$end";
+
+        return $this->query($query);
+    }
 
 }

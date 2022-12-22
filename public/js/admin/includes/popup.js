@@ -14,13 +14,16 @@ function closePopup(){
     popup.style.visibility = "hidden";
     console.log(visitUrl);
     window.location.href = visitUrl;                                                 
-
 }
 
 function openDeletePopup(val){
     // popup.classList.add("open_popup");
     popup.style.visibility = "visible";
     id = val; 
+}
+
+function closeDeletePopup(){
+    popup.style.visibility = "hidden";
 }
 
 function openDelete2Popup(){

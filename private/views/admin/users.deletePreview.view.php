@@ -2,7 +2,20 @@
 
 
 <body>
-    
+    <div class="header">
+        <p class="operation">Delete User</p>
+        <input type="text" class="searchbox">
+        <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+        <p class="search">Search</p>
+        <div class="notificationIconBack"></div>
+        <i class="fa-solid fa-bell" id="notificationIcon"></i>
+        <p class="logout"><a href="<?= ROOT ?>/logout">Logout</a></p>
+    </div>
+
+    <!-- navigation bar -->
+
+    <?php include('../private/views/includes/nav.view.php'); ?>
+
     <!-- body -->
 
     <div class="bodyContainer01">
@@ -161,7 +174,8 @@
                         </select>
                     </div>
                 </div>
-                    <button class="deletememberbtn" name="deleteMember" type="submit"><a href="<?=ROOT?>/users/delete/<?= $row[0]->UserID?>" >Delete</a></button>
+                <button class="deletememberbtn" name="deleteMember" type="submit"><a href="<?=ROOT?>/users/delete/<?= $row[0]->UserID?>" style="text-decoration: none; color: white;">Delete</a></button>
+                
 
             </form>
             <?php else:?>

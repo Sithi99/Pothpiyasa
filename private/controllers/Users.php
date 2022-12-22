@@ -236,7 +236,7 @@ class Users extends Controller
 
         if (count($_POST) > 0) {
 
-            if ($user->validate($_POST)) {
+            if ($user->validateEdit($_POST)) {
                 $userData['RegistrationNo'] = $_POST['RegistrationNo'];
                 $userData['Title'] = $_POST['Title'];
                 $userData['FirstName'] = $_POST['FirstName'];

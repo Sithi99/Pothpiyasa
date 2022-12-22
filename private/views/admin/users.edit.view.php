@@ -41,6 +41,14 @@
                 <input type="text" name="RegistrationNo" class="reg" id="reg" value="<?=get_var('RegistrationNo',$row[0]->RegistrationNo) ?>"
                     required>
 
+                <div class="errorRegistrationNo">
+                    <?php if (isset($errors['RegistrationNo'])): ?>
+                    <p>
+                        <?="*" . $errors['RegistrationNo'] ?>
+                    </p>
+                    <?php endif; ?>
+                </div>
+
                 <label for="firstName" class="firstNameLabel">First Name</label>
                 <input type="text" name="FirstName" class="firstName" id="firstName" value="<?= get_var('FirstName',$row[0]->FirstName) ?>"
                     required>
@@ -212,21 +220,29 @@
                         </select>
                     </div>
                 </div>
-                <button class="addmemberbtn" name="addMember" onclick="openPopup()">Save</button>
+                <button class="addmemberbtn" name="addMember" >Save</button>
 
             </form>
             <?php else:?>
-                <div style="text-align: center; position: absolute; top: 30%; left: 38%;">
-                    <!-- Here, need to include popup -->
-                    <h2>That user was not found!</h2>
-
+                <div class="result_notfound_container">
+                        <img src="<?= ROOT ?>/img/notfound.png" class="notfound_png">
+                        <br>
+                        <h4 class="No_result">No results found</h4>
+                        <br>
+                        <h5 class="No_result_para">We couldn't find what you search for. <br>Try searching again!</h5>
                 </div>
+
             <?php endif;?>
 
         </div>
         <button class="backbtn"><a href="<?= ROOT?>/users">Back</a></button>
 
+        <?php include('../private/views/includes/popup.edit.view.php');?> 
+
     </div>
 
-
     <?php include('../private/views/includes/footer.view.php'); ?>
+
+    <?php if($flag[0]==1){
+    echo '<script type="text/javascript">openPopup("http://localhost/Pothpiyasa/public/users")</script>';
+    }

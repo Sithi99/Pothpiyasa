@@ -375,16 +375,6 @@ function get_VendorID($key,$data){
     }
 }
 
-//get authorID
-function get_authorID($key,$data){
-    $author = new Author();
-    if($row = $author->where($key,$data)){
-        return $row[0]->AuthorID;
-    }
-    else{
-        return "None";
-    }
-}
 
 
 

@@ -353,5 +353,40 @@ function select_redioButton($value)
     
 }
 
+//get donor ID
+function get_DonorID($key,$data){
+    $donor = new Donor();
+    if($row = $donor->where($key,$data)){
+        return $row[0]->DonorID;
+    }
+    else{
+        return "None";
+    }
+}
+
+//get Vendor ID
+function get_VendorID($key,$data){
+    $vendor = new Vendor();
+    if($row = $vendor->where($key,$data)){
+        return $row[0]->VendorID;
+    }
+    else{
+        return "None";
+    }
+}
+
+//get authorID
+function get_authorID($key,$data){
+    $author = new Author();
+    if($row = $author->where($key,$data)){
+        return $row[0]->AuthorID;
+    }
+    else{
+        return "None";
+    }
+}
+
+
+
 
  

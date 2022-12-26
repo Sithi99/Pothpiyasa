@@ -13,7 +13,51 @@ class Books extends Controller
             }
     
             $book = new Book();
+        if (isset($_POST['filter_type_book'])) {
+
+            $column = $_POST['book_filter_type'];
+            $value = $_POST['book_filter_typo_input'];
+
+            if ($column == 'BookID') {
+                $data = $book->where($column, $value);
+
+            } elseif ($column == 'Title') {
+                $data = $book->where($column, $value);
+
+            } 
+            elseif ($column == 'Language') {
+                $data = $book->where($column, $value);
+
+            }
+            elseif ($column == 'PublishedYear') {
+                $data = $book->where($column, $value);
+
+            }
+            elseif ($column == 'Publisher') {
+                $data = $book->where($column, $value);
+
+            }
+            elseif ($column == 'VendorName') {
+                $data = $book->where('VendorID', get_VendorID('Name',$value));
+
+            }
+            elseif ($column == 'DonorName') {
+                $data = $book->where('DonorID', get_DonorID('Name',$value));
+
+            }
+            elseif ($column == 'AuthorName') {
+                $data = $book->where('AuthorID', get_AuthorID('Name',$value));
+
+            }else {
+                $data = $book->findAll();
+            }
+
+        } else {
+
             $data = $book->findAll();
+
+        }
+
             $this->view('librarian/book.view',['rows' => $data]);
         }
     
@@ -275,6 +319,33 @@ class Books extends Controller
 
 
         $this->view("user/searchbook");
+
+    }
+
+    public function searchbookOPAC()
+    {
+       // print_r("hi");
+        $errors = array();
+        
+        if(count($_POST) > 0)
+        {
+            $book = new Book();
+            
+            // if($book->opacvalidate($_POST))
+            // {
+
+               
+            // }
+            // else{
+            //     $errors = $book->errors;
+            //     print_r($errors) ;
+            
+            // }
+
+        }
+
+
+        $this->view("includes/searchbook");
 
     }
 

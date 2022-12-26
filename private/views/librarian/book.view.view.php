@@ -53,7 +53,7 @@
 
                 <button id="filter_type_book" name="filter_type_book" class="filter_type_book">Filter</button>
         </form>
-         <div class="bodyContainer01ViewBook">
+         
         <?php include('../private/views/includes/popup.delete1.view.php');?>
         <?php include('../private/views/includes/popup.delete2.view.php');?>
         <?php if($rows):?>

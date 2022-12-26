@@ -30,21 +30,33 @@
         <!-- navigation bar -->
     
         <?php include('../private/views/librarian/includes/nav.view.php'); ?>
-        <!-- <select name="filterViewBook" id="filterViewBook">
-            <option value="">--- Choose Type ---</option>
-            <option value="">Title</option>
-            <option value="">ISBN</option>
-            <option value="">Edition</option>
-            <option  value="">Language</option>
-            <option  value="Publisher">Publisher</option>
-            <option  value="PublishedYear">PublishedYear</option>
-        </select>
-        <input type="text" class="filterViewBookInput" id="filterViewBookInput">
-        <button></button> -->
+       
         <!-- body -->
         <div class="bodyContainer01ViewBook">
         <?php include('../private/views/includes/popup.delete1.view.php');?>
         <?php include('../private/views/includes/popup.delete2.view.php');?>
+        <form method="POST">
+
+                <select id="book_filter_type" class="book_filter_type" name="book_filter_type">
+                        <option value="">--- Filter By  ---</option>
+                        <option value="BookID">Book ID</option>
+                        <option value="Title">Title</option>
+                        <option value="Language">Language</option>
+                        <option value="PublishedYear">Published Year</option>
+                        <option value="Publisher">Publisher</option>
+                        <option value="VendorName">Vendor Name</option>
+                        <option value="DonorName">Donor Name</option>
+                        <option value="AuthorName">Author Name</option>
+                </select>
+
+                <input class="book_filter_typo_input" name="book_filter_typo_input" type="text">
+
+                <button id="filter_type_book" name="filter_type_book" class="filter_type_book">Filter</button>
+        </form>
+         <div class="bodyContainer01ViewBook">
+        <?php include('../private/views/includes/popup.delete1.view.php');?>
+        <?php include('../private/views/includes/popup.delete2.view.php');?>
+        <?php if($rows):?>
             <?php 
                 $book = new Book();
                 $data = $book->findAll();
@@ -144,6 +156,15 @@
 
                 echo $table1;
             ?>
+            <?php else: ?>
+             <div class="result_notfound_container">
+                        <img src="<?= ROOT ?>/img/notfound.png" class="notfound_png">
+                        <br>
+                        <h4 class="No_result">No results found</h4>
+                        <br>
+                        <h5 class="No_result_para">We couldn't find what you search for. <br>Try searching again!</h5>
+                </div>
+            <?php endif;?>
             
         <?php include('../private/views/includes/popup.delete1.view.php'); ?>
 

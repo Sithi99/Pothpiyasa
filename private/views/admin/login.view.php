@@ -18,7 +18,7 @@
             </div>
             <div class="opac_button">
                 <img src="<?= ROOT ?>/img/admin/login/vector_book.png" class="book_logo">
-                <a href="#" class="opac_text">OPAC</a>
+                <a href="<?= ROOT?>/books/searchbookOPAC" class="opac_text">OPAC</a>
             </div>
         </div>
     </header>

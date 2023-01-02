@@ -31,8 +31,12 @@ class Users extends Controller
             } else {
                 $data = $user->findAll();
             }
+        }else {
+            $data = $user->findAll();
 
-        } elseif (isset($_POST['filter_typo_search'])) {
+        }
+
+        if (isset($_POST['filter_typo_search'])) {
 
             $column = $_POST['user_filter_typo'];
             $value = $_POST['user_filter_typo_input'];
@@ -230,9 +234,15 @@ class Users extends Controller
 
 
         $user = new User();
+        $lecturer = new Lecturer();
+        $student = new Student();
 
         //Getting existing data from database
-        $row = $user->where('UserID', $id);
+        $rowUser = $user->where('UserID', $id);
+        $rowLecturer = $lecturer->where('UserID', $id);
+        $rowStudent = $student->where('UserID', $id);
+
+
 
         if (count($_POST) > 0) {
 
@@ -340,7 +350,9 @@ class Users extends Controller
         }
 
         $this->view('admin/users.edit', [
-            'row' => $row,
+            'rowUser' => $rowUser,
+            'rowLecturer' => $rowLecturer,
+            'rowStudent' => $rowStudent,
             'errors' => $errors,
             'flag'=>$flag
         ]);
@@ -352,46 +364,21 @@ class Users extends Controller
             $this->redirect('AdminLogin');
         }
 
-        $user = new User();
+
         $flag = array(0);
 
 
-        //Getting existing data from database
-        $row = $user->where('UserID', $id);
+         $flag[0]=1;
 
-            //Delete data from user table
-            $user->delete('UserID', $id);
-
-
-            //Delete data from librarystaff table
-            $libStaff = new LibraryStaff();
-
-            $libStaff->delete('UserID', $id);
-
-            //Delete data from student table
-            $student = new Student();
-
-            $student->delete('UserID', $id);
-
-
-            //Delete data from lecturer table
-            $lecturer = new Lecturer();
-
-            $lecturer->delete('UserID', $id);
-
-            $flag[0]=1;
-
-            echo $flag[0];
             // $this->redirect('users');
 
 
         $this->view('admin/users.delete', [
-            'row' => $row,
             'flag'=>$flag
         ]);
     }
 
-    public function editProfile($id = null)
+    public function adminEditProfile($id = null)
     {
         if (!Auth::logged_in()) {
             $this->redirect('AdminLogin');
@@ -519,12 +506,95 @@ class Users extends Controller
     }
 
     public function deletePreview($id = Null){
+        if (!Auth::logged_in()) {
+            $this->redirect('AdminLogin');
+        }
+
         $user = new User();
-        $row =$user->where("UserID",$id);
-            
-        $this->view("admin/users.deletePreview",['row'=>$row]);
+        $lecturer = new Lecturer();
+        $student = new Student();
+
+        $rowUser = $user->where('UserID', $id);
+        $rowLecturer = $lecturer->where('UserID', $id);
+        $rowStudent = $student->where('UserID', $id);
+
+        $flag = array(0);
+
+
+        //Getting existing data from database
+        $row = $user->where('UserID', $id);
+
+            //Delete data from user table
+            $user->delete('UserID', $id);
+
+
+            //Delete data from librarystaff table
+            $libStaff = new LibraryStaff();
+
+            $libStaff->delete('UserID', $id);
+
+            //Delete data from student table
+            $student = new Student();
+
+            $student->delete('UserID', $id);
+
+
+            //Delete data from lecturer table
+            $lecturer = new Lecturer();
+
+            $lecturer->delete('UserID', $id);
+
+            $flag[0]=1;
+
+            echo $flag[0];
+            // $this->redirect('users');
+
+
+        $this->view('admin/users.deletePreview', [
+            'rowUser' => $rowUser,
+            'rowLecturer' => $rowLecturer,
+            'rowStudent' => $rowStudent,
+            'flag'=>$flag
+        ]);
           
         
+    }
+
+    //Sandali
+    public function myhistory()
+    {
+        
+        $this->view('user/history');
+    }
+
+    public function myreservations($id = "null")
+    {
+        
+        $reserve = new ReserveBook();
+        $row = $reserve->where("UserID",$id);
+        
+
+        
+        $this->view("user/reservations",['rows'=>$row]);
+    }
+    public function myloans($id = "null")
+    {
+        $loan = new IssueBook();
+        $row = $loan->where("UserID",$id);
+    
+        $this->view("user/loans",['rows'=>$row]);
+    }
+    
+    public function requestbooks()
+    {
+        
+        $this->view('user/requestBooks');
+    }
+    
+    public function editprofile()
+    {
+        
+        $this->view('user/editProfile');
     }
 
 }

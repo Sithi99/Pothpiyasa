@@ -21,6 +21,19 @@ class Model extends Database
         //Here, supply query data seperately
         return $this->query($query, ['value' => $value] );
     }
+    
+
+    //Sandali
+
+     //SELECT * FROM `rack` ORDER BY RackID DESC LIMIT 1;
+    //get last row
+
+    public function last($col1,$col2) //Getting single record
+    {
+        $query = "SELECT $col2 FROM $this->table ORDER BY $col1 DESC LIMIT 1";
+
+        return $this->query($query);
+    }
 
     public function findAll() //Getting all records(rows)
     {
@@ -86,4 +99,18 @@ class Model extends Database
         return $this->query($query);
     }
 
+<<<<<<< Updated upstream
 }
+=======
+    //kasun
+
+    public function findLimit($start,$end) //Getting specific number of rows
+    {
+        
+        $query = "SELECT * FROM $this->table LIMIT $start,$end";
+
+        return $this->query($query);
+    }
+
+}
+>>>>>>> Stashed changes

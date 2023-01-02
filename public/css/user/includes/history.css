@@ -1,0 +1,10 @@
+.container_view_history {
+    position: absolute;
+    width: 1210px;
+    height: 590px;
+    left: 306px;
+    top: 104px;
+  
+    background: #ffffff;
+    border-radius: 35px;
+  }

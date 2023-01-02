@@ -18,88 +18,91 @@
     <div class="report_container">
         <div class="report">
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/issued_books'>
+            <a href='<?= ROOT ?>/reports/issued_books'>
+                <div class="outside_box">
                     <h3>Issued Books</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/returned_books'>
+
+            <a href='<?= ROOT ?>/reports/returned_books'>
+                <div class="outside_box">
                     <h3>Returned Books</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/withdrawn_books'>
+            <a href='<?= ROOT ?>/reports/withdrawn_books'>
+                <div class="outside_box">
                     <h3>Withdrawn Books</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/damaged_books'>
+            <a href='<?= ROOT ?>/reports/damaged_books'>
+                <div class="outside_box">
                     <h3>Withdrawn Books (T)</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/lost_books'>
+            <a href='<?= ROOT ?>/reports/lost_books'>
+                <div class="outside_box">
                     <h3>Lost Books</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
 
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/damaged_books'>
+            <a href='<?= ROOT ?>/reports/damaged_books'>
+                <div class="outside_box">
                     <h3>Damaged Books</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
 
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/fine_report'>
+            <a href='<?= ROOT ?>/reports/fine_report'>
+                <div class="outside_box">
                     <h3>Fine Report</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/fine_report'>
+            <a href='<?= ROOT ?>/reports/fine_report'>
+                <div class="outside_box">
                     <h3>Fine Payment</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/missing'>
+            <a href='<?= ROOT ?>/reports/missing'>
+                <div class="outside_box">
+
                     <h3>Photocopies</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/inventory_report'>
+            <a href='<?= ROOT ?>/reports/inventory_report'>
+                <div class="outside_box">
                     <h3>Donors/Vendors</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/missing'>
+            <a href='<?= ROOT ?>/reports/missing'>
+                <div class="outside_box">
                     <h3>Inventory Missing</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
 
-            <div class="outside_box">
-                <a href='<?= ROOT ?>/reports/inventory_report'>
+            <a href='<?= ROOT ?>/reports/inventory_report'>
+                <div class="outside_box">
                     <h3>Inventory Report</h3>
-                </a>
-            </div>
+                </div>
+            </a>
 
 
-            <button class="backbtn"><a href="<?= ROOT ?>">Back</a></button>
+
+            <button class="backbtn"><a href="<?= ROOT ?>/AdminDashboard">Back</a></button>
 
         </div>
 

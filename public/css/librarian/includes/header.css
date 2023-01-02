@@ -1,0 +1,129 @@
+body {
+    background: #ede6e7;
+  }
+  
+  /* Start of Header Section */
+  .header {
+    position: absolute;
+    width: 1255px;
+    height: 60px;
+    left: 280px;
+    top: 0px;
+  
+    background: #ffffff;
+  }
+  
+  .operation {
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    color: #aea7a7;
+  }
+  
+  .searchbox {
+    position: absolute;
+    width: 254px;
+    height: 40px;
+    left: 650px;
+    top: 8px;
+    border: none;
+    outline: none;
+    background: #edecf1;
+    border-radius: 35px;
+  }
+  .searchbox:focus {
+    border: 3px solid #1395ed;
+    outline: none;
+  }
+  #searchIcon {
+    position: absolute;
+    top: 19px;
+    left: 680px;
+    font-size: 20px;
+    color: #1395ed;
+  }
+  .search {
+    position: absolute;
+    left: 820px;
+    top: -9px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: right;
+  
+    color: #1395ed;
+  }
+  .notificationIconBack {
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    left: 990px;
+    top: 15px;
+    background: #1395ed;
+    border-radius: 35px;
+  }
+  #notificationIcon {
+    position: absolute;
+    top: 18px;
+    left: 1000px;
+    color: white;
+    font-size: 20px;
+  }
+  .logout {
+    position: absolute;
+    width: 108px;
+    height: 25px;
+    left: 1090px;
+    top: -10px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .logout a {
+    text-decoration: none;
+    color: #1395ed;
+  }
+
+
+  
+  .No_result{
+    position: absolute;
+    font-size: 42px;
+    color: #3FBAFE;
+    font-weight: 700;
+    left: 41%;
+    top: 40%;
+  }
+
+  .No_result_para{
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    left: 41.5%;
+    color: #908d8d;
+    /* color: #1ED7FE; */
+
+    top: 55%;
+  }
+
+  .notfound_png{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 46%;
+
+    top: 15%;
+  }
+  
+  
+  /* End of Header Section */

@@ -353,6 +353,7 @@ function select_redioButton($value)
     
 }
 
+<<<<<<< Updated upstream
 //get donor ID
 function get_DonorID($key,$data){
     $donor = new Donor();
@@ -378,5 +379,7 @@ function get_VendorID($key,$data){
 
 
 
+=======
+>>>>>>> Stashed changes
 
  

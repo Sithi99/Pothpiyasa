@@ -4,8 +4,6 @@
 
 .container_onlineUsers {
   position: absolute;
-  /* width: 332px;
-  height: 330px; */
   left: 1160px;
   top: 440px;
   display: flex;
@@ -31,4 +29,10 @@
   border-bottom: 3px solid #2c9eea;
   text-align: center;
 
+}
+
+.onlineUsers img {
+  position: absolute;
+  height: 210px;
+  left: 15px;
 }

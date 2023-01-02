@@ -16,15 +16,41 @@ class Reports extends Controller
 
     public function issued_books()
     {
-        // $book = new Book();
-        // $data = $book->findAll();
-
+        
         if(!Auth::logged_in())
         {
             $this->redirect('AdminLogin');
         }
+
+        $issuebook = new IssueBook();
+
+        if (isset($_POST['issue_filter_typo_search'])) {
+
+            $column = $_POST['issue_user_filter_typo'];
+
+            $value = $_POST['issue_user_filter_typo_input'];
+
+            if ($column == 'BookID') {
+                $data = $issuebook->where($column, $value);
+
+            } elseif ($column == 'UserID') {
+                $data = $issuebook->where($column, $value);
+
+            } elseif ($column == 'StaffID') {
+                $data = $issuebook->where($column, $value);
+
+            } else {
+                $data = $issuebook->findAll();
+            }
+
+        } else {
+
+             $data = $issuebook->findAll();
+            
+        }
+
         
-        $this->view('admin/reports/issued.report');
+        $this->view('admin/reports/issued.report',['rows' => $data]);
 
     }
 
@@ -34,6 +60,7 @@ class Reports extends Controller
         {
             $this->redirect('AdminLogin');
         }
+
         
         $this->view('admin/reports/damaged.report');
 
@@ -45,8 +72,35 @@ class Reports extends Controller
         {
             $this->redirect('AdminLogin');
         }
+
+        $returnbook = new ReturnBook();
+
+        if (isset($_POST['issue_filter_typo_search'])) {
+
+            $column = $_POST['issue_user_filter_typo'];
+
+            $value = $_POST['issue_user_filter_typo_input'];
+
+            if ($column == 'BookID') {
+                $data = $returnbook->where($column, $value);
+
+            } elseif ($column == 'UserID') {
+                $data = $returnbook->where($column, $value);
+
+            } elseif ($column == 'StaffID') {
+                $data = $returnbook->where($column, $value);
+
+            } else {
+                $data = $returnbook->findAll();
+            }
+
+        } else {
+
+             $data = $returnbook->findAll();
+            
+        }
         
-        $this->view('admin/reports/returned.report');
+        $this->view('admin/reports/returned.report',['rows' => $data]);
 
     }
 
@@ -78,8 +132,35 @@ class Reports extends Controller
         {
             $this->redirect('AdminLogin');
         }
+
+        $returnbook = new ReturnBook();
+
+        if (isset($_POST['issue_filter_typo_search'])) {
+
+            $column = $_POST['issue_user_filter_typo'];
+
+            $value = $_POST['issue_user_filter_typo_input'];
+
+            if ($column == 'BookID') {
+                $data = $returnbook->where($column, $value);
+
+            } elseif ($column == 'UserID') {
+                $data = $returnbook->where($column, $value);
+
+            } elseif ($column == 'StaffID') {
+                $data = $returnbook->where($column, $value);
+
+            } else {
+                $data = $returnbook->findAll();
+            }
+
+        } else {
+
+             $data = $returnbook->findAll();
+            
+        }
         
-        $this->view('admin/reports/fine.report');
+        $this->view('admin/reports/fine.report',['rows' => $data]);
 
     }
 

@@ -91,7 +91,7 @@
                                 </td>
                                 <!-- Getting user name when gives id, this should -->
                                 <td>
-                                        <?= get_user_name('UserID', $row->AddStaffID) ?>
+                                        <?= get_staff_name('StaffID', $row->AddStaffID) ?>
                                 </td>
 
                                 <td><button type='button' class='editbtn' id='editbtn'><i

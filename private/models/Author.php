@@ -6,15 +6,12 @@ class Author extends Model
 {
  
      //Validation is differ from one model to another
-     public function validate($DATA)
+     public function validate($DATA,$size,$type)
      {
           
           $this->errors = array();
           
-          //Check for name
-          //$name=$DATA['Name'];
-          //if (!preg_match ("/^[a-zA-Z]*$/", $name) )
-          //if(empty($DATA['Name']))
+         
           if(!preg_match('/^[a-zA-Z-, ]*$/',$DATA['Name']))
           {
                $this->errors['Name'] = "Only letters and white space are allowed";
@@ -32,6 +29,21 @@ class Author extends Model
           {
                $this->errors['Sex'] = "Select Sex field";
           }
+
+          //check image size
+
+          if($size>125000)
+          {
+               $this->errors['imagefile'] = "Sorry Image is too large.";
+          }
+
+          //check file format
+ 
+          if($type!="jpg" && $type!="png" && $type!="jpeg")
+          {
+               $this->errors['imagefile'] = "Sorry, File format is wrong.";
+          }
+
           
          
           

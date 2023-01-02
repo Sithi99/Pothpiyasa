@@ -42,21 +42,21 @@
 
         <div class="role librarian_role">
             <h3>Librarian</h3>
-            <a href="<?= ROOT?>/AdminLogin">
+            <a href="<?= ROOT?>/LibrarianLogin">
                 <img src="<?= ROOT ?>/img/home/librarian.png" width="200px" height="160px">
             </a>
         </div>
 
         <div class="role libraryStaff_role">
             <h3>Library-Staff</h3>
-            <a href="<?= ROOT?>/AdminLogin">
+            <a href="<?= ROOT?>/LibraryStaffLogin">
                 <img src="<?= ROOT ?>/img/home/library_staff.png" width="200px" height="160px">
             </a>
         </div>
 
         <div class="role user_role">
             <h3>Borrower</h3>
-            <a href="<?= ROOT?>/AdminLogin">
+            <a href="<?= ROOT?>/UserLogin">
                 <img src="<?= ROOT ?>/img/home/user.png" width="200px" height="160px">
             </a>
         </div>

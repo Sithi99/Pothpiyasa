@@ -23,15 +23,22 @@ class AdminLogin extends Controller
                     Auth::authenticate($row);
 
                     
-                    if($row->JobType == "Administrator")
-                    {
+                    if ($row->JobType == "Librarian") {
+                        $this->redirect('LibrarianDashboard');
+
+                    }
+                    else if ($row->JobType == "Administrator") {
                         $this->redirect('AdminDashboard');
 
                     }
+                    else if ($row->JobType == "Library-Staff") {
+                        $this->redirect('librarystaffdashboard');
 
-                    if($row->JobType == "Librarian")
-                    {
-                        // $this->redirect('Librarian');
+                    }
+                    else if($row->MemberType == "Other-Member"){
+
+                        $this->redirect('UserDashboard');
+
                     }
 
                 } else {

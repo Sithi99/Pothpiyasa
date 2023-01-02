@@ -1,0 +1,313 @@
+/* Start of Navigation Section */
+
+.navigation {
+  position: absolute;
+  width: 280px;
+  height: 755px;
+  left: 0px;
+  top: -2px;
+  background: #0a3451;
+}
+
+.navigationLabels {
+  position: absolute;
+  top: -50px;
+  left: 6px;
+}
+
+.logo {
+  position: absolute;
+  width: 237px;
+  height: 65px;
+  left: -5px;
+  top: 6px;
+}
+#navIcon {
+  position: absolute;
+  left: 245px;
+  top: 25px;
+  font-size: 30px;
+
+  color: #ffffff;
+}
+
+.profile {
+  position: relative;
+  top: -30px;
+  left: 1px;
+}
+.profileImg {
+  position: absolute;
+  width: 60px;
+  height: 55px;
+  left: 15px;
+  top: 128px;
+  border-radius: 50%;
+}
+.profileName {
+  color: white;
+  position: absolute;
+  top: 130px;
+  left: 96px;
+}
+
+.profileID {
+  color: white;
+  position: absolute;
+  top: 140px;
+  left: 110px;
+}
+.toggelBar {
+  position: absolute;
+  width: 268px;
+  height: 40px;
+  left: 5px;
+  top: 237px;
+  background: white;
+  opacity: 0.3;
+  border-radius: 35px 0px 0px 35px;
+}
+
+.dashbordLabel {
+  position: absolute;
+  width: 129px;
+  height: 29px;
+  left: 74px;
+  top: 222px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+}
+.dashbordLabel a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.dashbordIconBack {
+  position: absolute;
+  width: 37px;
+  height: 29px;
+  left: 10px;
+  top: 242px;
+
+  background: #1395ed;
+  border-radius: 35px;
+}
+#dashbordIcon {
+  position: absolute;
+  top: 249px;
+  left: 19px;
+
+  color: #ffffff;
+}
+.profileLabel {
+  position: absolute;
+  width: 129px;
+  height: 29px;
+  left: 74px;
+  top: 272px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+}
+.profileLabel a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.profileIconBack {
+  position: absolute;
+  width: 37px;
+  height: 29px;
+  left: 10px;
+  top: 292px;
+
+  background: #1395ed;
+  border-radius: 35px;
+}
+#profileIcon {
+  position: absolute;
+  top: 299px;
+  left: 19px;
+
+  color: #ffffff;
+}
+
+.bookLabel {
+  position: absolute;
+  width: 129px;
+  height: 29px;
+  left: 74px;
+  top: 322px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+}
+.bookLabel a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.bookIconBack {
+  position: absolute;
+  width: 37px;
+  height: 29px;
+  left: 10px;
+  top: 342px;
+
+  background: #1395ed;
+  border-radius: 35px;
+}
+#bookIcon {
+  position: absolute;
+  top: 349px;
+  left: 21px;
+  color: #ffffff;
+}
+
+
+.reservationLabel {
+  position: absolute;
+  width: 149px;
+  height: 29px;
+  left: 74px;
+  top: 372px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+}
+.reservationLabel a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.reservationIconBack {
+  position: absolute;
+  width: 37px;
+  height: 29px;
+  left: 10px;
+  top: 392px;
+
+  background: #1395ed;
+  border-radius: 35px;
+}
+#reservationIcon {
+  position: absolute;
+  top: 399px;
+  left: 21px;
+
+  color: #ffffff;
+}
+
+.loansLabel {
+  position: absolute;
+  width: 129px;
+  height: 29px;
+  left: 74px;
+  top: 422px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+}
+.loansLabel a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.loansIconBack {
+  position: absolute;
+  width: 37px;
+  height: 29px;
+  left: 10px;
+  top: 442px;
+
+  background: #1395ed;
+  border-radius: 35px;
+}
+#loansIcon {
+  position: absolute;
+  top: 449px;
+  left: 21px;
+
+  color: #ffffff;
+}
+
+.historyLabel {
+  position: absolute;
+  width: 200px;
+  height: 29px;
+  left: 74px;
+  top: 470px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+}
+.historyLabel a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.historyIconBack {
+  position: absolute;
+  width: 37px;
+  height: 29px;
+  left: 10px;
+  top: 492px;
+
+  background: #1395ed;
+  border-radius: 35px;
+}
+#historyIcon {
+  position: absolute;
+  top: 499px;
+  left: 21px;
+
+  color: #ffffff;
+}
+
+.requestbookLabel {
+  position: absolute;
+  width: 129px;
+  height: 29px;
+  left: 74px;
+  top: 520px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+}
+.requestbookLabel a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.requestbookIconBack {
+  position: absolute;
+  width: 37px;
+  height: 29px;
+  left: 10px;
+  top: 542px;
+
+  background: #1395ed;
+  border-radius: 35px;
+}
+#requestbookIcon {
+  position: absolute;
+  top: 548px;
+  left: 19px;
+
+  color: #ffffff;
+}

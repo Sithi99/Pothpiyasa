@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Author</title>
-    <link rel="stylesheet" href="<?= ROOT ?>/css/includes/header.css">
-    <link rel="stylesheet" href="<?= ROOT ?>/css/includes/nav.css">
+    <title>Pothpiyasa</title>
+    <link rel="stylesheet" href="<?= ROOT ?>/css/librarian/includes/header.css">
+    <link rel="stylesheet" href="<?= ROOT ?>/css/librarian/includes/nav.css">
     <link rel="stylesheet" href="<?= ROOT ?>/css/librarian/addAuthor.css">
+    <link rel="stylesheet" href="<?= ROOT ?>/css/librarian/includes/popup.css">
     <link rel="stylesheet" href="<?= ROOT ?>/css/all.min.css">
 </head>
 
@@ -20,13 +21,14 @@
         <p class="search">Search</p>
         <div class="notificationIconBack"></div>
         <i class="fa-solid fa-bell" id="notificationIcon"></i>
-        <p class="logout"><a href="#">Logout</a></p>
+        <p class="logout"><a href="<?=ROOT?>/logout">Logout</a></p>
     </div>
 
     <!-- navigation bar -->
 
-    <?php include('../private/views/includes/nav.view.php'); ?>
-
+    <?php 
+       $this->view('librarian/includes/nav'); 
+    ?>
 
     <!-- body -->
 
@@ -75,6 +77,13 @@
         <label for="authorImage" class="authorImageLabel">Upload Image</label> 
         <input type="file" id="imagefile" name="imagefile" class="imagefile" required >
 
+        <div class="errorImage">
+                    <?php if (isset($errors['imagefile'])): ?>
+                    <p>
+                        <?="*" . $errors['imagefile'] ?>
+                    </p>
+                    <?php endif; ?>
+
       
         
         <div class="container3" id="imagecontainer">
@@ -84,11 +93,21 @@
         </div>
     </form>
 </div>
-<button class="backbtn"><a href="<?= ROOT ?>/librarian">Back</a></button>
+<button class="backbtn"><a href="<?= ROOT ?>/librariandashboard">Back</a></button>
 
 
         
 </div>
-
-<?php include('../private/views/includes/footer.view.php'); ?>
+<?php 
+   include('../private/views/includes/popup.add.view.php');
+?>    
     
+
+    <?php $this->view('librarian/includes/footer'); ?>
+
+
+    
+<!-- set the popup msg -->
+<?php if($flag[0]==1){
+    echo '<script type="text/javascript">openPopup("http://localhost/Pothpiyasa/public/authors/add");</script>';
+}?>

@@ -1,8 +1,8 @@
 .container_view {
   position: absolute;
-  width: 1240px;
+  width: 1235px;
   height: 550px;
-  left: 290px;
+  left: 292px;
   top: 144px;
 
   background: #ffffff;
@@ -106,15 +106,17 @@
   text-align: center;
 }
 
-.user_table {
-  position: absolute;
-  top: 2%;
-  left: 20px;
+.user_table{
+ 
   padding: 6px;
+}
+
+.user_table {  
   display: block;
   overflow-x: auto;
   white-space: nowrap;
   margin-top: 30px;
+
 }
 
 .user_table th {

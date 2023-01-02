@@ -80,15 +80,11 @@ const renderHolidayCalendar = () => {
       //Here given id to the divs (id = particular date)
       days += `<div onclick="openForm1()" class = "today_holidays" id="${new Date(
         date_holidays.getFullYear(),
-        date_holidays.getMonth(),
-        i
-      ).toDateString()}">${i}</div>`;
+        date_holidays.getMonth(), i).toDateString()}">${i}</div>`;
     } else {
       days += `<div onclick="openForm1()" id="${new Date(
         date_holidays.getFullYear(),
-        date_holidays.getMonth(),
-        i
-      ).toDateString()}">${i}</div>`;
+        date_holidays.getMonth(), i).toDateString()}">${i}</div>`;
     }
   }
 
@@ -96,9 +92,7 @@ const renderHolidayCalendar = () => {
   for (let j = 1; j <= nextDays; j++) {
     days += `<div class="next-date_holidays" id="${new Date(
       date_holidays.getFullYear(),
-      date_holidays.getMonth(),
-      i
-    ).toDateString()}">${j}</div>`;
+      date_holidays.getMonth(),j).toDateString()}">${j}</div>`;
   }
 
   monthDays.innerHTML = days;

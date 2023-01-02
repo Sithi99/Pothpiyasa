@@ -228,7 +228,7 @@
 
             </form>
         </div>
-        <button class="backbtn"><a href="<?= ROOT ?>">Back</a></button>
+        <button class="backbtn"><a href="<?= ROOT ?>/AdminDashboard">Back</a></button>
 
     </div>
 

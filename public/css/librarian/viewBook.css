@@ -141,7 +141,14 @@
 
 .bookTitleTable{
     text-decoration: none;
+<<<<<<< Updated upstream
     color: blue;
+=======
+    color: black;
+}
+.bookTitleTable:hover{
+    color: white;
+>>>>>>> Stashed changes
 }
 #filterViewBook{
     position: absolute;

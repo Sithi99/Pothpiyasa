@@ -2,7 +2,7 @@
 
 <body>
         <div class="header">
-                <p class="operation">View Members</p>
+                <p class="operation">Issued Report</p>
                 <input type="text" class="searchbox">
                 <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
                 <p class="search">Search</p>
@@ -17,93 +17,66 @@
 
         <!-- body -->
 
-        <form method="POST">
-
-                <select class="user_filter" id="user_filter" class="user_filter" name="user_filter">
-                        <option value="">--- Filter By Position ---</option>
-                        <option value="Library-Staff Members">Library-Staff Members</option>
-                        <option value="Lecturers">Lecturers</option>
-                        <option value="Students">Students</option>
-                        <option value="Non-Academic Members">Non-Academic Members</option>
-                </select>
-
-                <button id="filter_search" name="filter_search" class="filter_search_btn1">Filter</button>
-        </form>
 
         <form method="POST">
 
-                <select class="user_filter_typo" id="user_filter_typo" class="user_filter_typo" name="user_filter_typo">
+                <select class="issue_user_filter_typo" id="user_filter_typo" class="user_filter_typo" name="issue_user_filter_typo">
                         <option value="">--- Filter By  ---</option>
-                        <option value="FirstName">--- Filter By First Name ---</option>
-                        <option value="LastName">--- Filter By Last Name ---</option>
-                        <option value="Sex">--- Filter By Sex ---</option>
-                        <option value="Email">--- Filter By Email ---</option>
+                        <option value="BookID">--- Filter By Book ID ---</option>
+                        <option value="UserID">--- Filter By Member ID ---</option>
+                        <option value="StaffID">--- Filter By Staff ID ---</option>
                 </select>
 
-                <input class="user_filter_typo_input" name="user_filter_typo_input" type="text">
+                <input class="issue_user_filter_typo_input" name="issue_user_filter_typo_input" type="text">
 
-                <button id="filter_typo_search" name="filter_typo_search" class="filter_search_btn2">Filter</button>
+                <button id="issue_filter_typo_search" name="issue_filter_typo_search" class="issue_filter_search_btn2">Filter</button>
+
+                <button id="issue_download" name="issue_download" class="issue_download_btn">Download</button>
+
         </form>
 
-        <div class="container_view">
+        <div class="issue_container_view">
 
 
                 <?php if ($rows): ?>
                 <table class="user_table">
                         <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Phone No</th>
-                                <th>Sex</th>
-                                <th>Birthday</th>
-                                <th>Address</th>
-                                <th>Email</th>
-                                <th>Member Type</th>
-                                <th>Added by</th>
-                                <th>Operations</th>
+                                <th>Book ID</th>
+                                <th>Book Title</th>
+                                <th>Member ID</th>
+                                <th>Member Name</th>
+                                <th>Staff ID</th>
+                                <th>Staff Name</th>
+                                <th>Issued Date</th>
+                                <th>Due Date</th>
 
                         </tr>
                         <?php foreach ($rows as $row): ?>
                         <tr>
                                 <td>
-                                        <?= $row->FirstName ?>
+                                        <?= $row->BookID ?>
                                 </td>
                                 <td>
-                                        <?= $row->LastName ?>
+                                        <?= get_bookname('BookID', $row->BookID) ?>        
                                 </td>
                                 <td>
-                                        <?= $row->PhoneNo ?>
+                                        <?= $row->UserID ?>
                                 </td>
                                 <td>
-                                        <?= $row->Sex ?>
+                                         <?= get_user_name('UserID', $row->UserID) ?>              
                                 </td>
                                 <td>
-                                        <?= $row->Birthday ?>
+                                        <?= $row->StaffID ?>
                                 </td>
                                 <td>
-                                        <?= $row->Address ?>
+                                        <?= get_staff_name('StaffID', $row->StaffID) ?>
                                 </td>
                                 <td>
-                                        <?= $row->Email ?>
+                                        <?= $row->IssuedDate ?>
                                 </td>
                                 <td>
-                                        <?= $row->MemberType ?>
+                                        <?= $row->DueDate ?>
                                 </td>
-                                <!-- Getting user name when gives id, this should -->
-                                <td>
-                                        <?= get_user_name('UserID', $row->AddStaffID) ?>
-                                </td>
-
-                                <td><button type='button' class='editbtn' id='editbtn'><i
-                                                        class='fa-solid fa-pen'></i>&nbsp;<a
-                                                        href='<?= ROOT ?>/users/edit/<?= $row->UserID ?>'>
-                                                        Edit</a></button>
-                                        <button type='button' class='deletebtn' id='deletebtn'><i
-                                                        class='fa-solid fa-trash'></i>&nbsp;<a
-                                                        href='<?= ROOT ?>/users/delete/<?= $row->UserID ?>'>
-                                                        Delete</a></button>
-                                </td>
-
                         </tr>
 
                         <?php endforeach; ?>
@@ -118,6 +91,9 @@
                         <h5 class="No_result_para">We couldn't find what you search for. <br>Try searching again!</h5>
                 </div>
                 <?php endif; ?>
+
+                <button class="report_backbtn"><a href="<?= ROOT ?>/reports">Back</a></button>
+
         </div>
 
 

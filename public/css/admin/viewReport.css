@@ -1,0 +1,155 @@
+/* Issued Report  */
+.issue_container_view {
+    position: absolute;
+    width: 1120px;
+    height: 550px;
+    left: 350px;
+    top: 144px;
+
+    background: #ffffff;
+    border-radius: 35px;
+
+}
+
+.issue_container_view .user_table {
+
+    padding: 15px 45px;
+}
+
+.issue_container_view .user_table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 30px;
+
+}
+
+.issue_container_view .user_table th {
+    border-bottom: 1px solid #1395ed;
+    padding: 12px 25px;
+    font-size: 22px;
+    letter-spacing: 0.8px;
+    background-color: #1395ed;
+    color: white;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.issue_container_view .user_table td {
+    font-size: 18px;
+    padding: 12px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.issue_user_filter_typo{
+    position: absolute;
+    width: 200px;
+    height: 35px;
+    left: 428px;
+    top: 85px;
+    border: none;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px 0 0 0;
+    box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
+  }
+  
+  .issue_user_filter_typo:focus {
+    border: 3px solid #2e9fed;
+    outline: 0;
+  }
+  
+  .issue_user_filter_typo_input{
+    position: absolute;
+    width: 200px;
+    height: 35px;
+    left: 630px;
+    top: 85px;
+    padding-left: 2px;
+    border: none;
+    outline: none;
+    background: white;
+    border-radius: 0 0 20px 0;
+    box-shadow: 0 0.3rem 0.5rem rgba(60, 60, 60, 0.5);
+  
+  }
+  
+  .issue_user_filter_typo_input:focus {
+    border: 3px solid #2e9fed;
+    outline: 0;
+  }
+  
+  .issue_filter_search_btn2{
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    left: 882px;
+    top: 85px;
+    color: white;
+    background: #1395ed;
+    border-radius: 35px;
+    cursor: pointer;
+    border: none;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .issue_download_btn{
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    left: 1292px;
+    top: 85px;
+    color: white;
+    background: #49f546;
+    border-radius: 35px;
+    cursor: pointer;
+    border: none;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .report_backbtn {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    left: 955px;
+    top: 490px;
+    border: 1px solid #5ccbd4;
+    background: #5ccbd4;
+    border-radius: 35px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  .report_backbtn a {
+    text-decoration: none;
+    color: white;
+  }
+
